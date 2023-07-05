@@ -1,0 +1,2 @@
+#rodar o webserver
+python manage.py runserver
