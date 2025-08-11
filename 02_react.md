@@ -210,3 +210,7 @@ Vamos unir todo o conhecimento adquirido para criar um projeto do mundo real.
       * Código limpo e reutilizável com **Hooks Personalizados**.
 
 Ao final deste curso, você não apenas saberá como criar aplicações React, mas também entenderá os padrões e as melhores práticas para construir software escalável, performático e de alta qualidade. **Parabéns\!** 🎉
+
+---
+
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
