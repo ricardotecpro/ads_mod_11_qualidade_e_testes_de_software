@@ -1,4 +1,6 @@
-Sequência didática para um curso de React, do zero ao avançado, com foco em uma experiência de aprendizado clara e prática para ambientes Windows e Linux.
+# Sequência didática para um curso de React, do zero ao avançado
+
+## com foco em uma experiência de aprendizado clara e prática para ambientes Windows e Linux.
 
 Vamos começar essa jornada\! 🚀
 
