@@ -13,20 +13,21 @@ Este guia aborda a construção de um sistema completo, composto por:
 **Diagrama da Arquitetura Final:**
 
 ```mermaid
+
 graph TD
     subgraph "Gerenciamento e Automação"
-        Script[Painel de Controle (manage.ps1)]
+        Script["🛠 Painel de Controle\n(manage.ps1)"]
     end
 
     subgraph "Clientes (Frontends)"
-        Web[Frontend Web<br/>(Angular)]
-        Desktop[Frontend Desktop<br/>(JavaFX)]
-        Mobile[Frontend Mobile<br/>(Android)]
+        Web["💻 Frontend Web\n(Angular)"]
+        Desktop["🖥 Frontend Desktop\n(JavaFX)"]
+        Mobile["📱 Frontend Mobile\n(Android)"]
     end
 
     subgraph "Serviços (Backend)"
-        API[Backend API<br/>(Spring Boot)]
-        DB[(Banco de Dados<br/>H2)]
+        API["⚙️ Backend API\n(Spring Boot)"]
+        DB[("🗄 Banco de Dados\nH2")]
     end
 
     %% Conexões de Dados
@@ -40,6 +41,8 @@ graph TD
     Script -- Gerencia --> Web
     Script -- Gerencia --> Desktop
     Script -- Gerencia --> Mobile
+
+
 ```
 
 -----
