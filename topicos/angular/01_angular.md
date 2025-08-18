@@ -16,10 +16,10 @@
 
     (Se não estiverem instalados, você pode baixá-los do site oficial do [Node.js](https://nodejs.org/) e instalar o Angular CLI com `npm install -g @angular/cli`).
 
-2.  **Crie o projeto Angular:** Navegue até a pasta onde você guarda seus projetos (fora da pasta `todolist-api`) e execute o seguinte comando:
+2.  **Crie o projeto Angular:** Navegue até a pasta onde você guarda seus projetos (fora da pasta `listatarefas-api`) e execute o seguinte comando:
 
     ```bash
-    ng new todolist-web
+    ng new listatarefas-web
     ```
 
     O Angular CLI fará algumas perguntas:
@@ -27,9 +27,9 @@
       * `Would you like to add Angular routing?` (Gostaria de adicionar roteamento Angular?) -\> Digite `n` e pressione Enter (para este projeto simples, não precisaremos de rotas).
       * `Which stylesheet format would you like to use?` (Qual formato de folha de estilo você gostaria de usar?) -\> Selecione `CSS` (a opção mais simples e padrão).
 
-    Aguarde o Angular CLI criar a pasta `todolist-web` e instalar todas as dependências.
+    Aguarde o Angular CLI criar a pasta `listatarefas-web` e instalar todas as dependências.
 
-3.  **Abra o novo projeto:** Abra a pasta `todolist-web` em uma **nova janela** do seu editor (VS Code é altamente recomendado para desenvolvimento Angular).
+3.  **Abra o novo projeto:** Abra a pasta `listatarefas-web` em uma **nova janela** do seu editor (VS Code é altamente recomendado para desenvolvimento Angular).
 
 #### **Passo 2: Gerando os Blocos de Construção (Componentes e Serviços)**
 
@@ -38,7 +38,7 @@ Vamos usar o Angular CLI para criar a estrutura básica da nossa aplicação.
 1.  **Navegue para a pasta do projeto** no seu terminal:
 
     ```bash
-    cd todolist-web
+    cd listatarefas-web
     ```
 
 2.  **Crie um modelo (interface) para a Tarefa:** Isso garante que nosso frontend "fale a mesma língua" que o backend.
@@ -285,7 +285,7 @@ Componentes standalone precisam importar explicitamente outros componentes, dire
       styleUrl: './app.component.css'
     })
     export class AppComponent {
-      title = 'todolist-web';
+      title = 'listatarefas-web';
     }
     ```
 
@@ -524,8 +524,8 @@ Abra o arquivo `src/app/components/task-list/task-list.component.css` e **adicio
 
 Agora é a hora da verdade.
 
-1.  **Garanta que sua API Spring Boot esteja rodando.** (Abra o projeto backend e execute a classe `TodolistApiApplication.java`).
-2.  **Abra um novo terminal na pasta do projeto Angular (`todolist-web`)** e execute o comando:
+1.  **Garanta que sua API Spring Boot esteja rodando.** (Abra o projeto backend e execute a classe `listatarefasApiApplication.java`).
+2.  **Abra um novo terminal na pasta do projeto Angular (`listatarefas-web`)** e execute o comando:
     ```bash
     ng serve --open
     ```

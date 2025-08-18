@@ -1,4 +1,0 @@
-componente do ecossistema.
-
------
-

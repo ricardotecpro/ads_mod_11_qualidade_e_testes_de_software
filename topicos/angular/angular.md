@@ -25,10 +25,10 @@ Vamos começar criando nosso projeto e garantindo que o ambiente de desenvolvime
 
     *(Caso não os tenha, instale o [Node.js](https://nodejs.org/) e, em seguida, o Angular CLI com o comando `npm install -g @angular/cli`)*.
 
-2.  **Criação do Projeto:** No seu diretório de projetos (fora da pasta `todolist-api`), execute o comando de criação.
+2.  **Criação do Projeto:** No seu diretório de projetos (fora da pasta `listatarefas-api`), execute o comando de criação.
 
     ```bash
-    ng new todolist-web
+    ng new listatarefas-web
     ```
 
     O CLI fará algumas perguntas:
@@ -36,9 +36,9 @@ Vamos começar criando nosso projeto e garantindo que o ambiente de desenvolvime
       * `Would you like to add Angular routing?` -\> `n` (Não usaremos rotas neste projeto simples).
       * `Which stylesheet format would you like to use?` -\> `CSS`.
 
-    O Angular criará a pasta `todolist-web` e instalará as dependências. Por padrão, ele já usará a nova arquitetura **Standalone**, que é mais simples e não utiliza `NgModules`.
+    O Angular criará a pasta `listatarefas-web` e instalará as dependências. Por padrão, ele já usará a nova arquitetura **Standalone**, que é mais simples e não utiliza `NgModules`.
 
-3.  **Abra o Projeto:** Abra a pasta `todolist-web` em uma nova janela do seu editor de código (VS Code é recomendado).
+3.  **Abra o Projeto:** Abra a pasta `listatarefas-web` em uma nova janela do seu editor de código (VS Code é recomendado).
 
 -----
 
@@ -49,7 +49,7 @@ Com o projeto criado, vamos gerar os blocos de construção da nossa aplicação
 1.  **A Interface de Dados (`Tarefa`):** Para garantir que nosso frontend entenda a estrutura de dados vinda do backend, criaremos uma "interface" TypeScript.
 
     ```bash
-    # No terminal, dentro da pasta todolist-web
+    # No terminal, dentro da pasta listatarefas-web
     ng generate interface models/tarefa
     ```
 
@@ -96,7 +96,7 @@ Com o projeto criado, vamos gerar os blocos de construção da nossa aplicação
       styleUrl: './app.component.css'
     })
     export class AppComponent {
-      title = 'todolist-web';
+      title = 'listatarefas-web';
     }
     ```
 
@@ -328,8 +328,8 @@ Esta é a etapa mais visual, onde conectaremos a lógica, o HTML e o CSS para cr
 
 É a hora da verdade\! Vamos conectar o frontend e o backend.
 
-1.  **Inicie o Backend:** Garanta que sua API Spring Boot (`todolist-api`) esteja em execução.
-2.  **Inicie o Frontend:** Em um novo terminal, na pasta do projeto Angular (`todolist-web`), execute:
+1.  **Inicie o Backend:** Garanta que sua API Spring Boot (`listatarefas-api`) esteja em execução.
+2.  **Inicie o Frontend:** Em um novo terminal, na pasta do projeto Angular (`listatarefas-web`), execute:
     ```bash
     ng serve --open
     ```
