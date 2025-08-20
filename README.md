@@ -1,3 +1,3 @@
-# Módulo 11: Testes de Software
+# Modulo 11: Testes de Software
 
-Este módulo aborda os fundamentos de testes de software.
+Este mï¿½dulo aborda os fundamentos de testes de software.
