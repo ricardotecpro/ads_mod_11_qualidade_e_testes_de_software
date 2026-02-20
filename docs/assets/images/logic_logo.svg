@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Decision Diamond (Flowchart) -->
+    <path d="M256 96 L416 256 L256 416 L96 256 Z" fill="#FFC107" stroke="none"/>
+    
+    <!-- Circuit Connections -->
+    <path d="M256 48 V96" />
+    <path d="M256 416 V464" />
+    <path d="M48 256 H96" />
+    <path d="M416 256 H464" />
+    
+    <!-- Binary Nodes -->
+    <circle cx="256" cy="48" r="24" fill="#FFFFFF" stroke="none"/>
+    <circle cx="256" cy="464" r="24" fill="#FFFFFF" stroke="none"/>
+    <circle cx="48" cy="256" r="24" fill="#FFFFFF" stroke="none"/>
+    <circle cx="464" cy="256" r="24" fill="#FFFFFF" stroke="none"/>
+    
+    <!-- Inner Symbol (Code Brackets) -->
+    <path d="M224 224 L192 256 L224 288" stroke="#333333" stroke-width="24"/>
+    <path d="M288 224 L320 256 L288 288" stroke="#333333" stroke-width="24"/>
+  </g>
+</svg>

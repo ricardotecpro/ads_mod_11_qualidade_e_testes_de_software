@@ -1,0 +1,64 @@
+[project]
+name = "ads_spec_mobile_nativo_kotlin_swift"
+version = "1.0.0"
+description = "ads_spec_mobile_nativo_kotlin_swift"
+authors = [
+    {name = "Ricardo Tec Pro", email = "ricardotecpro@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "mkdocs (>=1.6.1,<2.0.0)",
+    "mkdocs-material (>=9.6.21,<10.0.0)",
+    "mkdocs-glightbox (>=0.5.1,<0.6.0)",
+    "mkdocs-quiz (>=0.0.41,<0.0.42)",
+    "mkdocs-macros-plugin (>=1.4.0,<2.0.0)",
+    "mkdocs-git-authors-plugin (>=0.10.0,<0.11.0)",
+    "mkdocs-git-revision-date-localized-plugin (>=1.4.7,<2.0.0)",
+    "mike (>=2.1.3,<3.0.0)",
+    "pillow (>=11.3.0,<12.0.0)",
+    "pymdown-extensions (>=10.0.0,<11.0.0)",
+    "mkdocs-simple-hooks (>=0.1.5,<0.2.0)",
+    "mkdocs-video (>=1.5.0,<2.0.0)",
+    "termynal (>=0.13.1,<0.14.0)",
+    "mkdocs-with-pdf (>=0.9.3,<0.10.0)",
+    "mkdocs-minify-plugin (>=0.8.0,<0.9.0)",
+    "mkdocs-print-site-plugin (>=2.8,<3.0)",
+    "mkdocs-awesome-pages-plugin (>=2.10.1,<3.0.0)",
+    "mkdocs-jupyter (>=0.25.1,<0.26.0)",
+    "mkdocs-rss-plugin (>=1.17.9,<2.0.0)",
+    "mkdocs-revealjs (>=0.0.6,<0.0.7)",
+
+]
+
+[dependency-groups]
+dev = [
+  "invoke (>=2.2.0,<3.0.0)",
+  "rich (>=14.1.0,<15.0.0)",
+  "taskipy (>=1.14.1,<2.0.0)",
+  "pytest (>=8.0.0,<9.0.0)",
+  "pytest-playwright (>=0.5.0,<0.6.0)",
+  "playwright (>=1.40.0,<2.0.0)",
+  "ruff (>=0.15.0,<0.16.0)",
+]
+
+[tool.taskipy.tasks]
+docs = {cmd="mkdocs serve --dev-addr localhost:8000", help="Servidor local MkDocs"}
+serve = {cmd="task docs", help="Inicia servidor de desenvolvimento (alias para docs)"}
+build = {cmd="mkdocs build", help="Build do site"}
+slides = {cmd="python scripts/generate_slides_quizzes.py", help="Gera slides HTML"}
+quizzes = {cmd="python scripts/convert_quizzes.py", help="Gera quizzes interativos"}
+deploy = {cmd="mike deploy estavel --push --allow-empty", help="Deploy produção com Mike"}
+test = {cmd="pytest tests/ -v", help="Executa todos os testes"}
+check = {cmd="python scripts/check_content.py", help="Verifica integridade do conteúdo"}
+clean = {cmd="invoke clean", help="Limpa arquivos gerados"}
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+base_url = "http://127.0.0.1:8766"

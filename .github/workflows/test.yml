@@ -1,0 +1,39 @@
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+      
+      - name: Install Dependencies
+        run: poetry install
+      
+      - name: Run Tests
+        run: poetry run task test
+        continue-on-error: true
+      
+      - name: Build Site
+        run: poetry run task build
+      
+      - name: Check for Broken Links
+        run: |
+          echo "Link checking would go here"
+          echo "Install and configure a link checker if needed"
+        continue-on-error: true

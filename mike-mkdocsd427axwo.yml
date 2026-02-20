@@ -1,0 +1,226 @@
+site_name: "Lógica e Algoritmos - Curso"
+site_url: https://ricardotecpro.github.io/ads_mod_02_logica_e_algoritmos
+repo_url: https://github.com/ricardotecpro/ads_mod_02_logica_e_algoritmos
+repo_name: ricardotecpro/ads_mod_02_logica_e_algoritmos
+theme:
+  name: material
+  language: pt-BR
+  favicon: assets/images/python-logo-notext.svg
+  logo: assets/images/python-logo-notext.svg
+  custom_dir: overrides
+  features:
+  - navigation.tracking
+  - navigation.tabs
+  - navigation.expand
+  - navigation.top
+  - navigation.footer
+  - navigation.indexes
+  - toc.follow
+  - content.code.copy
+  - content.code.annotate
+  - search.suggest
+  - search.highlight
+  palette:
+  - scheme: slate
+    primary: indigo
+    accent: amber
+    toggle:
+      icon: material/weather-night
+      name: Mudar para modo claro
+  - scheme: default
+    primary: indigo
+    accent: amber
+    toggle:
+      icon: material/weather-sunny
+      name: Mudar para modo escuro
+  icon:
+    repo: fontawesome/brands/github
+markdown_extensions:
+- pymdownx.critic
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format ''
+- pymdownx.details
+- pymdownx.keys
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji ''
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg ''
+- footnotes
+- admonition
+- attr_list
+- md_in_html
+- tables
+- pymdownx.snippets:
+    base_path: docs
+plugins:
+- mike
+- mkdocs-revealjs
+- search:
+    lang: pt
+- mkdocs-jupyter
+- glightbox
+- mkdocs_quiz
+- git-authors:
+    show_contribution: true
+    show_line_count: true
+    count_empty_lines: false
+    fallback_to_empty: false
+    sort_authors_by: contribution
+    authorship_threshold_percent: 10
+    exclude:
+    - index.md
+- git-revision-date-localized:
+    enable_creation_date: true
+    type: datetime
+- macros
+- mkdocs-video
+- termynal:
+    title: shell
+    buttons: macos
+    prompt_literal_start:
+    - $
+- rss:
+    match_path: .*
+    date_from_meta:
+      datetime_format: '%Y-%m-%d %H:%M:%S'
+- print-site:
+    add_to_navigation: false
+    print_page_rel_path: print_page.md
+    print_page_title: "Vers\xE3o para Impress\xE3o"
+    add_print_site_banner: false
+    enumerate_headings: false
+    enumerate_figures: false
+hooks:
+- hooks/copy_slides.py
+extra_css:
+- assets/css/quiz.css
+- assets/css/home.css
+- assets/css/extra.css
+extra_javascript:
+- assets/js/quiz.js
+- https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
+- assets/js/mermaid-init.js
+- assets/js/custom_termynal.js
+extra:
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/ricardotecpro
+  - icon: fontawesome/brands/linkedin
+    link: https://linkedin.com/in/ricardotecpro
+  - icon: fontawesome/solid/globe
+    link: https://ricardotecpro.github.io/
+  version:
+    provider: mike
+    default: estavel
+nav:
+- Home: index.md
+- Sobre: sobre.md
+- Aulas:
+  - aulas/index.md
+  - "Fundamentos da L\xF3gica":
+    - "Aula 01 - Conte\xFAdo do Curso": aulas/aula-01.md
+    - "Aula 02 - Introdu\xE7\xE3o \xE0 Programa\xE7\xE3o": aulas/aula-02.md
+    - Aula 03 - Estrutura Sequencial: aulas/aula-03.md
+    - Aula 04 - Estrutura Condicional: aulas/aula-04.md
+    - Aula 05 - Estruturas Repetitivas: aulas/aula-05.md
+    - Aula 06 - Vetores: aulas/aula-06.md
+    - Aula 07 - Matrizes: aulas/aula-07.md
+    - "Aula 08 - Fun\xE7\xF5es": aulas/aula-08.md
+  - "Introdu\xE7\xE3o \xE0s Linguagens":
+    - Aula 09 - Linguagem C: aulas/aula-09.md
+    - Aula 10 - Linguagem C++: aulas/aula-10.md
+    - Aula 11 - Linguagem Java: aulas/aula-11.md
+    - Aula 12 - Linguagem C#: aulas/aula-12.md
+    - Aula 13 - Linguagem Python: aulas/aula-13.md
+    - Aula 14 - Linguagem JavaScript: aulas/aula-14.md
+    - Aula 15 - Linguagem Rust: aulas/aula-15.md
+    - Aula 16 - Linguagem Dart: aulas/aula-16.md
+- Materiais:
+  - materiais.md
+  - Slides:
+    - slides/index.md
+    - "Slide 01 - Conte\xFAdo": slides/slide-01.html
+    - "Slide 02 - Introdu\xE7\xE3o": slides/slide-02.html
+    - Slide 03 - Sequencial: slides/slide-03.html
+    - Slide 04 - Condicional: slides/slide-04.html
+    - Slide 05 - Repetitivas: slides/slide-05.html
+    - Slide 06 - Vetores: slides/slide-06.html
+    - Slide 07 - Matrizes: slides/slide-07.html
+    - "Slide 08 - Fun\xE7\xF5es": slides/slide-08.html
+    - Slide 09 - Linguagem C: slides/slide-09.html
+    - Slide 10 - Linguagem C++: slides/slide-10.html
+    - Slide 11 - Linguagem Java: slides/slide-11.html
+    - Slide 12 - Linguagem C#: slides/slide-12.html
+    - Slide 13 - Linguagem Python: slides/slide-13.html
+    - Slide 14 - Linguagem JavaScript: slides/slide-14.html
+    - Slide 15 - Linguagem Rust: slides/slide-15.html
+    - Slide 16 - Linguagem Dart: slides/slide-16.html
+  - "Exerc\xEDcios":
+    - exercicios/index.md
+    - "Exerc\xEDcio 01": exercicios/exercicio-01.md
+    - "Exerc\xEDcio 02": exercicios/exercicio-02.md
+    - "Exerc\xEDcio 03": exercicios/exercicio-03.md
+    - "Exerc\xEDcio 04": exercicios/exercicio-04.md
+    - "Exerc\xEDcio 05": exercicios/exercicio-05.md
+    - "Exerc\xEDcio 06": exercicios/exercicio-06.md
+    - "Exerc\xEDcio 07": exercicios/exercicio-07.md
+    - "Exerc\xEDcio 08": exercicios/exercicio-08.md
+    - "Exerc\xEDcio 09": exercicios/exercicio-09.md
+    - "Exerc\xEDcio 10": exercicios/exercicio-10.md
+    - "Exerc\xEDcio 11": exercicios/exercicio-11.md
+    - "Exerc\xEDcio 12": exercicios/exercicio-12.md
+    - "Exerc\xEDcio 13": exercicios/exercicio-13.md
+    - "Exerc\xEDcio 14": exercicios/exercicio-14.md
+    - "Exerc\xEDcio 15": exercicios/exercicio-15.md
+    - "Exerc\xEDcio 16": exercicios/exercicio-16.md
+  - Quizzes:
+    - quizzes/index.md
+    - Quiz 01: quizzes/quiz-01.md
+    - Quiz 02: quizzes/quiz-02.md
+    - Quiz 03: quizzes/quiz-03.md
+    - Quiz 04: quizzes/quiz-04.md
+    - Quiz 05: quizzes/quiz-05.md
+    - Quiz 06: quizzes/quiz-06.md
+    - Quiz 07: quizzes/quiz-07.md
+    - Quiz 08: quizzes/quiz-08.md
+    - Quiz 09: quizzes/quiz-09.md
+    - Quiz 10: quizzes/quiz-10.md
+    - Quiz 11: quizzes/quiz-11.md
+    - Quiz 12: quizzes/quiz-12.md
+    - Quiz 13: quizzes/quiz-13.md
+    - Quiz 14: quizzes/quiz-14.md
+    - Quiz 15: quizzes/quiz-15.md
+    - Quiz 16: quizzes/quiz-16.md
+  - Projetos:
+    - projetos/index.md
+    - Projeto 01: projetos/projeto-01.md
+    - Projeto 02: projetos/projeto-02.md
+    - Projeto 03: projetos/projeto-03.md
+    - Projeto 04: projetos/projeto-04.md
+    - Projeto 05: projetos/projeto-05.md
+    - Projeto 06: projetos/projeto-06.md
+    - Projeto 07: projetos/projeto-07.md
+    - Projeto 08: projetos/projeto-08.md
+    - Projeto 09: projetos/projeto-09.md
+    - Projeto 10: projetos/projeto-10.md
+    - Projeto 11: projetos/projeto-11.md
+    - Projeto 12: projetos/projeto-12.md
+    - Projeto 13: projetos/projeto-13.md
+    - Projeto 14: projetos/projeto-14.md
+    - Projeto 15: projetos/projeto-15.md
+    - Projeto 16: projetos/projeto-16.md
+  - "Configura\xE7\xE3o":
+    - setups/index.md
+    - "Ambiente L\xF3gica": setups/setup-01.md
+    - Ambiente Linguagens: setups/setup-02.md
+- "Impress\xE3o": print_page.md
