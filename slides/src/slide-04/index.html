@@ -16,12 +16,12 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
         <link rel="alternate" type="application/rss+xml" title="RSS feed de conteúdo atualizado" href="../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../assets/images/logic_logo.svg">
+      <link rel="icon" href="../../../assets/images/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
-        <title>Aula 04 - Estrutura de um App 🏗️ - Qualidade e Testes de Software - Curso</title>
+        <title>Aula 04 - Estrutura de um App Android 🏗️ - Qualidade e Testes de Software - Curso</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aula-04-estrutura-de-um-app" class="md-skip">
+        <a href="#aula-04-estrutura-de-um-app-android" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -116,7 +116,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
     <a href="../../.." title="Qualidade e Testes de Software - Curso" class="md-header__button md-logo" aria-label="Qualidade e Testes de Software - Curso" data-md-component="logo">
       
-  <img src="../../../assets/images/logic_logo.svg" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -133,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aula 04 - Estrutura de um App 🏗️
+              Aula 04 - Estrutura de um App Android 🏗️
             
           </span>
         </div>
@@ -502,7 +502,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Qualidade e Testes de Software - Curso" class="md-nav__button md-logo" aria-label="Qualidade e Testes de Software - Curso" data-md-component="logo">
       
-  <img src="../../../assets/images/logic_logo.svg" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     Qualidade e Testes de Software - Curso
@@ -3672,10 +3672,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#o-que-tem-debaixo-do-capo" class="md-nav__link">
+  <a href="#manifest-lifecycle-e-layouts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧐 O que tem "debaixo do capô"?
+        Manifest, Lifecycle e Layouts
       
     </span>
   </a>
@@ -3683,10 +3683,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#visao-geral-do-projeto" class="md-nav__link">
+  <a href="#agenda" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📂 Visão Geral do Projeto
+        Agenda 📅
       
     </span>
   </a>
@@ -3694,10 +3694,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-o-manifesto" class="md-nav__link">
+  <a href="#1-androidmanifestxml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. O Manifesto 📜
+        1. AndroidManifest.xml 📜
       
     </span>
   </a>
@@ -3705,10 +3705,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-a-pasta-java-ou-kotlin" class="md-nav__link">
+  <a href="#2-activities-o-cerebro-da-tela" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. A Pasta java (ou kotlin) ⌨️
+        2. Activities: O Cérebro da Tela 🧠
       
     </span>
   </a>
@@ -3716,66 +3716,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-a-pasta-res-resources" class="md-nav__link">
+  <a href="#3-ciclo-de-vida-lifecycle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. A Pasta res (Resources) 🎨
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. A Pasta res (Resources) 🎨">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#por-que-centralizar-os-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🎨 Por que centralizar os values?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-gradle-o-gerente-de-fabrica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Gradle: O Gerente de Fábrica ⚙️
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Gradle: O Gerente de Fábrica ⚙️">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#o-que-tem-no-gradle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📦 O que tem no Gradle?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#o-ciclo-de-build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏗️ O Ciclo de Build
+        3. Ciclo de Vida (Lifecycle) 🔄
       
     </span>
   </a>
@@ -3783,10 +3727,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#estrutura-android-vs-ios" class="md-nav__link">
+  <a href="#estados-principais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🆚 Estrutura: Android vs iOS
+        Estados Principais
       
     </span>
   </a>
@@ -3794,10 +3738,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewbinding-o-link-seguro" class="md-nav__link">
+  <a href="#activity-vs-uiviewcontroller" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔌 ViewBinding: O Link Seguro
+        Activity vs UIViewController
       
     </span>
   </a>
@@ -3805,10 +3749,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pratica-explorando-o-studio" class="md-nav__link">
+  <a href="#4-layouts-xml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛠️ Prática: Explorando o Studio
+        4. Layouts XML 🎨
       
     </span>
   </a>
@@ -3816,10 +3760,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuidado-com-a-pasta-build" class="md-nav__link">
+  <a href="#5-recursos-res" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚠️ Cuidado com a pasta build
+        5. Recursos (res/) 📦
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-viewbinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. ViewBinding 🔗
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desafio-o-app-sumiu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desafio: O App sumiu! 😱
       
     </span>
   </a>
@@ -3830,7 +3796,7 @@
   <a href="#resumo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧩 Resumo
+        Resumo ✅
       
     </span>
   </a>
@@ -3838,10 +3804,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#desafio-da-aula" class="md-nav__link">
+  <a href="#proxima-aula-interfaces-ui" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Desafio da Aula
+        Próxima Aula: Interfaces (UI) 🎨
       
     </span>
   </a>
@@ -3849,30 +3815,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusao" class="md-nav__link">
+  <a href="#duvidas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏁 Conclusão
+        Dúvidas? 🏗️
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="🏁 Conclusão">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proxima-aula-interface-grafica-layouts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Próxima Aula: Interface Gráfica (Layouts)! 🎨👋
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3933,150 +3882,122 @@
   
 
 
-<h1 id="aula-04-estrutura-de-um-app">Aula 04 - Estrutura de um App 🏗️</h1>
-<!-- .slide: data-transition="zoom" -->
-
+<h1 id="aula-04-estrutura-de-um-app-android">Aula 04 - Estrutura de um App Android 🏗️</h1>
+<h2 id="manifest-lifecycle-e-layouts">Manifest, Lifecycle e Layouts</h2>
 <hr>
-<h2 id="o-que-tem-debaixo-do-capo">🧐 O que tem "debaixo do capô"?</h2>
-<p>Ao abrir um projeto no Android Studio, vemos muitas pastas.
-Não se desespere! Vamos entender cada uma.</p>
+<h2 id="agenda">Agenda 📅</h2>
+<ol>
+<li>O Manifesto (Cérebro) { .fragment }</li>
+<li>Activities e ViewControllers { .fragment }</li>
+<li>O Ciclo de Vida (Nascer e Morrer) { .fragment }</li>
+<li>Layouts XML e Recursos (res/) { .fragment }</li>
+<li>ViewBinding vs findViewById { .fragment }</li>
+</ol>
 <hr>
-<h2 id="visao-geral-do-projeto">📂 Visão Geral do Projeto</h2>
-<p>Existem dois modos de visão: <strong>Project</strong> e <strong>Android</strong>.
-Nós usaremos o modo <strong>Android</strong> (mais organizado).</p>
-<hr>
-<h2 id="1-o-manifesto">1. O Manifesto 📜</h2>
-<p><code>app/src/main/AndroidManifest.xml</code></p>
-<p>É o contrato do seu app com o sistema operacional.</p>
+<h2 id="1-androidmanifestxml">1. AndroidManifest.xml 📜</h2>
 <ul>
-<li>Nome e Ícone do App. { .fragment }</li>
-<li>Declaração de todas as <strong>Activities</strong>. { .fragment }</li>
-<li>Solicitação de <strong>Permissões</strong> (Câmera, GPS). { .fragment }</li>
+<li>Identidade do App. { .fragment }</li>
+<li>Permissões (Internet, GPS). { .fragment }</li>
+<li>Lista de Telas (Activities). { .fragment }</li>
 </ul>
 <hr>
-<h2 id="2-a-pasta-java-ou-kotlin">2. A Pasta <code>java</code> (ou <code>kotlin</code>) ⌨️</h2>
-<p>Onde a "mágica" acontece.</p>
+<h2 id="2-activities-o-cerebro-da-tela">2. Activities: O Cérebro da Tela 🧠</h2>
 <ul>
-<li>Ficam as classes de lógica. { .fragment }</li>
-<li>Ficam as classes das telas (MainActivity). { .fragment }</li>
-<li>Organizado em <strong>pacotes</strong> (ex: <code>com.meuapp.telas</code>). { .fragment }</li>
+<li>Herda de <code>AppCompatActivity</code>. { .fragment }</li>
+<li>Controla a lógica de uma tela específica. { .fragment }</li>
 </ul>
 <hr>
-<h2 id="3-a-pasta-res-resources">3. A Pasta <code>res</code> (Resources) 🎨</h2>
-<p>Tudo o que o usuário <strong>vê</strong> ou <strong>ouve</strong>, mas que não é lógica.</p>
-<ul>
-<li><strong>drawable</strong>: Imagens e ícones. { .fragment }</li>
-<li><strong>layout</strong>: A interface visual (XML). { .fragment }</li>
-<li><strong>mipmap</strong>: Ícones que aparecem no menu do celular. { .fragment }</li>
-<li><strong>values</strong>: Strings, Cores e Temas. { .fragment }</li>
-</ul>
-<hr>
-<h3 id="por-que-centralizar-os-values">🎨 Por que centralizar os <code>values</code>?</h3>
-<p>Evite escrever texto direto no código!</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">&lt;!-- res/values/strings.xml --&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&lt;string</span><span class="w"> </span><span class="na">name=</span><span class="s">"boas_vinda"</span><span class="nt">&gt;</span>Bem-vindo<span class="w"> </span>ao<span class="w"> </span>App!<span class="nt">&lt;/string&gt;</span>
-</span></code></pre></div>
-<blockquote>
-<p>Facilita a tradução para outros idiomas (Internacionalização). 🌍</p>
-</blockquote>
-<hr>
-<h2 id="4-gradle-o-gerente-de-fabrica">4. Gradle: O Gerente de Fábrica ⚙️</h2>
-<p>Não é código do seu app, é a configuração da "fábrica" que constrói ele.</p>
-<ul>
-<li><code>build.gradle (Project)</code>: Configurações globais. { .fragment }</li>
-<li><code>build.gradle (Module)</code>: Configurações específicas do App. { .fragment }</li>
-</ul>
-<hr>
-<h3 id="o-que-tem-no-gradle">📦 O que tem no Gradle?</h3>
-<ul>
-<li><strong>versionCode</strong>: Número interno (1, 2, 3...). { .fragment }</li>
-<li><strong>versionName</strong>: Nome para o usuário (1.0.1...). { .fragment }</li>
-<li><strong>Dependencies</strong>: Bibliotecas externas (Retrofit, Room). { .fragment }</li>
-</ul>
-<hr>
-<h2 id="o-ciclo-de-build">🏗️ O Ciclo de Build</h2>
+<h2 id="3-ciclo-de-vida-lifecycle">3. Ciclo de Vida (Lifecycle) 🔄</h2>
+<p>Crucial para performance e bateria!</p>
 <pre class="mermaid"><code>graph LR
-    A[Código Kotlin/Java] --&gt; B[Compilador]
-    E[Recursos XML/Img] --&gt; B
-    B --&gt; C[Arquivo DEX]
-    C --&gt; D[APK / AAB]</code></pre>
+    A[Created] --&gt; B[Started]
+    B --&gt; C[Resumed]
+    C --&gt; D[Paused]
+    D --&gt; E[Stopped]
+    E --&gt; F[Destroyed]</code></pre>
 <hr>
-<h2 id="estrutura-android-vs-ios">🆚 Estrutura: Android vs iOS</h2>
+<h2 id="estados-principais">Estados Principais</h2>
+<ul>
+<li><strong>onCreate</strong>: Configuração inicial. { .fragment }</li>
+<li><strong>onResume</strong>: App visível e pronto para toque. { .fragment }</li>
+<li><strong>onStop</strong>: App saiu da frente do usuário. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="activity-vs-uiviewcontroller">Activity vs UIViewController</h2>
+<ul>
+<li>Mesma lógica de gerenciar estados e visual. { .fragment }</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Android</th>
-<th style="text-align: center;">iOS</th>
-<th style="text-align: left;">Papel</th>
+<th style="text-align: left;">Android 🤖</th>
+<th style="text-align: left;">iOS 🍎</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><code>AndroidManifest</code></td>
-<td style="text-align: center;"><code>Info.plist</code></td>
-<td style="text-align: left;">Metadados</td>
+<td style="text-align: left;"><code>onCreate</code></td>
+<td style="text-align: left;"><code>viewDidLoad</code></td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>res/layout</code></td>
-<td style="text-align: center;"><code>Storyboard/XIB</code></td>
-<td style="text-align: left;">UI Visual</td>
+<td style="text-align: left;"><code>onStart</code></td>
+<td style="text-align: left;"><code>viewWillAppear</code></td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>gradle</code></td>
-<td style="text-align: center;"><code>CocoaPods/SwiftPM</code></td>
-<td style="text-align: left;">Dependências</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>res/values</code></td>
-<td style="text-align: center;"><code>Localizable.strings</code></td>
-<td style="text-align: left;">Textos</td>
+<td style="text-align: left;"><code>onStop</code></td>
+<td style="text-align: left;"><code>viewDidDisappear</code></td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="viewbinding-o-link-seguro">🔌 ViewBinding: O Link Seguro</h2>
-<p>Antigamente usava-se o <code>findViewById</code> (lento e perigoso).
-Hoje usamos o <strong>ViewBinding</strong>.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// No código Kotlin</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">binding</span><span class="p">.</span><span class="na">txtTitulo</span><span class="p">.</span><span class="na">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Novo Título"</span>
-</span></code></pre></div>
-<blockquote>
-<p>Garante que você não tente acessar um ID que não existe na tela! 🛡️</p>
-</blockquote>
-<hr>
-<h2 id="pratica-explorando-o-studio">🛠️ Prática: Explorando o Studio</h2>
-<ol>
-<li>Abra o arquivo <code>Activity_main.xml</code>. { .fragment }</li>
-<li>Veja as abas <strong>Code</strong>, <strong>Split</strong> e <strong>Design</strong>. { .fragment }</li>
-<li>Mantenha no <strong>Split</strong> para aprender rápido! { .fragment }</li>
-</ol>
-<!-- .slide: data-background-color="#2d6a4f" -->
-
-<hr>
-<h2 id="cuidado-com-a-pasta-build">⚠️ Cuidado com a pasta <code>build</code></h2>
-<p>Ela é gerada automaticamente.
-<strong>Nunca</strong> altere nada dentro dela manualmente. Se der erro, use o comando:
-<code>Build -&gt; Clean Project</code>.</p>
-<hr>
-<h2 id="resumo">🧩 Resumo</h2>
+<h2 id="4-layouts-xml">4. Layouts XML 🎨</h2>
 <ul>
-<li><strong>Manifesto</strong>: Declarativo e essencial. { .fragment }</li>
-<li><strong>Res</strong>: Visual e Multimídia. { .fragment }</li>
-<li><strong>Gradle</strong>: Configuração e Bibliotecas. { .fragment }</li>
-<li><strong>Java/Kotlin</strong>: Comportamento. { .fragment }</li>
+<li>O visual é separado da lógica. { .fragment }</li>
+<li>Arquivos em <code>res/layout</code>. { .fragment }</li>
+</ul>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;TextView</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="na">android:text=</span><span class="s">"Olá Mundo"</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span></code></pre></div>
+<hr>
+<h2 id="5-recursos-res">5. Recursos (res/) 📦</h2>
+<ul>
+<li><strong>drawable</strong>: Imagens. { .fragment }</li>
+<li><strong>values/strings</strong>: Textos traduzíveis. { .fragment }</li>
+<li><strong>values/colors</strong>: Paleta de cores. { .fragment }</li>
 </ul>
 <hr>
-<h2 id="desafio-da-aula">🚀 Desafio da Aula</h2>
-<ol>
-<li>Adicione uma nova cor em <code>colors.xml</code>. { .fragment }</li>
-<li>Crie uma nova String em <code>strings.xml</code>. { .fragment }</li>
-<li>Use essa cor e essa string em um componente na tela inicial. { .fragment }</li>
-</ol>
+<h2 id="6-viewbinding">6. ViewBinding 🔗</h2>
+<ul>
+<li>A forma moderna e segura de acessar a UI. { .fragment }</li>
+</ul>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Antes (Perigoso)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="o">&lt;</span><span class="n">Button</span><span class="o">&gt;</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">btn</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// Depois (Seguro)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">binding</span><span class="p">.</span><span class="na">btnClick</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
 <hr>
-<h2 id="conclusao">🏁 Conclusão</h2>
-<p>Entender a estrutura é o primeiro passo para não se perder em projetos grandes.</p>
+<h2 id="desafio-o-app-sumiu">Desafio: O App sumiu! 😱</h2>
+<p>Se o usuário aperta o botão HOME, qual método do ciclo de vida é o último a ser chamado com certeza?</p>
 <hr>
-<h3 id="proxima-aula-interface-grafica-layouts">Próxima Aula: Interface Gráfica (Layouts)! 🎨👋</h3>
+<h2 id="resumo">Resumo ✅</h2>
+<ul>
+<li>Manifest é a configuração. { .fragment }</li>
+<li>Activity gerencia a tela. { .fragment }</li>
+<li>Ciclo de vida evita travamentos e gasto de bateria. { .fragment }</li>
+<li>XML desenha, Kotlin controla. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="proxima-aula-interfaces-ui">Próxima Aula: Interfaces (UI) 🎨</h2>
+<ul>
+<li>ConstraintLayout. { .fragment }</li>
+<li>Componentes Modernos. { .fragment }</li>
+<li>Eventos de Clique. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="duvidas">Dúvidas? 🏗️</h2>
 
 
 
@@ -4099,7 +4020,7 @@ Hoje usamos o <strong>ViewBinding</strong>.</p>
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="20 de fevereiro de 2026 21:24:57 UTC">20 de fevereiro de 2026 21:24:57</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="23 de fevereiro de 2026 21:24:09 UTC">23 de fevereiro de 2026 21:24:09</span>
   </span>
 
     

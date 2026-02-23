@@ -16,12 +16,12 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
         <link rel="alternate" type="application/rss+xml" title="RSS feed de conteúdo atualizado" href="../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../assets/images/logic_logo.svg">
+      <link rel="icon" href="../../../assets/images/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
-        <title>Aula 02 - Java para Android ☕ - Qualidade e Testes de Software - Curso</title>
+        <title>Aula 02 - Arquitetura e Gateway 🏗️ - Qualidade e Testes de Software - Curso</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aula-02-java-para-android" class="md-skip">
+        <a href="#aula-02-arquitetura-e-gateway" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -116,7 +116,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
     <a href="../../.." title="Qualidade e Testes de Software - Curso" class="md-header__button md-logo" aria-label="Qualidade e Testes de Software - Curso" data-md-component="logo">
       
-  <img src="../../../assets/images/logic_logo.svg" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -133,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aula 02 - Java para Android ☕
+              Aula 02 - Arquitetura e Gateway 🏗️
             
           </span>
         </div>
@@ -502,7 +502,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Qualidade e Testes de Software - Curso" class="md-nav__button md-logo" aria-label="Qualidade e Testes de Software - Curso" data-md-component="logo">
       
-  <img src="../../../assets/images/logic_logo.svg" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     Qualidade e Testes de Software - Curso
@@ -3672,10 +3672,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#por-que-aprender-java-em-2026" class="md-nav__link">
+  <a href="#orquestrando-microsservicos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Por que aprender Java em 2026?
+        Orquestrando Microsserviços
       
     </span>
   </a>
@@ -3683,10 +3683,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-base-da-sintaxe" class="md-nav__link">
+  <a href="#agenda" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧱 A Base da Sintaxe
+        Agenda 📅
       
     </span>
   </a>
@@ -3694,38 +3694,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variaveis-e-tipos" class="md-nav__link">
+  <a href="#1-como-os-servicos-conversam" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📦 Variáveis e Tipos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📦 Variáveis e Tipos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cuidado-com-o-null" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cuidado com o Null! 👻
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#estruturas-de-decisao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔀 Estruturas de Decisão
+        1. Como os Serviços Conversam? 💬
       
     </span>
   </a>
@@ -3733,10 +3705,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#estruturas-de-repeticao" class="md-nav__link">
+  <a href="#11-comunicacao-sincrona" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔁 Estruturas de Repetição
+        1.1 Comunicação Síncrona 🔄
       
     </span>
   </a>
@@ -3744,38 +3716,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#orientacao-a-objetos-poo" class="md-nav__link">
+  <a href="#12-comunicacao-assincrona" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏛️ Orientação a Objetos (POO)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🏛️ Orientação a Objetos (POO)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemplo-classe-carro" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exemplo: Classe Carro 🚗
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#heranca-o-extends" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧬 Herança: O extends
+        1.2 Comunicação Assíncrona 📬
       
     </span>
   </a>
@@ -3783,10 +3727,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#encapsulamento" class="md-nav__link">
+  <a href="#2-api-gateway-o-porteiro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔒 Encapsulamento
+        2. API Gateway: O Porteiro 🚪
       
     </span>
   </a>
@@ -3794,38 +3738,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#android-studio-onde-o-java-vive" class="md-nav__link">
+  <a href="#gateway-responsibilities" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🗺️ Android Studio: Onde o Java vive
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🗺️ Android Studio: Onde o Java vive">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ciclo-de-vida-o-oncreate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ciclo de Vida: O onCreate
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparacao-java-vs-swift" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔬 Comparação: Java vs Swift
+        Gateway Responsibilities
       
     </span>
   </a>
@@ -3833,10 +3749,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ferramentas-da-aula" class="md-nav__link">
+  <a href="#3-service-discovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛠️ Ferramentas da Aula
+        3. Service Discovery 🔎
       
     </span>
   </a>
@@ -3844,10 +3760,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercicio-rapido" class="md-nav__link">
+  <a href="#4-load-balancing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧩 Exercício Rápido
+        4. Load Balancing ⚖️
       
     </span>
   </a>
@@ -3855,10 +3771,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#de-java-para-kotlin" class="md-nav__link">
+  <a href="#5-resiliencia-circuit-breaker" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚡ De Java para Kotlin
+        5. Resiliência: Circuit Breaker 🔌
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparativo-sync-vs-async" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativo: Sync vs Async
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-pratica-o-dashboard-agregador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Prática: O "Dashboard" Agregador 💻
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desafio-relampago" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desafio Relâmpago ⚡
       
     </span>
   </a>
@@ -3869,7 +3818,7 @@
   <a href="#resumo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏁 Resumo
+        Resumo ✅
       
     </span>
   </a>
@@ -3877,41 +3826,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pergunta-do-dia" class="md-nav__link">
+  <a href="#proxima-aula-modelagem-rest" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ❓ Pergunta do Dia
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❓ Pergunta do Dia">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proxima-aula-kotlin-moderno" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Próxima Aula: Kotlin Moderno ⚡
+        Próxima Aula: Modelagem REST 📡
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#valeu-pessoal" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#duvidas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Valeu, pessoal! 👋
+        Dúvidas? 🏗️
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3972,153 +3904,131 @@
   
 
 
-<h1 id="aula-02-java-para-android">Aula 02 - Java para Android ☕</h1>
-<!-- .slide: data-transition="convex" -->
-
+<h1 id="aula-02-arquitetura-e-gateway">Aula 02 - Arquitetura e Gateway 🏗️</h1>
+<h2 id="orquestrando-microsservicos">Orquestrando Microsserviços</h2>
 <hr>
-<h2 id="por-que-aprender-java-em-2026">🎯 Por que aprender Java em 2026?</h2>
-<p>"O Kotlin não matou o Java?"</p>
-<ul>
-<li><strong>Base Sólida</strong>: O Android é feito de Java. { .fragment }</li>
-<li><strong>Legado</strong>: Bilhões de linhas de código em produção. { .fragment }</li>
-<li><strong>Mercado</strong>: Muitas empresas pedem os dois. { .fragment }</li>
-</ul>
-<hr>
-<h2 id="a-base-da-sintaxe">🧱 A Base da Sintaxe</h2>
-<p>Java é uma linguagem de tipagem estática e explícita.</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ola</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Olá, Java!"</span><span class="p">);</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h2 id="variaveis-e-tipos">📦 Variáveis e Tipos</h2>
-<p>Onde guardamos os dados na memória.</p>
-<ul>
-<li><strong>int</strong>: Números inteiros. { .fragment }</li>
-<li><strong>double</strong>: Números decimais. { .fragment }</li>
-<li><strong>boolean</strong>: true ou false. { .fragment }</li>
-<li><strong>String</strong>: Texto (É uma classe!). { .fragment }</li>
-</ul>
-<hr>
-<h3 id="cuidado-com-o-null">Cuidado com o Null! 👻</h3>
-<p>Em Java, objetos podem ser <code>null</code>.
-Isso causa o famoso <strong>NullPointerException</strong>.</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">String</span><span class="w"> </span><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">tamanho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nome</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="c1">// BOOM! 💥</span>
-</span></code></pre></div>
-<hr>
-<h2 id="estruturas-de-decisao">🔀 Estruturas de Decisão</h2>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">idade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">idade</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Pode dirigir"</span><span class="p">);</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Aguarde mais um pouco"</span><span class="p">);</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h2 id="estruturas-de-repeticao">🔁 Estruturas de Repetição</h2>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Contar até 5</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Número: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h2 id="orientacao-a-objetos-poo">🏛️ Orientação a Objetos (POO)</h2>
-<p>O coração do desenvolvimento nativo.</p>
-<ul>
-<li><strong>Classe</strong>: O molde (Planta da casa). { .fragment }</li>
-<li><strong>Objeto</strong>: A instância (A casa construída). { .fragment }</li>
-</ul>
-<hr>
-<h3 id="exemplo-classe-carro">Exemplo: Classe Carro 🚗</h3>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Carro</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">modelo</span><span class="p">;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ano</span><span class="p">;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">buzinar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Beep Beep!"</span><span class="p">);</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h2 id="heranca-o-extends">🧬 Herança: O <code>extends</code></h2>
-<p>No Android, usamos herança o tempo todo.</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Activity</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="c1">// Agora minha classe faz tudo que uma Activity faz!</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h2 id="encapsulamento">🔒 Encapsulamento</h2>
-<p>Proteja seus dados!</p>
-<ul>
-<li><strong>public</strong>: Todos veem. { .fragment }</li>
-<li><strong>private</strong>: Só a classe vê. { .fragment }</li>
-</ul>
-<blockquote>
-<p>Use <strong>getters</strong> e <strong>setters</strong> para acessar dados privados.</p>
-</blockquote>
-<hr>
-<h2 id="android-studio-onde-o-java-vive">🗺️ Android Studio: Onde o Java vive</h2>
-<p>Ao criar um App, o código Java fica na pasta:
-<code>app/src/main/java/</code></p>
-<hr>
-<h3 id="ciclo-de-vida-o-oncreate">Ciclo de Vida: O <code>onCreate</code></h3>
-<p>O primeiro contato com o Android.</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nd">@Override</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">activity_main</span><span class="p">);</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h2 id="comparacao-java-vs-swift">🔬 Comparação: Java vs Swift</h2>
-<p>No iOS (Swift), os conceitos são os mesmos, muda a "roupa".</p>
-<ul>
-<li>Java: <code>public class</code></li>
-<li>Swift: <code>class</code> (mais simples)</li>
-</ul>
-<hr>
-<h2 id="ferramentas-da-aula">🛠️ Ferramentas da Aula</h2>
+<h2 id="agenda">Agenda 📅</h2>
 <ol>
-<li><strong>JDK instalado</strong>. { .fragment }</li>
-<li><strong>IntelliJ</strong> ou <strong>Android Studio</strong>. { .fragment }</li>
-<li>Treinar lógica básica no console. { .fragment }</li>
+<li>Comunicação entre Serviços { .fragment }</li>
+<li>Síncrono vs Assíncrono { .fragment }</li>
+<li>O Papel do API Gateway { .fragment }</li>
+<li>Service Discovery { .fragment }</li>
+<li>Load Balancing { .fragment }</li>
+<li>Padrões de Resiliência { .fragment }</li>
 </ol>
-<!-- .slide: data-background-color="#5d2a42" -->
-
 <hr>
-<h2 id="exercicio-rapido">🧩 Exercício Rápido</h2>
-<p>Crie uma classe <code>Usuario</code> com:
-* Nome (String)
-* Idade (int)
-* Método <code>verificarIdade()</code> que diz se é maior de idade.</p>
-<hr>
-<h2 id="de-java-para-kotlin">⚡ De Java para Kotlin</h2>
-<p>Na aula de hoje vimos Java.
-Nas próximas, veremos como o Kotlin simplifica <strong>TUDO</strong> isso.</p>
-<blockquote>
-<p>Mas sem entender o Java, você será apenas um "copiador de código".</p>
-</blockquote>
-<hr>
-<h2 id="resumo">🏁 Resumo</h2>
+<h2 id="1-como-os-servicos-conversam">1. Como os Serviços Conversam? 💬</h2>
 <ul>
-<li>Java é a fundação. { .fragment }</li>
-<li>POO é essencial para Android. { .fragment }</li>
-<li>Classes, Atributos e Métodos são seus novos amigos. { .fragment }</li>
+<li>Microsserviços são ilhas que precisam de pontes. { .fragment }</li>
+<li>Dois mundos: <strong>Sync</strong> e <strong>Async</strong>. { .fragment }</li>
 </ul>
 <hr>
-<h2 id="pergunta-do-dia">❓ Pergunta do Dia</h2>
-<p>"Posso criar um app Android sem saber nadinha de Java?"</p>
-<blockquote>
-<p>Pode, mas na primeira biblioteca antiga que você baixar, vai travar!</p>
-</blockquote>
+<h2 id="11-comunicacao-sincrona">1.1 Comunicação Síncrona 🔄</h2>
+<ul>
+<li>Cliente bloqueia até a resposta. { .fragment }</li>
+<li>Uso de HTTP/REST ou gRPC. { .fragment }</li>
+<li><strong>Risco</strong>: Acoplamento temporal e gargalos. { .fragment }</li>
+</ul>
 <hr>
-<h3 id="proxima-aula-kotlin-moderno">Próxima Aula: Kotlin Moderno ⚡</h3>
+<h2 id="12-comunicacao-assincrona">1.2 Comunicação Assíncrona 📬</h2>
+<ul>
+<li>Envia e esquece (Eventos). { .fragment }</li>
+<li>Uso de Filas e Tópicos (Broker). { .fragment }</li>
+<li><strong>Vantagem</strong>: Escalabilidade e desacoplamento. { .fragment }</li>
+</ul>
 <hr>
-<h3 id="valeu-pessoal">Valeu, pessoal! 👋</h3>
+<h2 id="2-api-gateway-o-porteiro">2. API Gateway: O Porteiro 🚪</h2>
+<ul>
+<li>Única entrada para o mundo exterior. { .fragment }</li>
+<li>Esconde a complexidade interna. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="gateway-responsibilities">Gateway Responsibilities</h2>
+<ul>
+<li><strong>Roteamento</strong>: <code>/p</code> -&gt; Pagamento, <code>/e</code> -&gt; Estoque. { .fragment }</li>
+<li><strong>Segurança</strong>: Autenticação centralizada. { .fragment }</li>
+<li><strong>Rate Limit</strong>: Proteção contra flood. { .fragment }</li>
+<li><strong>Logs &amp; Monitoramento</strong>. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="3-service-discovery">3. Service Discovery 🔎</h2>
+<ul>
+<li>Onde está o servidor de pagamentos? { .fragment }</li>
+<li>Agenda dinâmica de IPs e Portas. { .fragment }</li>
+<li><strong>Ferramentas</strong>: Netflix Eureka, Consul. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="4-load-balancing">4. Load Balancing ⚖️</h2>
+<ul>
+<li>Distribuição inteligente da carga. { .fragment }</li>
+<li>Evita que um container "morra" de trabalho. { .fragment }</li>
+</ul>
+<pre class="mermaid"><code>graph TD
+    GW[Gateway] --&gt; LB[Load Balancer]
+    LB --&gt; S1[Serviço A]
+    LB --&gt; S2[Serviço B]
+    LB --&gt; S3[Serviço C]</code></pre>
+<hr>
+<h2 id="5-resiliencia-circuit-breaker">5. Resiliência: Circuit Breaker 🔌</h2>
+<ul>
+<li>Detecta serviços lentos ou falhos. { .fragment }</li>
+<li>Abre o circuito para proteger o resto do sistema. { .fragment }</li>
+<li>Evita o cascateamento de erros. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="comparativo-sync-vs-async">Comparativo: Sync vs Async</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Característica</th>
+<th style="text-align: left;">Síncrono 🔄</th>
+<th style="text-align: left;">Assíncrono 📬</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Resposta</strong></td>
+<td style="text-align: left;">Imediata</td>
+<td style="text-align: left;">Eventual</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Desempenho</strong></td>
+<td style="text-align: left;">Limitado pelo destino</td>
+<td style="text-align: left;">Alto débito</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Uso comum</strong></td>
+<td style="text-align: left;">Cadastro/Login</td>
+<td style="text-align: left;">Geração de Relatórios</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-pratica-o-dashboard-agregador">6. Prática: O "Dashboard" Agregador 💻</h2>
+<ul>
+<li>Como o Gateway une dados de 3 serviços? { .fragment }</li>
+<li>Agregação de respostas (Aggregation Pattern). { .fragment }</li>
+</ul>
+<hr>
+<h2 id="desafio-relampago">Desafio Relâmpago ⚡</h2>
+<p>O que acontece se o seu API Gateway cair? Ele é um ponto único de falha?</p>
+<hr>
+<h2 id="resumo">Resumo ✅</h2>
+<ul>
+<li>Sync é fácil, Async é escalável. { .fragment }</li>
+<li>API Gateway protege e organiza. { .fragment }</li>
+<li>Service Discovery é essencial em containers. { .fragment }</li>
+<li>Resiliência não é opcional! { .fragment }</li>
+</ul>
+<hr>
+<h2 id="proxima-aula-modelagem-rest">Próxima Aula: Modelagem REST 📡</h2>
+<ul>
+<li>Verbos HTTP. { .fragment }</li>
+<li>Status Codes. { .fragment }</li>
+<li>O contrato ideal. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="duvidas">Dúvidas? 🏗️</h2>
 
 
 
@@ -4141,7 +4051,7 @@ Nas próximas, veremos como o Kotlin simplifica <strong>TUDO</strong> isso.</p>
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="20 de fevereiro de 2026 21:24:57 UTC">20 de fevereiro de 2026 21:24:57</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="23 de fevereiro de 2026 21:24:09 UTC">23 de fevereiro de 2026 21:24:09</span>
   </span>
 
     

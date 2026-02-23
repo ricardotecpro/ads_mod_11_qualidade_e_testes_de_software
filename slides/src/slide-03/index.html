@@ -16,12 +16,12 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
         <link rel="alternate" type="application/rss+xml" title="RSS feed de conteúdo atualizado" href="../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../assets/images/logic_logo.svg">
+      <link rel="icon" href="../../../assets/images/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
-        <title>Aula 03 - Kotlin Moderno ⚡ - Qualidade e Testes de Software - Curso</title>
+        <title>Aula 03 - Modelagem de APIs RESTful 📡 - Qualidade e Testes de Software - Curso</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aula-03-kotlin-moderno" class="md-skip">
+        <a href="#aula-03-modelagem-de-apis-restful" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -116,7 +116,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
     <a href="../../.." title="Qualidade e Testes de Software - Curso" class="md-header__button md-logo" aria-label="Qualidade e Testes de Software - Curso" data-md-component="logo">
       
-  <img src="../../../assets/images/logic_logo.svg" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -133,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aula 03 - Kotlin Moderno ⚡
+              Aula 03 - Modelagem de APIs RESTful 📡
             
           </span>
         </div>
@@ -502,7 +502,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Qualidade e Testes de Software - Curso" class="md-nav__button md-logo" aria-label="Qualidade e Testes de Software - Curso" data-md-component="logo">
       
-  <img src="../../../assets/images/logic_logo.svg" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     Qualidade e Testes de Software - Curso
@@ -3672,10 +3672,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#o-que-e-kotlin" class="md-nav__link">
+  <a href="#recursos-verbos-e-contratos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 O que é Kotlin?
+        Recursos, Verbos e Contratos
       
     </span>
   </a>
@@ -3683,10 +3683,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#null-safety-o-fim-dos-crashes" class="md-nav__link">
+  <a href="#agenda" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛡️ Null Safety: O Fim dos Crashes
+        Agenda 📅
       
     </span>
   </a>
@@ -3694,10 +3694,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variaveis-val-vs-var" class="md-nav__link">
+  <a href="#1-rest-a-lingua-da-web" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📦 Variáveis: val vs var
+        1. REST: A "Língua" da Web 🌐
       
     </span>
   </a>
@@ -3705,10 +3705,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#inferencia-de-tipos" class="md-nav__link">
+  <a href="#principios-rest" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚡ Inferência de Tipos
+        Princípios REST
       
     </span>
   </a>
@@ -3716,77 +3716,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpolacao-de-strings" class="md-nav__link">
+  <a href="#2-identificando-recursos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💬 Interpolação de Strings
+        2. Identificando Recursos 📍
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operador-elvis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🕴️ Operador Elvis ?:
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#funcoes-simplicidade" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠️ Funções: Simplicidade
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#estruturas-de-decisao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏗️ Estruturas de Decisão
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#colecoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📋 Coleções
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#classes-e-objetos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏛️ Classes e Objetos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🏛️ Classes e Objetos">
+    <nav class="md-nav" aria-label="2. Identificando Recursos 📍">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-classes" class="md-nav__link">
+  <a href="#o-que-nao-fazer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📊 Data Classes
+        O que NÃO fazer:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-que-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que fazer:
       
     </span>
   </a>
@@ -3799,10 +3755,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interoperabilidade" class="md-nav__link">
+  <a href="#3-os-verbos-http" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧬 Interoperabilidade
+        3. Os Verbos HTTP 🛠️
       
     </span>
   </a>
@@ -3810,10 +3766,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comparacao-swift" class="md-nav__link">
+  <a href="#idempotencia-e-seguranca" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🍎 Comparação: Swift
+        Idempotência e Segurança
       
     </span>
   </a>
@@ -3821,10 +3777,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#playground-da-aula" class="md-nav__link">
+  <a href="#4-status-codes-a-resposta" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎮 Playground da Aula
+        4. Status Codes: A Resposta 🚦
       
     </span>
   </a>
@@ -3832,10 +3788,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#safe-call" class="md-nav__link">
+  <a href="#5-o-formato-json" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚠️ Safe Call ?.
+        5. O Formato JSON 🏗️
       
     </span>
   </a>
@@ -3843,10 +3799,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusao" class="md-nav__link">
+  <a href="#6-design-de-uris-complexas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏁 Conclusão
+        6. Design de URIs Complexas
       
     </span>
   </a>
@@ -3854,30 +3810,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proxima-aula-anatomia-de-um-app" class="md-nav__link">
+  <a href="#7-pratica-postman-em-acao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Próxima Aula: Anatomia de um App
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Próxima Aula: Anatomia de um App">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ate-a-proxima" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Até a próxima! ⚡👋
+        7. Prática: Postman em Ação 💻
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#desafio-rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desafio REST ⚡
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo ✅
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxima-aula-swagger-e-mocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Próxima Aula: Swagger e Mocks 📝
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duvidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dúvidas? 📡
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3938,167 +3921,135 @@
   
 
 
-<h1 id="aula-03-kotlin-moderno">Aula 03 - Kotlin Moderno ⚡</h1>
-<!-- .slide: data-transition="convex" -->
-
+<h1 id="aula-03-modelagem-de-apis-restful">Aula 03 - Modelagem de APIs RESTful 📡</h1>
+<h2 id="recursos-verbos-e-contratos">Recursos, Verbos e Contratos</h2>
 <hr>
-<h2 id="o-que-e-kotlin">🚀 O que é Kotlin?</h2>
-<p>A linguagem que mudou o Android.</p>
+<h2 id="agenda">Agenda 📅</h2>
+<ol>
+<li>O que é REST? { .fragment }</li>
+<li>Recursos e URIs { .fragment }</li>
+<li>Verbos HTTP (GET, POST, PUT...) { .fragment }</li>
+<li>Status Codes { .fragment }</li>
+<li>JSON: A Linguagem das APIs { .fragment }</li>
+<li>Boas Práticas de Design { .fragment }</li>
+</ol>
+<hr>
+<h2 id="1-rest-a-lingua-da-web">1. REST: A "Língua" da Web 🌐</h2>
 <ul>
-<li>Criada pela JetBrains (2011). { .fragment }</li>
-<li>Oficial no Android (Google I/O 2017). { .fragment }</li>
-<li><strong>Moderna</strong>, <strong>Segura</strong> e <strong>Concisa</strong>. { .fragment }</li>
+<li>Style arquitetural para sistemas distribuídos. { .fragment }</li>
+<li>Baseado no protocolo <strong>HTTP</strong>. { .fragment }</li>
+<li>Independência entre Client e Server. { .fragment }</li>
 </ul>
 <hr>
-<h2 id="null-safety-o-fim-dos-crashes">🛡️ Null Safety: O Fim dos Crashes</h2>
-<p>O pesadelo do Java era o <code>null</code>.
-O Kotlin resolveu isso na raiz.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">nome</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ricardo"</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="c1">// Erro de Compilação! 🛑</span>
-</span></code></pre></div>
-<p>Para permitir nulos:
-</p><div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">nome</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Pode ser nulo"</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="c1">// OK! ✅</span>
-</span></code></pre></div><p></p>
-<hr>
-<h2 id="variaveis-val-vs-var">📦 Variáveis: <code>val</code> vs <code>var</code></h2>
-<p>No Kotlin, preferimos a imutabilidade.</p>
+<h2 id="principios-rest">Princípios REST</h2>
 <ul>
-<li><strong>val</strong>: Imutável (referência não muda). 🔒 { .fragment }</li>
-<li><strong>var</strong>: Mutável (pode mudar o valor). 🔓 { .fragment }</li>
+<li><strong>Stateless</strong>: Cada requisição é única. { .fragment }</li>
+<li><strong>Uniform Interface</strong>: Padrões compartilhados. { .fragment }</li>
+<li><strong>Cacheable</strong>: Melhore a performance. { .fragment }</li>
 </ul>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">idade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="c1">// Nunca mais muda</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">var</span><span class="w"> </span><span class="nv">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100.0</span><span class="w"> </span><span class="c1">// Pode mudar</span>
-</span></code></pre></div>
 <hr>
-<h2 id="inferencia-de-tipos">⚡ Inferência de Tipos</h2>
-<p>O Kotlin é inteligente. Ele sabe o tipo sem você dizer.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">versao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="c1">// Ele sabe que é Int</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.14</span><span class="w"> </span><span class="c1">// Ele sabe que é Double</span>
-</span></code></pre></div>
+<h2 id="2-identificando-recursos">2. Identificando Recursos 📍</h2>
+<ul>
+<li>Um recurso é qualquer coisa que expomos. { .fragment }</li>
+<li><strong>URI</strong>: O endereço do recurso. { .fragment }</li>
+</ul>
+<h3 id="o-que-nao-fazer">O que NÃO fazer:</h3>
+<p><code>GET /obterUsuarios</code> ❌</p>
+<h3 id="o-que-fazer">O que fazer:</h3>
+<p><code>GET /usuarios</code> ✅ (Sempre substantivos no plural!)</p>
 <hr>
-<h2 id="interpolacao-de-strings">💬 Interpolação de Strings</h2>
-<p>Diga adeus ao <code>+ " " +</code>.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">usuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Google"</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">println</span><span class="p">(</span><span class="s">"Olá, </span><span class="si">$</span><span class="n">usuario</span><span class="s">! Temos </span><span class="si">${</span><span class="m">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="si">}</span><span class="s"> notificações."</span><span class="p">)</span>
-</span></code></pre></div>
+<h2 id="3-os-verbos-http">3. Os Verbos HTTP 🛠️</h2>
+<p>Eles definem a intenção da chamada:</p>
+<ul>
+<li><strong>GET</strong>: Buscar dados. { .fragment }</li>
+<li><strong>POST</strong>: Criar novo dado. { .fragment }</li>
+<li><strong>PUT</strong>: Atualizar (Trocar tudo). { .fragment }</li>
+<li><strong>PATCH</strong>: Atualizar (Apenas um pedaço). { .fragment }</li>
+<li><strong>DELETE</strong>: Remover dado. { .fragment }</li>
+</ul>
 <hr>
-<h2 id="operador-elvis">🕴️ Operador Elvis <code>?:</code></h2>
-<p>"Se for nulo, faça isso".</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nome</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nome</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s">"Visitante"</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">// resultado = "Visitante"</span>
-</span></code></pre></div>
-<hr>
-<h2 id="funcoes-simplicidade">🛠️ Funções: Simplicidade</h2>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">somar</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">}</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">// Versão "Single Line"</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">somar</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span>
-</span></code></pre></div>
-<hr>
-<h2 id="estruturas-de-decisao">🏗️ Estruturas de Decisão</h2>
-<p>O <code>if</code> e o <code>when</code> no Kotlin são <strong>expressões</strong> (retornam valor).</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="s">"Aprovado"</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s">"Reprovado"</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">nota</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="m">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">"Genial!"</span><span class="p">)</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="m">7.</span><span class="p">.</span><span class="m">9</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">"Muito bom"</span><span class="p">)</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">"Tente mais"</span><span class="p">)</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h2 id="colecoes">📋 Coleções</h2>
-<p>Listas que facilitam a vida.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// Imutável</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nomes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="p">(</span><span class="s">"Ana"</span><span class="p">,</span><span class="w"> </span><span class="s">"Bia"</span><span class="p">)</span><span class="w"> </span><span class="c1">// Mutável</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">nomes</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Caio"</span><span class="p">)</span>
-</span></code></pre></div>
-<hr>
-<h2 id="classes-e-objetos">🏛️ Classes e Objetos</h2>
-<p>Mais limpo que o Java.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Carro</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">model</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">ano</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">meuCarro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Carro</span><span class="p">(</span><span class="s">"Fusca"</span><span class="p">,</span><span class="w"> </span><span class="m">1970</span><span class="p">)</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">println</span><span class="p">(</span><span class="n">meuCarro</span><span class="p">.</span><span class="na">model</span><span class="p">)</span>
-</span></code></pre></div>
-<hr>
-<h3 id="data-classes">📊 Data Classes</h3>
-<p>Onde o Kotlin brilha de verdade.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Usuario</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">email</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1">// Gera automaticamente: toString, equals, hashCode, copy...</span>
-</span></code></pre></div>
-<hr>
-<h2 id="interoperabilidade">🧬 Interoperabilidade</h2>
-<p>Você pode misturar Java e Kotlin no mesmo projeto sem problemas.</p>
-<pre class="mermaid"><code>graph LR
-    A[Java Code] &lt;--&gt; B[Kotlin Code]
-    B --&gt; C[Bytecode JVM]
-    C --&gt; D[Dalvik/ART Android]</code></pre>
-<hr>
-<h2 id="comparacao-swift">🍎 Comparação: Swift</h2>
-<p>O Kotlin e o Swift são quase "gêmeos" na sintaxe moderna.</p>
+<h2 id="idempotencia-e-seguranca">Idempotência e Segurança</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Recurso</th>
-<th style="text-align: left;">Kotlin</th>
-<th style="text-align: left;">Swift</th>
+<th style="text-align: left;">Verbo</th>
+<th style="text-align: left;">Seguro?</th>
+<th style="text-align: left;">Idempotente?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Constante</strong></td>
-<td style="text-align: left;"><code>val</code></td>
-<td style="text-align: left;"><code>let</code></td>
+<td style="text-align: left;">GET</td>
+<td style="text-align: left;">Sim ✅</td>
+<td style="text-align: left;">Sim ✅</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Variável</strong></td>
-<td style="text-align: left;"><code>var</code></td>
-<td style="text-align: left;"><code>var</code></td>
+<td style="text-align: left;">POST</td>
+<td style="text-align: left;">Não ❌</td>
+<td style="text-align: left;">Não ❌</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Opcional</strong></td>
-<td style="text-align: left;"><code>String?</code></td>
-<td style="text-align: left;"><code>String?</code></td>
+<td style="text-align: left;">PUT</td>
+<td style="text-align: left;">Não ❌</td>
+<td style="text-align: left;">Sim ✅</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Função</strong></td>
-<td style="text-align: left;"><code>fun</code></td>
-<td style="text-align: left;"><code>func</code></td>
+<td style="text-align: left;">DELETE</td>
+<td style="text-align: left;">Não ❌</td>
+<td style="text-align: left;">Sim ✅</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="playground-da-aula">🎮 Playground da Aula</h2>
-<p>Acesse <a href="https://play.kotlinlang.org">play.kotlinlang.org</a> e teste:</p>
-<ol>
-<li>Crie uma variável que pode ser nula. { .fragment }</li>
-<li>Use o operador Elvis nela. { .fragment }</li>
-<li>Crie uma data class "Produto". { .fragment }</li>
-</ol>
-<!-- .slide: data-background-color="#3d5a80" -->
-
-<hr>
-<h2 id="safe-call">⚠️ Safe Call <code>?.</code></h2>
-<p>Chama o método apenas se não for nulo.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nome</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">println</span><span class="p">(</span><span class="n">nome</span><span class="o">?.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="c1">// Não crasha! Imprime "null"</span>
-</span></code></pre></div>
-<hr>
-<h2 id="conclusao">🏁 Conclusão</h2>
+<h2 id="4-status-codes-a-resposta">4. Status Codes: A Resposta 🚦</h2>
 <ul>
-<li>Kotlin economiza tempo e dedos (menos código). { .fragment }</li>
-<li>Segurança contra nulos é o seu maior trunfo. { .fragment }</li>
-<li>É a linguagem do futuro do Android. { .fragment }</li>
+<li><strong>2xx</strong>: Deu certo! (200, 201, 204). { .fragment }</li>
+<li><strong>4xx</strong>: Você (cliente) errou algo (400, 401, 404). { .fragment }</li>
+<li><strong>5xx</strong>: Eu (servidor) quebrei (500, 503). { .fragment }</li>
 </ul>
 <hr>
-<h2 id="proxima-aula-anatomia-de-um-app">🚀 Próxima Aula: Anatomia de um App</h2>
-<p>Vamos abrir o Android Studio e ver como o Kotlin controla as telas!</p>
+<h2 id="5-o-formato-json">5. O Formato JSON 🏗️</h2>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Curso Backend"</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"modulo"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">"ativo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>Leve, legível e universal. { .fragment }</li>
+</ul>
 <hr>
-<h3 id="ate-a-proxima">Até a próxima! ⚡👋</h3>
+<h2 id="6-design-de-uris-complexas">6. Design de URIs Complexas</h2>
+<p>Como buscar os pedidos de um usuário específico?</p>
+<p><code>GET /usuarios/123/pedidos</code> ✅</p>
+<ul>
+<li>Hierarquia lógica e limpa. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="7-pratica-postman-em-acao">7. Prática: Postman em Ação 💻</h2>
+<ul>
+<li>Testando verbos em APIs reais. { .fragment }</li>
+<li>Analisando Headers e Body. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="desafio-rest">Desafio REST ⚡</h2>
+<p>Se você quer mudar apenas o e-mail de um usuário, qual verbo deve usar: PUT ou PATCH?</p>
+<hr>
+<h2 id="resumo">Resumo ✅</h2>
+<ul>
+<li>REST é sobre recursos e padrões. { .fragment }</li>
+<li>URIs usam substantivos no plural. { .fragment }</li>
+<li>Status codes guiam o frontend. { .fragment }</li>
+<li>JSON é o padrão de facto. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="proxima-aula-swagger-e-mocks">Próxima Aula: Swagger e Mocks 📝</h2>
+<ul>
+<li>Documentação automática. { .fragment }</li>
+<li>Como trabalhar sem o backend pronto? { .fragment }</li>
+</ul>
+<hr>
+<h2 id="duvidas">Dúvidas? 📡</h2>
 
 
 
@@ -4121,7 +4072,7 @@ O Kotlin resolveu isso na raiz.</p>
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="20 de fevereiro de 2026 21:24:57 UTC">20 de fevereiro de 2026 21:24:57</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="23 de fevereiro de 2026 21:24:09 UTC">23 de fevereiro de 2026 21:24:09</span>
   </span>
 
     

@@ -16,12 +16,12 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
         <link rel="alternate" type="application/rss+xml" title="RSS feed de conteúdo atualizado" href="../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../assets/images/logic_logo.svg">
+      <link rel="icon" href="../../../assets/images/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
-        <title>Aula 10 - APIs REST &amp; Retrofit 🌍 - Qualidade e Testes de Software - Curso</title>
+        <title>Aula 10 - Consumindo API REST 🌍 - Qualidade e Testes de Software - Curso</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aula-10-apis-rest-retrofit" class="md-skip">
+        <a href="#aula-10-consumindo-api-rest" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -116,7 +116,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
     <a href="../../.." title="Qualidade e Testes de Software - Curso" class="md-header__button md-logo" aria-label="Qualidade e Testes de Software - Curso" data-md-component="logo">
       
-  <img src="../../../assets/images/logic_logo.svg" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -133,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aula 10 - APIs REST &amp; Retrofit 🌍
+              Aula 10 - Consumindo API REST 🌍
             
           </span>
         </div>
@@ -502,7 +502,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Qualidade e Testes de Software - Curso" class="md-nav__button md-logo" aria-label="Qualidade e Testes de Software - Curso" data-md-component="logo">
       
-  <img src="../../../assets/images/logic_logo.svg" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     Qualidade e Testes de Software - Curso
@@ -3672,10 +3672,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#o-app-e-a-internet" class="md-nav__link">
+  <a href="#conectando-seu-app-ao-mundo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📡 O App e a Internet
+        Conectando seu app ao mundo
       
     </span>
   </a>
@@ -3683,38 +3683,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#o-conceito-de-api-rest" class="md-nav__link">
+  <a href="#agenda" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🍕 O Conceito de API REST
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🍕 O Conceito de API REST">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#o-formato-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        O Formato JSON 📦
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conheca-o-retrofit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 Conheça o Retrofit
+        Agenda 📅
       
     </span>
   </a>
@@ -3722,60 +3694,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementacao-em-3-passos" class="md-nav__link">
+  <a href="#1-request-response" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔨 Implementação em 3 Passos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔨 Implementação em 3 Passos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-a-data-class-o-modelo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. A Data Class (O Modelo)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-a-interface-o-contrato" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. A Interface (O Contrato)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-a-instancia-o-cliente" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. A Instância (O Cliente)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chamando-na-viewmodel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧠 Chamando na ViewModel
+        1. Request &amp; Response 📨
       
     </span>
   </a>
@@ -3783,10 +3705,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#autenticacao-jwt-tokens" class="md-nav__link">
+  <a href="#2-o-formato-json" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔐 Autenticação (JWT Tokens)
+        2. O Formato JSON 📦
       
     </span>
   </a>
@@ -3794,10 +3716,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#android-vs-ios-rede" class="md-nav__link">
+  <a href="#3-retrofit-o-rei-das-apis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🆚 Android vs iOS (Rede)
+        3. Retrofit: O Rei das APIs 🚀
       
     </span>
   </a>
@@ -3805,10 +3727,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#permissao-de-internet" class="md-nav__link">
+  <a href="#4-permissoes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🌐 Permissão de Internet
+        4. Permissões 🛡️
       
     </span>
   </a>
@@ -3816,10 +3738,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ferramentas-de-apoio" class="md-nav__link">
+  <a href="#5-autenticacao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛠️ Ferramentas de Apoio
+        5. Autenticação 🔐
       
     </span>
   </a>
@@ -3827,10 +3749,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#desafio-da-aula-app-de-repositorios" class="md-nav__link">
+  <a href="#6-boas-praticas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧪 Desafio da Aula: App de Repositórios
+        6. Boas Práticas 🏆
       
     </span>
   </a>
@@ -3838,10 +3760,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuidado-com-o-main-thread" class="md-nav__link">
+  <a href="#desafio-de-rede" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚠️ Cuidado com o Main Thread
+        Desafio de Rede ⚡
       
     </span>
   </a>
@@ -3849,10 +3771,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusao" class="md-nav__link">
+  <a href="#resumo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏁 Conclusão
+        Resumo ✅
       
     </span>
   </a>
@@ -3860,30 +3782,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#perguntas-sobre-internet" class="md-nav__link">
+  <a href="#proxima-aula-threads-e-async" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ❓ Perguntas sobre Internet?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❓ Perguntas sobre Internet?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proxima-aula-threads-e-coroutines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Próxima Aula: Threads e Coroutines! 🧵👋
+        Próxima Aula: Threads e Async 🧵
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#duvidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dúvidas? 🌍
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3944,159 +3860,75 @@
   
 
 
-<h1 id="aula-10-apis-rest-retrofit">Aula 10 - APIs REST &amp; Retrofit 🌍</h1>
-<!-- .slide: data-transition="zoom" -->
-
+<h1 id="aula-10-consumindo-api-rest">Aula 10 - Consumindo API REST 🌍</h1>
+<h2 id="conectando-seu-app-ao-mundo">Conectando seu app ao mundo</h2>
 <hr>
-<h2 id="o-app-e-a-internet">📡 O App e a Internet</h2>
-<p>Raramente um app vive sozinho. Ele precisa de dados externos.</p>
-<ul>
-<li>Previsão do tempo. { .fragment }</li>
-<li>Posts de redes sociais. { .fragment }</li>
-<li>Salvar pedidos em um servidor. { .fragment }</li>
-</ul>
-<hr>
-<h2 id="o-conceito-de-api-rest">🍕 O Conceito de API REST</h2>
-<p>Pense em um restaurante (Servidor) e você (Cliente).</p>
+<h2 id="agenda">Agenda 📅</h2>
 <ol>
-<li><strong>Request</strong>: Você pede um prato. { .fragment }</li>
-<li><strong>Endpoint</strong>: A mesa do restaurante (<code>/pedidos</code>). { .fragment }</li>
-<li><strong>Response</strong>: O prato chega (JSON). { .fragment }</li>
+<li>O que é uma API? { .fragment }</li>
+<li>Formato JSON { .fragment }</li>
+<li>Retrofit e GSON { .fragment }</li>
+<li>Permissões de Internet { .fragment }</li>
+<li>Autenticação (Tokens) { .fragment }</li>
 </ol>
 <hr>
-<h3 id="o-formato-json">O Formato JSON 📦</h3>
-<p>É como o mundo troca dados hoje.</p>
+<h2 id="1-request-response">1. Request &amp; Response 📨</h2>
+<pre class="mermaid"><code>sequenceDiagram
+    Android App-&gt;&gt;Servidor: GET /usuarios
+    Servidor--&gt;&gt;Android App: 200 OK (JSON)</code></pre>
+<hr>
+<h2 id="2-o-formato-json">2. O Formato JSON 📦</h2>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"usuario"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ricardo"</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"idade"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">"ativo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ricardo"</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">"cargo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dev Android"</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
 </span></code></pre></div>
 <hr>
-<h2 id="conheca-o-retrofit">🚀 Conheça o Retrofit</h2>
-<p>A biblioteca da Square que é o padrão absoluto no Android.</p>
+<h2 id="3-retrofit-o-rei-das-apis">3. Retrofit: O Rei das APIs 🚀</h2>
 <ul>
-<li>Transforma APIs em interfaces Kotlin. { .fragment }</li>
-<li>Faz o "parse" do JSON automaticamente. { .fragment }</li>
-<li>Suporte nativo a Coroutines. { .fragment }</li>
+<li>Converte o site em uma interface de código. { .fragment }</li>
+<li>Automatiza a conversão de JSON para Objeto. { .fragment }</li>
+</ul>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@GET</span><span class="p">(</span><span class="s">"repos"</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">suspend</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">getRepos</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Repo</span><span class="o">&gt;</span>
+</span></code></pre></div>
+<hr>
+<h2 id="4-permissoes">4. Permissões 🛡️</h2>
+<ul>
+<li>Sem <code>android.permission.INTERNET</code>, nada acontece. { .fragment }</li>
+<li>Adicione no <code>AndroidManifest.xml</code>. { .fragment }</li>
 </ul>
 <hr>
-<h2 id="implementacao-em-3-passos">🔨 Implementação em 3 Passos</h2>
-<hr>
-<h3 id="1-a-data-class-o-modelo">1. A Data Class (O Modelo)</h3>
-<p>Deve ser o espelho do JSON.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Post</span><span class="p">(</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">userId</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">title</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">body</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">)</span>
-</span></code></pre></div>
-<hr>
-<h3 id="2-a-interface-o-contrato">2. A Interface (O Contrato)</h3>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">interface</span><span class="w"> </span><span class="nc">ApiService</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nd">@GET</span><span class="p">(</span><span class="s">"posts"</span><span class="p">)</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kd">suspend</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">obterPosts</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Post</span><span class="o">&gt;</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nd">@GET</span><span class="p">(</span><span class="s">"posts/{id}"</span><span class="p">)</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="kd">suspend</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">obterPostUnico</span><span class="p">(</span><span class="nd">@Path</span><span class="p">(</span><span class="s">"id"</span><span class="p">)</span><span class="w"> </span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">):</span><span class="w"> </span><span class="n">Post</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h3 id="3-a-instancia-o-cliente">3. A Instância (O Cliente)</h3>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">retrofit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Retrofit</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="p">.</span><span class="na">baseUrl</span><span class="p">(</span><span class="s">"https://jsonplaceholder.typicode.com/"</span><span class="p">)</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="p">.</span><span class="na">addConverterFactory</span><span class="p">(</span><span class="n">GsonConverterFactory</span><span class="p">.</span><span class="na">create</span><span class="p">())</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="p">.</span><span class="na">build</span><span class="p">()</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kd">val</span><span class="w"> </span><span class="nv">api</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">retrofit</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">ApiService</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">)</span>
-</span></code></pre></div>
-<hr>
-<h2 id="chamando-na-viewmodel">🧠 Chamando na ViewModel</h2>
-<p>Nunca trave a UI Thread!</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">viewModelScope</span><span class="p">.</span><span class="na">launch</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">api</span><span class="p">.</span><span class="na">obterPosts</span><span class="p">()</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="n">_posts</span><span class="p">.</span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="c1">// Tratar erro (falta de internet, 404...)</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h2 id="autenticacao-jwt-tokens">🔐 Autenticação (JWT Tokens)</h2>
-<p>A maioria das APIs exige login.</p>
+<h2 id="5-autenticacao">5. Autenticação 🔐</h2>
 <ul>
-<li><strong>Bearer Token</strong>: Um código que você envia no Header. { .fragment }</li>
-<li><strong>Interceptor</strong>: Adiciona o token em TODAS as chamadas automaticamente. { .fragment }</li>
-</ul>
-<!-- .slide: data-background-color="#002d04" -->
-
-<hr>
-<h2 id="android-vs-ios-rede">🆚 Android vs iOS (Rede)</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Recurso</th>
-<th style="text-align: left;">Android (Retrofit)</th>
-<th style="text-align: left;">iOS (URLSession)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Linguagem</strong></td>
-<td style="text-align: left;">Interface + Annotations</td>
-<td style="text-align: left;">Native Classes / URLRequest</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Conversão</strong></td>
-<td style="text-align: left;">Gson / Moshi</td>
-<td style="text-align: left;">Codable</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Async</strong></td>
-<td style="text-align: left;">Coroutines (suspend)</td>
-<td style="text-align: left;">Async / Await</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="permissao-de-internet">🌐 Permissão de Internet</h2>
-<p>No <code>AndroidManifest.xml</code>:</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.INTERNET"</span><span class="w"> </span><span class="nt">/&gt;</span>
-</span></code></pre></div>
-<blockquote>
-<p>Esqueceu? O App crasha com <strong>SecurityException</strong>. 💥 { .fragment }</p>
-</blockquote>
-<hr>
-<h2 id="ferramentas-de-apoio">🛠️ Ferramentas de Apoio</h2>
-<ul>
-<li><strong>Postman / Insomnia</strong>: Teste sua API antes de codar. { .fragment }</li>
-<li><strong>JSON Placeholder</strong>: APIs falsas gratuitas para teste. { .fragment }</li>
-<li><strong>QuickType.io</strong>: Gera a Data Class Kotlin direto do JSON. { .fragment }</li>
+<li><strong>Headers</strong>: Onde enviamos o Token. { .fragment }</li>
+<li>Padrão <strong>Bearer Token</strong>. { .fragment }</li>
 </ul>
 <hr>
-<h2 id="desafio-da-aula-app-de-repositorios">🧪 Desafio da Aula: App de Repositórios</h2>
-<ol>
-<li>Use a API pública do GitHub: <code>https://api.github.com/users/{seuUser}/repos</code>. { .fragment }</li>
-<li>Crie a Data Class e a Interface. { .fragment }</li>
-<li>Exiba o nome dos seus repositórios em uma <code>RecyclerView</code>. { .fragment }</li>
-</ol>
-<hr>
-<h2 id="cuidado-com-o-main-thread">⚠️ Cuidado com o Main Thread</h2>
-<p>O Android não permite rede na Main Thread.
-Sempre use <code>viewModelScope.launch</code> ou troque o Dispatcher para <code>Dispatchers.IO</code>.</p>
-<hr>
-<h2 id="conclusao">🏁 Conclusão</h2>
+<h2 id="6-boas-praticas">6. Boas Práticas 🏆</h2>
 <ul>
-<li>APIs conectam seu app ao mundo. { .fragment }</li>
-<li>Retrofit + Gson = Produtividade máxima. { .fragment }</li>
-<li>Atenção às permissões e erros de rede. { .fragment }</li>
+<li>Nunca rode API na Thread Principal. { .fragment }</li>
+<li>Use <code>viewModelScope</code>. { .fragment }</li>
+<li>Trate os erros (404, 500, Offline). { .fragment }</li>
 </ul>
 <hr>
-<h2 id="perguntas-sobre-internet">❓ Perguntas sobre Internet?</h2>
+<h2 id="desafio-de-rede">Desafio de Rede ⚡</h2>
+<p>Qual biblioteca do iOS é a mais famosa concorrente do Retrofit?</p>
 <hr>
-<h3 id="proxima-aula-threads-e-coroutines">Próxima Aula: Threads e Coroutines! 🧵👋</h3>
+<h2 id="resumo">Resumo ✅</h2>
+<ul>
+<li>APIs retornam JSON. { .fragment }</li>
+<li>Retrofit é a ferramenta padrão. { .fragment }</li>
+<li>Permissão de internet é vital. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="proxima-aula-threads-e-async">Próxima Aula: Threads e Async 🧵</h2>
+<ul>
+<li>Como não travar a tela durante o download. { .fragment }</li>
+</ul>
+<hr>
+<h2 id="duvidas">Dúvidas? 🌍</h2>
 
 
 
@@ -4119,7 +3951,7 @@ Sempre use <code>viewModelScope.launch</code> ou troque o Dispatcher para <code>
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="20 de fevereiro de 2026 21:24:57 UTC">20 de fevereiro de 2026 21:24:57</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="23 de fevereiro de 2026 21:24:09 UTC">23 de fevereiro de 2026 21:24:09</span>
   </span>
 
     
