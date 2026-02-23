@@ -1,204 +1,127 @@
-# Aula 02 - Java para Android ☕
-
-<!-- .slide: data-transition="convex" -->
-
----
-
-## 🎯 Por que aprender Java em 2026?
-
-"O Kotlin não matou o Java?"
-
-* **Base Sólida**: O Android é feito de Java. { .fragment }
-* **Legado**: Bilhões de linhas de código em produção. { .fragment }
-* **Mercado**: Muitas empresas pedem os dois. { .fragment }
+# Aula 02 - Arquitetura e Gateway 🏗️
+## Orquestrando Microsserviços
 
 ---
 
-## 🧱 A Base da Sintaxe
+## Agenda 📅
 
-Java é uma linguagem de tipagem estática e explícita.
+1. Comunicação entre Serviços { .fragment }
+2. Síncrono vs Assíncrono { .fragment }
+3. O Papel do API Gateway { .fragment }
+4. Service Discovery { .fragment }
+5. Load Balancing { .fragment }
+6. Padrões de Resiliência { .fragment }
 
-```java
-public class Ola {
-    public static void main(String[] args) {
-        System.out.println("Olá, Java!");
-    }
-}
+---
+
+## 1. Como os Serviços Conversam? 💬
+
+- Microsserviços são ilhas que precisam de pontes. { .fragment }
+- Dois mundos: **Sync** e **Async**. { .fragment }
+
+---
+
+## 1.1 Comunicação Síncrona 🔄
+
+- Cliente bloqueia até a resposta. { .fragment }
+- Uso de HTTP/REST ou gRPC. { .fragment }
+- **Risco**: Acoplamento temporal e gargalos. { .fragment }
+
+---
+
+## 1.2 Comunicação Assíncrona 📬
+
+- Envia e esquece (Eventos). { .fragment }
+- Uso de Filas e Tópicos (Broker). { .fragment }
+- **Vantagem**: Escalabilidade e desacoplamento. { .fragment }
+
+---
+
+## 2. API Gateway: O Porteiro 🚪
+
+- Única entrada para o mundo exterior. { .fragment }
+- Esconde a complexidade interna. { .fragment }
+
+---
+
+## Gateway Responsibilities
+
+- **Roteamento**: `/p` -> Pagamento, `/e` -> Estoque. { .fragment }
+- **Segurança**: Autenticação centralizada. { .fragment }
+- **Rate Limit**: Proteção contra flood. { .fragment }
+- **Logs & Monitoramento**. { .fragment }
+
+---
+
+## 3. Service Discovery 🔎
+
+- Onde está o servidor de pagamentos? { .fragment }
+- Agenda dinâmica de IPs e Portas. { .fragment }
+- **Ferramentas**: Netflix Eureka, Consul. { .fragment }
+
+---
+
+## 4. Load Balancing ⚖️
+
+- Distribuição inteligente da carga. { .fragment }
+- Evita que um container "morra" de trabalho. { .fragment }
+
+```mermaid
+graph TD
+    GW[Gateway] --> LB[Load Balancer]
+    LB --> S1[Serviço A]
+    LB --> S2[Serviço B]
+    LB --> S3[Serviço C]
 ```
 
 ---
 
-## 📦 Variáveis e Tipos
+## 5. Resiliência: Circuit Breaker 🔌
 
-Onde guardamos os dados na memória.
-
-* **int**: Números inteiros. { .fragment }
-* **double**: Números decimais. { .fragment }
-* **boolean**: true ou false. { .fragment }
-* **String**: Texto (É uma classe!). { .fragment }
+- Detecta serviços lentos ou falhos. { .fragment }
+- Abre o circuito para proteger o resto do sistema. { .fragment }
+- Evita o cascateamento de erros. { .fragment }
 
 ---
 
-### Cuidado com o Null! 👻
+## Comparativo: Sync vs Async
 
-Em Java, objetos podem ser `null`.
-Isso causa o famoso **NullPointerException**.
-
-```java
-String nome = null;
-int tamanho = nome.length(); // BOOM! 💥
-```
+| Característica | Síncrono 🔄 | Assíncrono 📬 |
+| :--- | :--- | :--- |
+| **Resposta** | Imediata | Eventual |
+| **Desempenho** | Limitado pelo destino | Alto débito |
+| **Uso comum** | Cadastro/Login | Geração de Relatórios |
 
 ---
 
-## 🔀 Estruturas de Decisão
+## 6. Prática: O "Dashboard" Agregador 💻
 
-```java
-int idade = 20;
-
-if (idade >= 18) {
-    System.out.println("Pode dirigir");
-} else {
-    System.out.println("Aguarde mais um pouco");
-}
-```
+- Como o Gateway une dados de 3 serviços? { .fragment }
+- Agregação de respostas (Aggregation Pattern). { .fragment }
 
 ---
 
-## 🔁 Estruturas de Repetição
+## Desafio Relâmpago ⚡
 
-```java
-// Contar até 5
-for (int i = 1; i <= 5; i++) {
-    System.out.println("Número: " + i);
-}
-```
+O que acontece se o seu API Gateway cair? Ele é um ponto único de falha?
 
 ---
 
-## 🏛️ Orientação a Objetos (POO)
+## Resumo ✅
 
-O coração do desenvolvimento nativo.
-
-* **Classe**: O molde (Planta da casa). { .fragment }
-* **Objeto**: A instância (A casa construída). { .fragment }
-
----
-
-### Exemplo: Classe Carro 🚗
-
-```java
-public class Carro {
-    String modelo;
-    int ano;
-
-    void buzinar() {
-        System.out.println("Beep Beep!");
-    }
-}
-```
+- Sync é fácil, Async é escalável. { .fragment }
+- API Gateway protege e organiza. { .fragment }
+- Service Discovery é essencial em containers. { .fragment }
+- Resiliência não é opcional! { .fragment }
 
 ---
 
-## 🧬 Herança: O `extends`
+## Próxima Aula: Modelagem REST 📡
 
-No Android, usamos herança o tempo todo.
-
-```java
-public class MainActivity extends Activity {
-    // Agora minha classe faz tudo que uma Activity faz!
-}
-```
+- Verbos HTTP. { .fragment }
+- Status Codes. { .fragment }
+- O contrato ideal. { .fragment }
 
 ---
 
-## 🔒 Encapsulamento
-
-Proteja seus dados!
-
-* **public**: Todos veem. { .fragment }
-* **private**: Só a classe vê. { .fragment }
-
-> Use **getters** e **setters** para acessar dados privados.
-
----
-
-## 🗺️ Android Studio: Onde o Java vive
-
-Ao criar um App, o código Java fica na pasta:
-`app/src/main/java/`
-
----
-
-### Ciclo de Vida: O `onCreate`
-
-O primeiro contato com o Android.
-
-```java
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
-}
-```
-
----
-
-## 🔬 Comparação: Java vs Swift
-
-No iOS (Swift), os conceitos são os mesmos, muda a "roupa".
-
-* Java: `public class`
-* Swift: `class` (mais simples)
-
----
-
-## 🛠️ Ferramentas da Aula
-
-1. **JDK instalado**. { .fragment }
-2. **IntelliJ** ou **Android Studio**. { .fragment }
-3. Treinar lógica básica no console. { .fragment }
-
-<!-- .slide: data-background-color="#5d2a42" -->
-
----
-
-## 🧩 Exercício Rápido
-
-Crie uma classe `Usuario` com:
-* Nome (String)
-* Idade (int)
-* Método `verificarIdade()` que diz se é maior de idade.
-
----
-
-## ⚡ De Java para Kotlin
-
-Na aula de hoje vimos Java.
-Nas próximas, veremos como o Kotlin simplifica **TUDO** isso.
-
-> Mas sem entender o Java, você será apenas um "copiador de código".
-
----
-
-## 🏁 Resumo
-
-* Java é a fundação. { .fragment }
-* POO é essencial para Android. { .fragment }
-* Classes, Atributos e Métodos são seus novos amigos. { .fragment }
-
----
-
-## ❓ Pergunta do Dia
-
-"Posso criar um app Android sem saber nadinha de Java?"
-
-> Pode, mas na primeira biblioteca antiga que você baixar, vai travar!
-
----
-
-### Próxima Aula: Kotlin Moderno ⚡
-
----
-
-### Valeu, pessoal! 👋
+## Dúvidas? 🏗️

@@ -1,182 +1,92 @@
-# Aula 10 - APIs REST & Retrofit 🌍
-
-<!-- .slide: data-transition="zoom" -->
-
----
-
-## 📡 O App e a Internet
-
-Raramente um app vive sozinho. Ele precisa de dados externos.
-
-* Previsão do tempo. { .fragment }
-* Posts de redes sociais. { .fragment }
-* Salvar pedidos em um servidor. { .fragment }
+# Aula 10 - Consumindo API REST 🌍
+## Conectando seu app ao mundo
 
 ---
 
-## 🍕 O Conceito de API REST
+## Agenda 📅
 
-Pense em um restaurante (Servidor) e você (Cliente).
-
-1. **Request**: Você pede um prato. { .fragment }
-2. **Endpoint**: A mesa do restaurante (`/pedidos`). { .fragment }
-3. **Response**: O prato chega (JSON). { .fragment }
+1. O que é uma API? { .fragment }
+2. Formato JSON { .fragment }
+3. Retrofit e GSON { .fragment }
+4. Permissões de Internet { .fragment }
+5. Autenticação (Tokens) { .fragment }
 
 ---
 
-### O Formato JSON 📦
+## 1. Request & Response 📨
 
-É como o mundo troca dados hoje.
+```mermaid
+sequenceDiagram
+    Android App->>Servidor: GET /usuarios
+    Servidor-->>Android App: 200 OK (JSON)
+```
+
+---
+
+## 2. O Formato JSON 📦
 
 ```json
 {
-  "usuario": "Ricardo",
-  "idade": 30,
-  "ativo": true
+  "id": 1,
+  "nome": "Ricardo",
+  "cargo": "Dev Android"
 }
 ```
 
 ---
 
-## 🚀 Conheça o Retrofit
+## 3. Retrofit: O Rei das APIs 🚀
 
-A biblioteca da Square que é o padrão absoluto no Android.
-
-* Transforma APIs em interfaces Kotlin. { .fragment }
-* Faz o "parse" do JSON automaticamente. { .fragment }
-* Suporte nativo a Coroutines. { .fragment }
-
----
-
-## 🔨 Implementação em 3 Passos
-
----
-
-### 1. A Data Class (O Modelo)
-
-Deve ser o espelho do JSON.
+- Converte o site em uma interface de código. { .fragment }
+- Automatiza a conversão de JSON para Objeto. { .fragment }
 
 ```kotlin
-data class Post(
-    val userId: Int,
-    val id: Int,
-    val title: String,
-    val body: String
-)
+@GET("repos")
+suspend fun getRepos(): List<Repo>
 ```
 
 ---
 
-### 2. A Interface (O Contrato)
+## 4. Permissões 🛡️
 
-```kotlin
-interface ApiService {
-    @GET("posts")
-    suspend fun obterPosts(): List<Post>
-
-    @GET("posts/{id}")
-    suspend fun obterPostUnico(@Path("id") id: Int): Post
-}
-```
+- Sem `android.permission.INTERNET`, nada acontece. { .fragment }
+- Adicione no `AndroidManifest.xml`. { .fragment }
 
 ---
 
-### 3. A Instância (O Cliente)
+## 5. Autenticação 🔐
 
-```kotlin
-val retrofit = Retrofit.Builder()
-    .baseUrl("https://jsonplaceholder.typicode.com/")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-
-val api = retrofit.create(ApiService::class.java)
-```
+- **Headers**: Onde enviamos o Token. { .fragment }
+- Padrão **Bearer Token**. { .fragment }
 
 ---
 
-## 🧠 Chamando na ViewModel
+## 6. Boas Práticas 🏆
 
-Nunca trave a UI Thread!
-
-```kotlin
-viewModelScope.launch {
-    try {
-        val lista = api.obterPosts()
-        _posts.value = lista
-    } catch (e: Exception) {
-        // Tratar erro (falta de internet, 404...)
-    }
-}
-```
+- Nunca rode API na Thread Principal. { .fragment }
+- Use `viewModelScope`. { .fragment }
+- Trate os erros (404, 500, Offline). { .fragment }
 
 ---
 
-## 🔐 Autenticação (JWT Tokens)
+## Desafio de Rede ⚡
 
-A maioria das APIs exige login.
-
-* **Bearer Token**: Um código que você envia no Header. { .fragment }
-* **Interceptor**: Adiciona o token em TODAS as chamadas automaticamente. { .fragment }
-
-<!-- .slide: data-background-color="#002d04" -->
+Qual biblioteca do iOS é a mais famosa concorrente do Retrofit?
 
 ---
 
-## 🆚 Android vs iOS (Rede)
+## Resumo ✅
 
-| Recurso | Android (Retrofit) | iOS (URLSession) |
-| :--- | :--- | :--- |
-| **Linguagem** | Interface + Annotations | Native Classes / URLRequest |
-| **Conversão** | Gson / Moshi | Codable |
-| **Async** | Coroutines (suspend) | Async / Await |
+- APIs retornam JSON. { .fragment }
+- Retrofit é a ferramenta padrão. { .fragment }
+- Permissão de internet é vital. { .fragment }
 
 ---
 
-## 🌐 Permissão de Internet
+## Próxima Aula: Threads e Async 🧵
 
-No `AndroidManifest.xml`:
-
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-```
-
-> Esqueceu? O App crasha com **SecurityException**. 💥 { .fragment }
+- Como não travar a tela durante o download. { .fragment }
 
 ---
 
-## 🛠️ Ferramentas de Apoio
-
-* **Postman / Insomnia**: Teste sua API antes de codar. { .fragment }
-* **JSON Placeholder**: APIs falsas gratuitas para teste. { .fragment }
-* **QuickType.io**: Gera a Data Class Kotlin direto do JSON. { .fragment }
-
----
-
-## 🧪 Desafio da Aula: App de Repositórios
-
-1. Use a API pública do GitHub: `https://api.github.com/users/{seuUser}/repos`. { .fragment }
-2. Crie a Data Class e a Interface. { .fragment }
-3. Exiba o nome dos seus repositórios em uma `RecyclerView`. { .fragment }
-
----
-
-## ⚠️ Cuidado com o Main Thread
-
-O Android não permite rede na Main Thread.
-Sempre use `viewModelScope.launch` ou troque o Dispatcher para `Dispatchers.IO`.
-
----
-
-## 🏁 Conclusão
-
-* APIs conectam seu app ao mundo. { .fragment }
-* Retrofit + Gson = Produtividade máxima. { .fragment }
-* Atenção às permissões e erros de rede. { .fragment }
-
----
-
-## ❓ Perguntas sobre Internet?
-
----
-
-### Próxima Aula: Threads e Coroutines! 🧵👋
+## Dúvidas? 🌍

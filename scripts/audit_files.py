@@ -1,4 +1,4 @@
-
+﻿
 import os
 import re
 import shutil
@@ -109,7 +109,7 @@ def main():
             
     # Whitelist Quiz source files
     for f in all_docs_files:
-        if "quizzes" in str(f) and ".src" in str(f):
+        if "quizzes" in str(f) and "src" in str(f):
             whitelist.add(f)
     
     unused = all_docs_files - referenced_files - whitelist

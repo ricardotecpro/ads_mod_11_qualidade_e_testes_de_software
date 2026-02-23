@@ -1,183 +1,103 @@
 # Aula 08 - Persistência de Dados 💾
-
-<!-- .slide: data-transition="slide" -->
-
----
-
-## 💾 Onde guardamos os dados?
-
-Apps precisam lembrar das coisas quando fechados.
-
-* Configurações simples. { .fragment }
-* Listas complexas. { .fragment }
-* Arquivos multimídia. { .fragment }
+## Guardando informações para sempre
 
 ---
 
-## 1. SharedPreferences 🔑
+## Agenda 📅
 
-A forma mais simples: Chave e Valor.
-
-* "nome" -> "Ricardo" { .fragment }
-* "notificacoes_on" -> true { .fragment }
-* "tema" -> 1 { .fragment }
+1. SharedPreferences (Preferências) { .fragment }
+2. Introdução ao SQLite { .fragment }
+3. A Biblioteca Room (Jetpack) { .fragment }
+4. Entities, DAOs e Database { .fragment }
+5. Operações Assíncronas (Threads) { .fragment }
 
 ---
 
-### Usando PreferenceManager
+## 1. Onde Guardar? 📦
+
+- **Leve (Configurações)**: SharedPreferences. { .fragment }
+- **Estruturado (Listas/Produtos)**: Room/SQLite. { .fragment }
+- **Arquivos (Fotos/PDFs)**: Internal/External Storage. { .fragment }
+
+---
+
+## 2. SharedPreferences 🔑
+
+- Sistema de Chave-Valor. { .fragment }
 
 ```kotlin
 val prefs = getSharedPreferences("config", MODE_PRIVATE)
-
-// Gravar
-prefs.edit().putString("USER", "Android").apply()
-
-// Ler
-val user = prefs.getString("USER", "Ninguém")
-```
-
-> **Atenção**: Não use para dados grandes ou listas!
-
----
-
-## 🏛️ Banco de Dados: SQLite
-
-O Android tem o SQLite no seu coração.
-
-* Banco Relacional. { .fragment }
-* Leve e embutido. { .fragment }
-* Mas... o código puro é horrível (SQL strings). { .fragment }
-
----
-
-## 🔨 Conheça o ROOM
-
-A biblioteca do Jetpack que salva vidas.
-
-1. **Entity**: Sua tabela (Classe de dados). { .fragment }
-2. **DAO**: Seus comandos (Queries). { .fragment }
-3. **Database**: O gerente do banco. { .fragment }
-
-<!-- .slide: data-transition="convex" -->
-
----
-
-### Passo 1: A Entidade (@Entity)
-
-```kotlin
-@Entity
-data class User(
-    @PrimaryKey val id: Int,
-    val name: String
-)
+prefs.edit().putBoolean("dark_mode", true).apply()
 ```
 
 ---
 
-### Passo 2: O DAO (@Dao)
+## 3. O Mundo Room 🏛️
 
-```kotlin
-@Dao
-interface UserDao {
-    @Insert
-    void save(User user)
-
-    @Query("SELECT * FROM User")
-    LiveData<List<User>> getAll()
-}
-```
+- O Google nos deu um ORM (Object-Relational Mapping). { .fragment }
+- Transforma classes em tabelas SQL automaticamente. { .fragment }
 
 ---
 
-## 🧵 A Regra de Ouro do Banco
+## Componentes do Room
 
-**NUNCA** acesse o banco na Main Thread.
-
-* O Room vai travar seu app (Crash) se você tentar. { .fragment }
-* Use **Coroutines** ou **LiveData**. { .fragment }
-* Por que? Porque ler o disco é lento e trava a tela. { .fragment }
-
----
-
-## 🧬 Ciclo Completo: MVVM + Room
+1.  **Entity**: A classe marcada com `@Entity`. { .fragment }
+2.  **DAO**: Interface com `@Insert`, `@Query`. { .fragment }
+3.  **Database**: A classe abstrata que conecta tudo. { .fragment }
 
 ```mermaid
-graph TD
-    UI[Activity/View] -->|Observa| VM[ViewModel]
-    VM -->|Pede| REPO[Repository]
-    REPO -->|Query| DB[(Room DB)]
-    DB -->|Retorna| REPO
-    REPO -->|State| VM
-    VM -->|LiveData| UI
+graph LR
+    A[Entity/Tabela] --> B[DAO/Comandos]
+    B --> C[Database/Ponto de Acesso]
 ```
 
 ---
 
-## 📂 Arquivos Externos
+## 4. O perigo da UI Thread 🧵
 
-Para fotos e vídeos.
-
-* **Cache**: Temporário. { .fragment }
-* **Arquivos Privados**: Só seu app vê. { .fragment }
-* **Arquivos Públicos**: Galeria, Downloads (Precisa de permissão). { .fragment }
+- O Android proíbe acessar banco na thread principal. { .fragment }
+- Se você fizer `dao.insert(item)` na Main Thread, o App cai! { .fragment }
+- Solução: Coroutines (que veremos à frente). { .fragment }
 
 ---
 
-## 🆚 Persistência: Android vs iOS
+## 5. Comparativo: Persistência iOS 🆚
 
-| Recurso | Android | iOS |
-| :---: | :---: | :--- |
-| **Simples** | SharedPreferences | UserDefaults |
-| **Banco** | Room (SQLite) | Core Data / SwiftData |
-| **Arquivos** | Scoped Storage | Sandbox |
-
----
-
-## 🕵️ Ferramenta: App Inspection
-
-No Android Studio, você pode ver o banco de dados **ao vivo**.
-
-1. Rode o app. { .fragment }
-2. Aba `App Inspection` -> `Database Inspector`. { .fragment }
-3. Você pode editar os dados e ver a tela do celular mudar! 🎩 { .fragment }
-
-<!-- .slide: data-background-color="#003049" -->
+| Android 🤖 | iOS 🍎 |
+| :--- | :--- |
+| SharedPreferences | UserDefaults |
+| Room (SQLite) | SwiftData / Core Data |
+| Internal Storage | App Sandbox |
 
 ---
 
-## 🛠️ Prática: Lista de Tarefas
+## 7. Melhores Práticas 🏆
 
-Vamos criar um banco para salvar textos.
-
-1. Configure o Room no `build.gradle`. { .fragment }
-2. Crie a Entity `Task`. { .fragment }
-3. Salve um texto vindo de um `EditText`. { .fragment }
+- Nunca guarde senhas em texto puro! { .fragment }
+- Use LiveData/Flow para o banco atualizar a tela sozinho. { .fragment }
+- Mantenha o Schema do banco organizado. { .fragment }
 
 ---
 
-### Dica: O Singleton do Banco
+## Desafio de Persistência ⚡
 
-Não crie várias instâncias do banco. Use o padrão **Singleton**.
-
-```kotlin
-val db = Room.databaseBuilder(
-    applicationContext,
-    AppDatabase::class.java, "database-name"
-).build()
-```
+Se eu desinstalar o app, os dados gravados no SharedPreferences continuam lá?
 
 ---
 
-## 🏁 Conclusão
+## Resumo ✅
 
-* Escolha a ferramenta certa para o dado certo. { .fragment }
-* Room é o padrão para dados estruturados. { .fragment }
-* Sempre use threads de background (IO). { .fragment }
-
----
-
-## ❓ Dúvidas sobre Dados?
+- SharedPreferences para o simples. { .fragment }
+- Room para o complexo e estruturado. { .fragment }
+- Sempre rode banco fora da thread principal. { .fragment }
 
 ---
 
-### Próxima Aula: Listas com RecyclerView! 📋👋
+## Próxima Aula: RecyclerView 📋
+
+- Exibindo listas gigantes de forma eficiente. { .fragment }
+- Ciclo de vida de células. { .fragment }
+
+---
+
+## Dúvidas? 💾

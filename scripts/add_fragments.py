@@ -1,9 +1,9 @@
-import glob
+﻿import glob
 import re
 import os
 
 def process_slides():
-    src_dir = os.path.join("f:\\SourceCode\\REPOS\\github.io\\ads_mod_02_logica_e_algoritmos\\docs\\slides\\.src")
+    src_dir = os.path.join("docs/slides/src")
     files = glob.glob(os.path.join(src_dir, "slide-*.md"))
     
     print(f"Found {len(files)} slide files.")

@@ -1,211 +1,130 @@
-# Aula 03 - Kotlin Moderno ⚡
-
-<!-- .slide: data-transition="convex" -->
-
----
-
-## 🚀 O que é Kotlin?
-
-A linguagem que mudou o Android.
-
-* Criada pela JetBrains (2011). { .fragment }
-* Oficial no Android (Google I/O 2017). { .fragment }
-* **Moderna**, **Segura** e **Concisa**. { .fragment }
+# Aula 03 - Modelagem de APIs RESTful 📡
+## Recursos, Verbos e Contratos
 
 ---
 
-## 🛡️ Null Safety: O Fim dos Crashes
+## Agenda 📅
 
-O pesadelo do Java era o `null`.
-O Kotlin resolveu isso na raiz.
-
-```kotlin
-var nome: String = "Ricardo"
-nome = null // Erro de Compilação! 🛑
-```
-
-Para permitir nulos:
-```kotlin
-var nome: String? = "Pode ser nulo"
-nome = null // OK! ✅
-```
+1. O que é REST? { .fragment }
+2. Recursos e URIs { .fragment }
+3. Verbos HTTP (GET, POST, PUT...) { .fragment }
+4. Status Codes { .fragment }
+5. JSON: A Linguagem das APIs { .fragment }
+6. Boas Práticas de Design { .fragment }
 
 ---
 
-## 📦 Variáveis: `val` vs `var`
+## 1. REST: A "Língua" da Web 🌐
 
-No Kotlin, preferimos a imutabilidade.
-
-* **val**: Imutável (referência não muda). 🔒 { .fragment }
-* **var**: Mutável (pode mudar o valor). 🔓 { .fragment }
-
-```kotlin
-val idade = 25 // Nunca mais muda
-var saldo = 100.0 // Pode mudar
-```
+- Style arquitetural para sistemas distribuídos. { .fragment }
+- Baseado no protocolo **HTTP**. { .fragment }
+- Independência entre Client e Server. { .fragment }
 
 ---
 
-## ⚡ Inferência de Tipos
+## Princípios REST
 
-O Kotlin é inteligente. Ele sabe o tipo sem você dizer.
-
-```kotlin
-val versao = 15 // Ele sabe que é Int
-val pi = 3.14 // Ele sabe que é Double
-```
+- **Stateless**: Cada requisição é única. { .fragment }
+- **Uniform Interface**: Padrões compartilhados. { .fragment }
+- **Cacheable**: Melhore a performance. { .fragment }
 
 ---
 
-## 💬 Interpolação de Strings
+## 2. Identificando Recursos 📍
 
-Diga adeus ao `+ " " +`.
+- Um recurso é qualquer coisa que expomos. { .fragment }
+- **URI**: O endereço do recurso. { .fragment }
 
-```kotlin
-val usuario = "Google"
-println("Olá, $usuario! Temos ${10 + 2} notificações.")
-```
+### O que NÃO fazer:
+`GET /obterUsuarios` ❌
 
----
-
-## 🕴️ Operador Elvis `?:`
-
-"Se for nulo, faça isso".
-
-```kotlin
-val nome: String? = null
-val resultado = nome ?: "Visitante"
-// resultado = "Visitante"
-```
+### O que fazer:
+`GET /usuarios` ✅ (Sempre substantivos no plural!)
 
 ---
 
-## 🛠️ Funções: Simplicidade
+## 3. Os Verbos HTTP 🛠️
 
-```kotlin
-fun somar(a: Int, b: Int): Int {
-    return a + b
-}
+Eles definem a intenção da chamada:
 
-// Versão "Single Line"
-fun somar(a: Int, b: Int) = a + b
-```
-
----
-
-## 🏗️ Estruturas de Decisão
-
-O `if` e o `when` no Kotlin são **expressões** (retornam valor).
-
-```kotlin
-val status = if (nota >= 6) "Aprovado" else "Reprovado"
-
-when (nota) {
-    10 -> println("Genial!")
-    in 7..9 -> println("Muito bom")
-    else -> println("Tente mais")
-}
-```
+- **GET**: Buscar dados. { .fragment }
+- **POST**: Criar novo dado. { .fragment }
+- **PUT**: Atualizar (Trocar tudo). { .fragment }
+- **PATCH**: Atualizar (Apenas um pedaço). { .fragment }
+- **DELETE**: Remover dado. { .fragment }
 
 ---
 
-## 📋 Coleções
+## Idempotência e Segurança
 
-Listas que facilitam a vida.
-
-```kotlin
-val numeros = listOf(1, 2, 3) // Imutável
-val nomes = mutableListOf("Ana", "Bia") // Mutável
-nomes.add("Caio")
-```
-
----
-
-## 🏛️ Classes e Objetos
-
-Mais limpo que o Java.
-
-```kotlin
-class Carro(val model: String, var ano: Int)
-
-val meuCarro = Carro("Fusca", 1970)
-println(meuCarro.model)
-```
-
----
-
-### 📊 Data Classes
-
-Onde o Kotlin brilha de verdade.
-
-```kotlin
-data class Usuario(val id: Int, val email: String)
-// Gera automaticamente: toString, equals, hashCode, copy...
-```
-
----
-
-## 🧬 Interoperabilidade
-
-Você pode misturar Java e Kotlin no mesmo projeto sem problemas.
-
-```mermaid
-graph LR
-    A[Java Code] <--> B[Kotlin Code]
-    B --> C[Bytecode JVM]
-    C --> D[Dalvik/ART Android]
-```
-
----
-
-## 🍎 Comparação: Swift
-
-O Kotlin e o Swift são quase "gêmeos" na sintaxe moderna.
-
-| Recurso | Kotlin | Swift |
+| Verbo | Seguro? | Idempotente? |
 | :--- | :--- | :--- |
-| **Constante** | `val` | `let` |
-| **Variável** | `var` | `var` |
-| **Opcional** | `String?` | `String?` |
-| **Função** | `fun` | `func` |
+| GET | Sim ✅ | Sim ✅ |
+| POST | Não ❌ | Não ❌ |
+| PUT | Não ❌ | Sim ✅ |
+| DELETE | Não ❌ | Sim ✅ |
 
 ---
 
-## 🎮 Playground da Aula
+## 4. Status Codes: A Resposta 🚦
 
-Acesse [play.kotlinlang.org](https://play.kotlinlang.org) e teste:
-
-1. Crie uma variável que pode ser nula. { .fragment }
-2. Use o operador Elvis nela. { .fragment }
-3. Crie uma data class "Produto". { .fragment }
-
-<!-- .slide: data-background-color="#3d5a80" -->
+- **2xx**: Deu certo! (200, 201, 204). { .fragment }
+- **4xx**: Você (cliente) errou algo (400, 401, 404). { .fragment }
+- **5xx**: Eu (servidor) quebrei (500, 503). { .fragment }
 
 ---
 
-## ⚠️ Safe Call `?.`
+## 5. O Formato JSON 🏗️
 
-Chama o método apenas se não for nulo.
-
-```kotlin
-val nome: String? = null
-println(nome?.length) // Não crasha! Imprime "null"
+```json
+{
+  "nome": "Curso Backend",
+  "modulo": 1,
+  "ativo": true
+}
 ```
 
----
-
-## 🏁 Conclusão
-
-* Kotlin economiza tempo e dedos (menos código). { .fragment }
-* Segurança contra nulos é o seu maior trunfo. { .fragment }
-* É a linguagem do futuro do Android. { .fragment }
+- Leve, legível e universal. { .fragment }
 
 ---
 
-## 🚀 Próxima Aula: Anatomia de um App
+## 6. Design de URIs Complexas
 
-Vamos abrir o Android Studio e ver como o Kotlin controla as telas!
+Como buscar os pedidos de um usuário específico?
+
+`GET /usuarios/123/pedidos` ✅
+
+- Hierarquia lógica e limpa. { .fragment }
 
 ---
 
-### Até a próxima! ⚡👋
+## 7. Prática: Postman em Ação 💻
+
+- Testando verbos em APIs reais. { .fragment }
+- Analisando Headers e Body. { .fragment }
+
+---
+
+## Desafio REST ⚡
+
+Se você quer mudar apenas o e-mail de um usuário, qual verbo deve usar: PUT ou PATCH?
+
+---
+
+## Resumo ✅
+
+- REST é sobre recursos e padrões. { .fragment }
+- URIs usam substantivos no plural. { .fragment }
+- Status codes guiam o frontend. { .fragment }
+- JSON é o padrão de facto. { .fragment }
+
+---
+
+## Próxima Aula: Swagger e Mocks 📝
+
+- Documentação automática. { .fragment }
+- Como trabalhar sem o backend pronto? { .fragment }
+
+---
+
+## Dúvidas? 📡

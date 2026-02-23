@@ -1,158 +1,98 @@
 # Aula 09 - Listas Eficientes (RecyclerView) 📋
-
-<!-- .slide: data-transition="zoom" -->
-
----
-
-## 🐢 O Problema das Listas Gigantes
-
-Imagine uma lista com 10.000 contatos.
-Criar 10.000 objetos de layout travaria qualquer celular.
-
-* Memória cheia. { .fragment }
-* Lag na rolagem. { .fragment }
-* App fechando (Crash). { .fragment }
+## Performance em listas infinitas
 
 ---
 
-## ♻️ A Mágica da Reciclagem
+## Agenda 📅
 
-O **RecyclerView** não cria 10.000 itens.
-Ele cria apenas o que cabe na tela (+ uns 2 ou 3 de reserva).
-
-* Item sai por cima -> Entra na "piscina". { .fragment }
-* Item entra por baixo -> Pega um layout da piscina e só troca o texto. { .fragment }
+1. O Problema da ListView 🐢 { .fragment }
+2. O Conceito de Reciclagem ♻️ { .fragment }
+3. ViewHolder e Adapter { .fragment }
+4. LayoutManagers { .fragment }
+5. Cliques e Interação { .fragment }
 
 ---
 
-### O Mecanismo visual
+## 1. Por que Reciclar? 🤔
+
+- Criar mil layouts trava o celular. { .fragment }
+- O RecyclerView reaproveita a carcaça da View. { .fragment }
+- **Fato**: Apenas o que cabe na tela existe de verdade. { .fragment }
+
+---
+
+## 2. A Reciclagem Visual ♻️
 
 ```mermaid
 graph TD
-    A[Item 1 sai ↑] --> P((Piscina de Views))
-    P --> B[Item 12 entra ↓]
+    A[Saindo da tela] --> B((Piscina de Views))
+    B --> C[Entrando na tela]
+    C --> D[ViewHolder preenche novos dados]
 ```
 
 ---
 
-## ⚔️ Os 3 Pilares
+## 3. Os 3 Componentes Reais ⚙️
 
-Para fazer um RecyclerView, você precisa de:
-
-1. **LayoutManager**: Define o formato (Lista, Grade, etc). { .fragment }
-2. **ViewHolder**: Guarda as referências dos IDs (Gaveta). { .fragment }
-3. **Adapter**: Liga os dados às Views (O Cérebro). { .fragment }
+1.  **LayoutManager**: "Como eu organizo?" (Lista/Grade) { .fragment }
+2.  **Adapter**: "Quais dados eu coloco?" { .fragment }
+3.  **ViewHolder**: "Onde eu guardo as referências?" { .fragment }
 
 ---
 
-## 📐 1. LayoutManager
-
-Troque a cara da sua lista com 1 linha:
-
-* **LinearLayoutManager**: Lista vertical/horizontal. { .fragment }
-* **GridLayoutManager**: Grade (estilo galeria). { .fragment }
-* **StaggeredGridLayoutManager**: Grade tipo Pinterest. { .fragment }
-
----
-
-## 🗄️ 2. ViewHolder
-
-Evita que o Android tenha que procurar o `findViewById` milhares de vezes.
+## 4. O Adapter na Prática ⚔️
 
 ```kotlin
-class MeuViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val nome = view.findViewById<TextView>(R.id.txtNome)
-}
-```
-
----
-
-## 🧠 3. Adapter
-
-Onde a lógica acontece.
-
-* `onCreateViewHolder`: Infla o layout do XML. { .fragment }
-* `onBindViewHolder`: Coloca os dados na tela. { .fragment }
-* `getItemCount`: Diz quantos itens a lista tem. { .fragment }
-
----
-
-## 👆 Lidando com Cliques
-
-O RecyclerView não tem clique nativo. Nós criamos!
-
-```kotlin
-holder.itemView.setOnClickListener {
+override fun onBindViewHolder(holder: ViewHolder, position: Int) {
     val item = lista[position]
-    // Abrir detalhes...
+    holder.txtNome.text = item.nome
 }
 ```
 
 ---
 
-## 🆚 Android vs iOS
+## 5. LayoutManagers: Formatos 🤸
 
-O mecanismo é IGUAL. Só mudam os nomes.
-
-| Conceito | Android | iOS |
-| :--- | :--- | :--- |
-| **Componente** | RecyclerView | UITableView |
-| **Reciclagem** | Scrap Heap | Reusable Cell |
-| **Dados** | Adapter | Data Source |
-| **Gaveta** | ViewHolder | UITableViewCell |
+- **LinearLayoutManager**: Lista vertical. { .fragment }
+- **GridLayoutManager**: Grade (estilo galeria). { .fragment }
+- **Staggered**: Grade irregular (estilo Pinterest). { .fragment }
 
 ---
 
-## 🚀 Otimização: ListAdapter & DiffUtil
+## 6. Cliques no Item 👆
 
-`notifyDataSetChanged()` é coisa do passado.
-
-* O **DiffUtil** calcula o que mudou. { .fragment }
-* Animações automáticas de inserção e remoção. { .fragment }
-* Muito mais rápido para o processador. { .fragment }
-
-<!-- .slide: data-background-color="#5a189a" -->
+- Passe uma lambda (callback) para o Adapter. { .fragment }
+- Use a posição (`position`) do item clicado. { .fragment }
 
 ---
 
-## 🛠️ Prática: Lista de Compras
+## 7. Melhores Práticas 🏆
 
-1. Crie um layout `item_produto.xml`. { .fragment }
-2. Crie a lista de objetos `Produto`. { .fragment }
-3. Implemente o Adapter e veja a mágica da rolagem fluida. { .fragment }
-
----
-
-### Dica: CardView 🃏
-
-Use `MaterialCardView` nos seus itens para ganhar sombras e bordas arredondadas automaticamente!
-
-```xml
-<com.google.android.material.card.MaterialCardView ...>
-    <!-- Seus textos/imagens aqui -->
-</com.google.android.material.card.MaterialCardView>
-```
+- Use **ListAdapter** + **DiffUtil**. { .fragment }
+- Evite lógica pesada dentro do `onBind`. { .fragment }
+- Ícones de placeholders para imagens. { .fragment }
 
 ---
 
-## ⚠️ Erro Comum
+## Desafio de Lista ⚡
 
-Tentar atualizar a lista e esquecer de avisar o Adapter.
-Sempre que o dado do banco/internet chegar, use:
-`adapter.submitList(novaLista)` (se usar ListAdapter).
+Qual o comando no iOS que faz o mesmo que a reciclagem do Android?
 
 ---
 
-## 🏁 Conclusão
+## Resumo ✅
 
-* RecyclerView é obrigatório em 99% dos apps. { .fragment }
-* O foco é performance e economia de memória. { .fragment }
-* Masterize o Adapter e você dominará o Android. { .fragment }
-
----
-
-## ❓ Perguntas sobre Listas?
+- RecyclerView = Performance. { .fragment }
+- Adapter liga dado e visual. { .fragment }
+- ViewHolder evita o `findViewById` excessivo. { .fragment }
 
 ---
 
-### Próxima Aula: Consumo de APIs com Retrofit! 🌍👋
+## Próxima Aula: API REST 🌍
+
+- Trazendo dados da nuvem. { .fragment }
+- Retrofit e JSON. { .fragment }
+
+---
+
+## Dúvidas? 📋

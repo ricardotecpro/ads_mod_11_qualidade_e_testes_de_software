@@ -1,95 +1,82 @@
-# Aula 16 - A Grande Conclusão 🎓
-
-<!-- .slide: data-transition="zoom" -->
-
----
-
-## 🏆 Você Conseguiu!
-
-De "Zero" a Desenvolvedor Mobile Nativo.
-
-* Entendeu a base (Java/Kotlin). { .fragment }
-* Dominou a estrutura (Manifest/Gradle/Res). { .fragment }
-* Construiu interfaces (XML/Material). { .fragment }
-* Conectou com o mundo (API/Rede). { .fragment }
+# Aula 16 - Projeto Final e Conclusão 🎓
+## De aluno a Desenvolvedor Mobile
 
 ---
 
-## 🧠 Recapitulação: O Arsenal do Dev
+## Agenda 📅
 
-* **Linguagem**: Kotlin Moderno. { .fragment }
-* **Arquitetura**: MVVM (ViewModel + LiveData). { .fragment }
-* **Persistência**: Room (Bancos Locais). { .fragment }
-* **Rede**: Retrofit (Internet). { .fragment }
-* **UI**: RecyclerView & ConstraintLayout. { .fragment }
-
----
-
-## 🚀 O Próximo Nível
-
-O aprendizado nunca termina.
-
-1. **Jetpack Compose**: UI Declarativa (O futuro). { .fragment }
-2. **KMP (Kotlin Multiplatform)**: Compartilhe lógica com iOS. { .fragment }
-3. **Hilt/Koin**: Injeção de Dependências. { .fragment }
-4. **Coroutines Avançado**: Flow e StateFlow. { .fragment }
+1. O Desafio Final 🦸‍♂️ { .fragment }
+2. Requisitos Técnicos { .fragment }
+3. Portfólio no GitHub { .fragment }
+4. Onde continuar estudando? { .fragment }
+5. Mensagem de Encerramento { .fragment }
 
 ---
 
-## 💼 Carreira e Portfólio
+## 1. O Desafio Final 🚀
 
-Como conseguir a primeira vaga?
-
-* **GitHub Ativo**: Commits frequentes. { .fragment }
-* **README Impecável**: Explique SEU projeto. { .fragment }
-* **Publicação**: Ter um app na Play Store vale ouro. { .fragment }
-
-<!-- .slide: data-background-color="#560bad" -->
+Você deve entregar um app completo contendo:
+- **Telas**: Pelo menos 2 (Lista e Detalhes). { .fragment }
+- **Dados**: Persistência (Room) ou API (Retrofit). { .fragment }
+- **Arquitetura**: MVVM (ViewModel + LiveData). { .fragment }
+- **Design**: Material 3 (Cards, Cores, FAB). { .fragment }
 
 ---
 
-## 📱 iOS: A Outra Metade
+## 2. Sugestões de Temas 💡
 
-Agora que você sabe Android, aprender iOS será MUITO mais fácil.
-
-* Swift ≈ Kotlin. { .fragment }
-* SwiftUI ≈ Jetpack Compose. { .fragment }
-* Lógica de negócio é a mesma! { .fragment }
-
----
-
-## ⚔️ Nativo vs Híbrido
-
-Você escolheu o caminho da performance e do controle total.
-
-> "Aplicações nativas entregam a melhor experiência possível que o hardware pode oferecer."
+- App de Finanças Pessoais 💰 { .fragment }
+- Catálogo de Games/Livros 🎮 { .fragment }
+- Tracker de Treinos 🏃 { .fragment }
+- Consulta de Clima com GPS 🌦️ { .fragment }
 
 ---
 
-## 🎓 O Projeto Final
+## 3. O README de Elite ✨
 
-Sua obra-prima.
-
-* Aplique tudo o que vimos. { .fragment }
-* Resolva um problema real. { .fragment }
-* Capriche no visual (UX/UI). { .fragment }
+- Prints ou GIFs do app rodando. { .fragment }
+- Tech Stack (Tecnologias usadas). { .fragment }
+- Como compilar e rodar. { .fragment }
 
 ---
 
-## ✨ Mensagem de Despedida
+## 4. Onde ir agora? 📚
 
-O mundo está no bolso das pessoas.
-Você agora tem a chave para entrar lá.
-
-> "A tecnologia move o mundo, mas são as pessoas que movem a tecnologia."
-
----
-
-## 🏁 Fim da Jornada
-
-Obrigado por nos acompanhar nesta trilha.
-Nos vemos na Play Store! 🚀
+- **Jetpack Compose**: UI moderna sem XML. { .fragment }
+- **SwiftUI**: Se quiser dominar o iOS. { .fragment }
+- **KMP**: Kotlin em todo lugar (Android/iOS). { .fragment }
 
 ---
 
-### Ricardo TecPro & Equipe 👋
+## 5. Soft Skills 🤝
+
+- Não é só saber programar! { .fragment }
+- Trabalho em equipe. { .fragment }
+- Resolver problemas de negócios. { .fragment }
+
+---
+
+## 6. O Mercado Mobile 📈
+
+- Demanda alta por desenvolvedores **Nativos**. { .fragment }
+- Salários competitivos. { .fragment }
+- Possibilidade de trabalhar para o mundo todo. { .fragment }
+
+---
+
+## 7. Mensagem Final 🌟
+
+> "Programar é a coisa mais próxima de superpoderes que temos hoje."
+
+- Você construiu a base sólida. { .fragment }
+- O código é sua tela, a criatividade sua tinta. { .fragment }
+
+---
+
+## Parabéns pela Jornada! 🎓🚀
+
+Vá e construa algo incrível.
+
+---
+
+## Dúvidas Finais? 🤔

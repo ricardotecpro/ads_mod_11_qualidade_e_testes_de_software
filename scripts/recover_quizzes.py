@@ -1,4 +1,4 @@
-
+﻿
 import pathlib
 import re
 from rich import print
@@ -59,7 +59,7 @@ def recover_quiz(html_path: pathlib.Path, src_dir: pathlib.Path):
 
 def main():
     docs_dir = pathlib.Path("docs/quizzes")
-    src_dir = docs_dir / ".src"
+    src_dir = docs_dir / "src"
     src_dir.mkdir(exist_ok=True)
     
     for f in docs_dir.glob("quiz-*.md"):

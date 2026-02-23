@@ -5,8 +5,8 @@ repo_name: ricardotecpro/ads_mod_11_qualidade_e_testes_de_software
 theme:
   name: material
   language: pt-BR
-  favicon: assets/images/logic_logo.svg
-  logo: assets/images/logic_logo.svg
+  favicon: assets/images/logo.png
+  logo: assets/images/logo.png
   custom_dir: overrides
   features:
     - navigation.tracking

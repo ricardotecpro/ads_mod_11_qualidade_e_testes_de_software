@@ -1,151 +1,92 @@
 # Aula 13 - Sensores e Hardware 📸
-
-<!-- .slide: data-transition="zoom" -->
-
----
-
-## 📱 Além da Tela
-
-O smartphone é um laboratório de sensores.
-Apps nativos têm "superpoderes" para sentir o mundo físico.
-
-* Onde eu estou? (GPS) { .fragment }
-* O que eu estou vendo? (Câmera) { .fragment }
-* Estou me movendo? (Acelerômetro) { .fragment }
+## Além da tela do celular
 
 ---
 
-## 🔑 O Porteiro: Permissões
+## Agenda 📅
 
-No Android 6.0+, as permissões são dinâmicas.
-
-* **Normais**: Declaradas no Manifest (Internet, BT). { .fragment }
-* **Perigosas**: Pop-up em tempo de execução (GPS, Câmera, Microfone). { .fragment }
-
-> **Sempre** verifique se tem a permissão antes de usar o hardware! 🛡️
+1. O Mundo do Hardware { .fragment }
+2. Permissões em Tempo de Execução { .fragment }
+3. Localização (GPS) { .fragment }
+4. Câmera (CameraX) { .fragment }
+5. Acelerômetro e Giroscópio { .fragment }
 
 ---
 
-### Pedindo Permissão (Moderno)
+## 1. Sensores de Bolso 📱
+
+- O Smartphone é um laboratório. { .fragment }
+- **Acelerômetro**: Movimento. { .fragment }
+- **GPS**: Localização. { .fragment }
+- **Microfone/Câmera**: Multimídia. { .fragment }
+
+---
+
+## 2. Permissões 🔑
+
+- **Normais**: Internet, Bluetooth (aceitas no Install). { .fragment }
+- **Perigosas**: Câmera, Contatos, GPS (pedidas no Runtime). { .fragment }
 
 ```kotlin
-val launcher = registerForActivityResult(
-    ActivityResultContracts.RequestPermission()
-) { concedida ->
-    if (concedida) { /* Use o hardware */ }
-}
-
-launcher.launch(Manifest.permission.CAMERA)
+requestPermissionLauncher.launch(Manifest.permission.CAMERA)
 ```
 
 ---
 
-## 🗺️ Localização e GPS
+## 3. Localização (GPS) 🗺️
 
-Use o **Fused Location Provider**.
-
-* **Por que?** Ele mistura GPS, Wi-Fi e Células de rede. { .fragment }
-* **Vantagem**: Menos gasto de bateria e maior precisão. { .fragment }
-* **Maps SDK**: Exiba a localização visualmente. { .fragment }
+- **Fused Location Provider**: O jeito Google de economizar bateria. { .fragment }
+- Combina Satélite + Wi-Fi + Torres de Celular. { .fragment }
 
 ---
 
-## 📸 A Câmera com CameraX
+## 4. Sensores de Movimento 🎢
 
-Esqueça a dor de cabeça da Camera2 API.
-
-* **Preview**: Imagem em tempo real. { .fragment }
-* **Capture**: Tirar e salvar foto. { .fragment }
-* **Analysis**: Analisar frames (QR Code, IA). { .fragment }
-
-<!-- .slide: data-background-color="#023e8a" -->
+- `SensorManager`: O portal de sensores. { .fragment }
+- **Acelerômetro**: Detecta o "Shake" (agito). { .fragment }
+- **Importante**: Desligue no `onStop` para não gastar bateria! { .fragment }
 
 ---
 
-## 🎢 Sensores de Movimento
+## 5. CameraX 📸
 
-Acelerômetro e Giroscópio.
-
-* Detectar o "Shake" (Balançar). { .fragment }
-* Rodar a tela automaticamente. { .fragment }
-* Realidade Aumentada (AR). { .fragment }
+- Biblioteca moderna para não sofrer com a câmera. { .fragment }
+- **Use Cases**: Preview, Tirar Foto, Analisar QR Code. { .fragment }
 
 ---
 
-## 🔵 Bluetooth (Classic e BLE)
+## 6. Biometria e Bluetooth ☝️🔵
 
-Conecte-se a tudo.
-
-* **Classic**: Som, Arquivos grandes. { .fragment }
-* **BLE (Low Energy)**: Sensores, IoT, Smartwatches. { .fragment }
-* **Eddystone/iBeacons**: Localização interna por proximidade. { .fragment }
+- **Biometria**: Login seguro e fácil. { .fragment }
+- **BLE**: Bluetooth de baixa energia para smartwatches. { .fragment }
 
 ---
 
-## 📞 Telefonia e SMS
+## 7. Melhores Práticas 🏆
 
-Sim, ainda é um telefone!
-
-* **SmsManager**: Envie e receba mensagens programaticamente. { .fragment }
-* **TelephonyManager**: Saiba a operadora e o estado da rede. { .fragment }
-
-> **Cuidado**: O Google Play é muito rígido com permissões de SMS. ⚠️ { .fragment }
+- Explique ao usuário POR QUE você precisa da permissão. { .fragment }
+- Tenha um plano B se o sensor não existir no aparelho. { .fragment }
 
 ---
 
-## 🔐 Biometria Segura
+## Desafio de Hardware ⚡
 
-Impressão digital e Rosto.
-
-* Use o `BiometricPrompt`. { .fragment }
-* Nunca guarde a digital do usuário! O sistema apenas diz "Confere" ou "Não Confere". { .fragment }
+Qual sensor é usado para saber se o usuário está com o celular no ouvido e apagar a tela?
 
 ---
 
-## 🆚 Android vs iOS (Hardware)
+## Resumo ✅
 
-| Recurso | Android | iOS |
-| :--- | :--- | :--- |
-| **GPS** | Fused Location | Core Location |
-| **Câmera** | CameraX | AVFoundation |
-| **Sensores** | SensorManager | Core Motion |
-| **Bluetooth** | BluetoothAdapter | Core Bluetooth |
+- Permissões garantem a privacidade. { .fragment }
+- Fused Location é melhor que GPS Puro. { .fragment }
+- CameraX simplificou o mundo das fotos. { .fragment }
 
 ---
 
-## 🧬 Mermaid: Ciclo de Hardware
+## Próxima Aula: Testes e Debug 🐞
 
-```mermaid
-graph TD
-    A[Usuário quer Foto] --> B{Tem Permissão?}
-    B -- Não --> C[Pedir Permissão]
-    C --> D{Aceitou?}
-    D -- Não --> E[Mostrar Aviso]
-    B -- Sim --> F[Abrir CameraX]
-    D -- Sim --> F
-    F --> G[Salvar Imagem]
-```
+- Como encontrar bugs e garantir que o app não quebre. { .fragment }
 
 ---
 
-## 🛠️ Prática: O Sensor de Luz
-
-1. Obtenha o `SensorManager`. { .fragment }
-2. Escolha o `Sensor.TYPE_LIGHT`. { .fragment }
-3. Se a luz baixar (colocar a mão sobre o sensor), mostre um aviso "Está escuro!". { .fragment }
-
----
-
-## 🏁 Conclusão
-
-* Hardware exige permissão e cuidado. { .fragment }
-* CameraX e Fused Location são seus melhores amigos. { .fragment }
-* Respeite a bateria do usuário! Pare de ouvir sensores no `onPause`. { .fragment }
-
----
-
-## ❓ Perguntas sobre Hardware?
-
----
-
-### Próxima Aula: Testes e Qualidade! 🐞👋
+## Dúvidas? 📸

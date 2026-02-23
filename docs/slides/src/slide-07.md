@@ -1,178 +1,105 @@
 # Aula 07 - Arquitetura MVVM 🏗️
-
-<!-- .slide: data-transition="zoom" -->
-
----
-
-## 🦸 O Problema da God Activity
-
-Sua Activity faz tudo?
-* Chama a internet. { .fragment }
-* Valida campos. { .fragment }
-* Salva no banco. { .fragment }
-* Desenha a tela. { .fragment }
-
-> Isso é um pesadelo de manutenção! 😱
+## Desenvolvendo para escalar
 
 ---
 
-## 📐 O Padrão MVVM
+## Agenda 📅
 
-Recomendado pelo Google (Android Jetpack).
-
-* **Model**: Dados e Lógica de Negócio. { .fragment }
-* **View**: UI (Activity/XML). Burra e Visual. { .fragment }
-* **ViewModel**: O cérebro. Faz a ponte entre os dois. { .fragment }
+1. O Caos da "God Activity" { .fragment }
+2. Model-View-ViewModel { .fragment }
+3. LiveData e ciclo de vida { .fragment }
+4. O Poder da Reatividade { .fragment }
+5. Rotação de Tela e Persistência de Estado { .fragment }
 
 ---
 
-### O Fluxo de Dados
+## 1. Por que Arquitetura? 🤔
+
+- Evita código "espaguete". { .fragment }
+- Facilita testes automatizados (essencial para devs sênior). { .fragment }
+- Separa lógica de UI (facilitando o trabalho com designers). { .fragment }
+
+---
+
+## 2. Camadas do MVVM 📐
 
 ```mermaid
-graph LR
-    V[View] -->|Ações| VM[ViewModel]
-    VM -->|Observa| V
-    VM <-->|Dados| M[Model/Repo]
+graph TD
+    View[View: Activity/Fragment] -->|Observa| VM[ViewModel]
+    VM -->|Regras de Negócio| Repository[Repository]
+    Repository -->|Dados| API[Web Service / DB]
 ```
 
 ---
 
-## 🧠 O ViewModel
+## 2.1 View (O Rosto)
 
-Seu maior superpoder: **Sobrevivência**.
-
-* Quando você gira a tela, a Activity morre e renasce. { .fragment }
-* O ViewModel **permanece** vivo na memória. { .fragment }
-* Os dados não são perdidos! 💎 { .fragment }
-
-<!-- .slide: data-background-color="#1e1e24" -->
+- XML e a Activity que infla o binding. { .fragment }
+- **Regra**: Ela não deve ter lógica de cálculo ou dados. { .fragment }
 
 ---
 
-## 📡 LiveData
+## 2.2 ViewModel (O Cérebro)
 
-O mensageiro que respeita a vida.
-
-* É um container de dados observável. { .fragment }
-* A View diz: "Me avise quando o dado mudar". { .fragment }
-* Se a View estiver em background, o LiveData espera ela voltar para avisar. { .fragment }
+- Guarda os dados que a View precisa. { .fragment }
+- Sobrevive à rotação de tela. { .fragment }
 
 ---
 
-### Exemplo de LiveData
+## 2.3 Model (O Coração)
+
+- Classes de dados (Data Classes). { .fragment }
+- Repositórios. { .fragment }
+
+---
+
+## 3. LiveData 📡
+
+- É um "caixa eletrônico" de dados. { .fragment }
+- A View se inscreve para receber atualizações. { .fragment }
 
 ```kotlin
-// No ViewModel
-val nome = MutableLiveData<String>()
-
-fun carregar() {
-    nome.value = "Ricardo"
-}
-```
-
-```kotlin
-// Na Activity
-viewModel.nome.observe(this) { novoNome ->
-    binding.txtNome.text = novoNome
+val count = MutableLiveData<Int>()
+count.observe(this) { valor -> 
+    binding.txt.text = valor.toString() 
 }
 ```
 
 ---
 
-## 🏗️ Camada Model & Repository
+## 4. Reatividade 🔄
 
-Não deixe o ViewModel saber de ONDE vêm os dados.
-
-* O **Repository** decide: "Vou buscar na Internet ou no Banco local?" { .fragment }
-* O ViewModel apenas pede: "Me dê a lista de usuários". { .fragment }
+- Em vez de mandar a UI mudar, o dado muda e a UI reage. { .fragment }
 
 ---
 
-## 🆚 MVVM vs Outros
+## 5. Gire o Celular! 🔄
 
-| Padrão | Característica |
-| :--- | :--- |
-| **MVC** | Controller fica sobrecarregado. |
-| **MVP** | Presenter e View muito acoplados. |
-| **MVVM** | View observa o ViewModel (Desacoplado). |
+- A Activity é destruída. { .fragment }
+- O ViewModel resiste bravamente. { .fragment }
+- Quando a Activity volta, ela "reconecta" no dado. { .fragment }
 
 ---
 
-## 🧪 Benefícios para Testes
+## Desafio MVVM ⚡
 
-Testar UI é lento e caro.
-Testar lógica no ViewModel é **fast & cheap**. ⚡
-
-> Com MVVM, você testa a lógica sem precisar abrir o emulador.
+Onde você colocaria a lógica de validar se um E-mail é válido? Na Activity ou no ViewModel?
 
 ---
 
-## 🧬 Data Binding (Avançado)
+## Resumo ✅
 
-Imagine ligar o dado do ViewModel direto no XML.
-
-```xml
-<TextView
-    android:text="@{viewModel.userName}" />
-```
-
-* Menos `binding.textView.text = ...` na Activity. { .fragment }
-* Código mais limpo. { .fragment }
-
-<!-- .slide: data-transition="convex" -->
+- MVVM separa responsabilidades. { .fragment }
+- LiveData é consciente do ciclo de vida. { .fragment }
+- Evita perda de dados em mudança de configuração. { .fragment }
 
 ---
 
-## 🛠️ Prática da Aula: Contador MVVM
+## Próxima Aula: Persistência (Room) 💾
 
-1. Crie uma Activity com um botão e um texto. { .fragment }
-2. Crie um `MainViewModel` com um `counter: MutableLiveData<Int>`. { .fragment }
-3. No clique, chame `counter.value = (counter.value ?: 0) + 1`. { .fragment }
-4. Observe o contador na Activity. { .fragment }
+- Salvando dados no banco interno. { .fragment }
+- SQLite facilitado. { .fragment }
 
 ---
 
-### O Segredo da Rotação 🔄
-
-Teste seu app:
-1. Clique 5 vezes (Contador = 5).
-2. Gire o celular.
-3. Se o contador continuar em 5, você implementou MVVM corretamente! ✅
-
----
-
-## 🆚 MVVM no iOS
-
-No iOS moderno usamos **@StateObject** e **@Published**.
-
-```swift
-class UserViewModel: ObservableObject {
-    @Published var name = "Ricardo"
-}
-```
-
-> O conceito de "Reatividade" é o mesmo!
-
----
-
-## 📊 Vantagens Reais
-
-* **Manutenibilidade**: Código organizado por pastas. { .fragment }
-* **Escalabilidade**: Fácil adicionar novas telas. { .fragment }
-* **Performance**: UI Thread fica livre para animações. { .fragment }
-
----
-
-## 🏁 Conclusão
-
-* Não seja um refém da `MainActivity`. { .fragment }
-* Use o ViewModel para guardar o estado. { .fragment }
-* Deixe o LiveData atualizar sua tela. { .fragment }
-
----
-
-## ❓ Dúvidas?
-
----
-
-### Próxima Aula: Persistência de Dados (Room)! 💾👋
+## Dúvidas? 🏗️

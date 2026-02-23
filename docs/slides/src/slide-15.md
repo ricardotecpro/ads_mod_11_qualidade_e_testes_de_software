@@ -1,119 +1,91 @@
-# Aula 15 - Publicação na Google Play 🚀
-
-<!-- .slide: data-transition="convex" -->
-
----
-
-## 🏁 A Reta Final
-
-Seu app está pronto e testado. Agora, como o mundo vai baixá-lo?
-
-* Google Play (Android). { .fragment }
-* App Store (iOS). { .fragment }
-* Distribuição Direta (APK/Enterprise). { .fragment }
+# Aula 15 - Publicação na Play Store 🚀
+## Do seu PC para milhões de bolsos
 
 ---
 
-## 📦 APK vs AAB
+## Agenda 📅
 
-O passado e o futuro dos pacotes.
-
-* **APK**: Um arquivo gigante para todos os celulares. { .fragment }
-* **AAB (App Bundle)**: O Google gera o APK sob medida para cada usuário. { .fragment }
-* **Resultado**: Downloads até 50% menores! 💎 { .fragment }
-
----
-
-## 🔑 A Chave da Vida (Keystore)
-
-Todo app de produção deve ser assinado.
-
-* O arquivo `.jks` é o seu RG. { .fragment }
-* **AVISO CRÍTICO**: Se perder a senha ou o arquivo, você nunca mais poderá atualizar o app. Guarde na nuvem, no HD e no papel! 💾 { .fragment }
+1. APK vs App Bundle (AAB) { .fragment }
+2. Assinatura Digital (Keystore) { .fragment }
+3. Ofuscação (ProGuard/R8) { .fragment }
+4. Google Play Console { .fragment }
+5. Checklist de Lançamento { .fragment }
 
 ---
 
-## 🎮 Google Play Console
+## 1. O Formato AAB 📦
 
-O portal dos campeões.
-
-* **Taxa**: $25 (Única e vitalícia). { .fragment }
-* **Análise**: O Google revisa seu app (1 a 7 dias). { .fragment }
-* **Políticas**: Cuidado com direitos autorais e privacidade. { .fragment }
+- **Obrigatório** desde 2021. { .fragment }
+- Diminui o tamanho do download no celular do usuário. { .fragment }
+- O Google gera o APK certo para cada tela. { .fragment }
 
 ---
 
-## 🛡️ Ofuscação (R8 / ProGuard)
+## 2. A Chave de Ouro 🔑
 
-Proteja seu código original.
-
-* Transforma `MinhaClasseDeLogin` em `a.b.c`. { .fragment }
-* Remove código morto. { .fragment }
-* Dificulta a pirataria e engenharia reversa. { .fragment }
+- **Keystore (.jks)**: Sua identidade como dev. { .fragment }
+- Se perder, a atualização do app é impossível. { .fragment }
 
 ---
 
-## 📈 Versão e Build
+## 3. R8 e ProGuard 🛡️
 
-No `build.gradle`:
-
-* **versionCode**: 1, 2, 3... (Sempre sobe). { .fragment }
-* **versionName**: "1.0.0", "1.1.2" (O que o usuário vê). { .fragment }
-
-<!-- .slide: data-background-color="#344e41" -->
+- Encolhe o seu código (Shrinking). { .fragment }
+- Embaralha os nomes das classes (Obfuscation). { .fragment }
+- Dificulta a vida de quem quer copiar seu app. { .fragment }
 
 ---
 
-## 🎨 Marketing na Loja (ASO)
+## 4. Google Play Console 🎮
 
-Não basta ser bom, tem que parecer bom.
-
-* **Ícone**: A cara do seu app (512px). { .fragment }
-* **Feature Graphic**: O banner de impacto. { .fragment }
-* **Screenshots**: Mostre as melhores telas! { .fragment }
+- Painel administrativo. { .fragment }
+- Taxa única: **$25**. { .fragment }
+- Revisão: De 1 a 7 dias. { .fragment }
 
 ---
 
-## 🆚 Android vs iOS (Loja)
+## 5. Canais de Teste 🧪
 
-| Característica | Google Play | App Store |
-| :--- | :--- | :--- |
-| **Custo** | $25 (Única) | $99 (Anual) |
-| **Revisão** | Média de 2 dias | Média de 24h a 48h |
-| **Rigidez** | Moderada | Alta / Rigorosa |
-| **Formato** | AAB / APK | IPA |
+- **Interno**: Imediato para sua equipe. { .fragment }
+- **Beta**: Para convidados selecionados. { .fragment }
+- **Produção**: Para todo o mundo. { .fragment }
 
 ---
 
-## 🧪 Canais de Teste
+## 6. Materiais de Mkt 🎨
 
-Teste com pessoas reais antes do lançamento.
-
-1. **Teste Interno**: Amigos e equipe. { .fragment }
-2. **Teste Fechado (Beta)**: Grupo seleto. { .fragment }
-3. **Produção**: O mundo todo! { .fragment }
+- **Screenshots**: Venda com os olhos. { .fragment }
+- **Featured Graphic**: A capa do seu app. { .fragment }
+- **Icon**: A cara do seu app no menu. { .fragment }
 
 ---
 
-## 🏆 Checklist de Lançamento
+## 7. Melhores Práticas 🏆
 
-- [ ] Removi todos os `Log.d`? { .fragment }
-- [ ] O nome do app está correto? { .fragment }
-- [ ] O ícone é o de produção (não o padrão)? { .fragment }
-- [ ] Tenho os links de Política de Privacidade? { .fragment }
-
----
-
-## 🏁 Conclusão
-
-* Publicar é um processo burocrático mas gratificante. { .fragment }
-* A segurança da Keystore é sua prioridade #1. { .fragment }
-* Marketing (ASO) é o que traz downloads. { .fragment }
+- Teste o AAB antes de subir. { .fragment }
+- Verifique se as traduções estão OK. { .fragment }
+- Limpe os logs de debug. { .fragment }
 
 ---
 
-## ❓ Perguntas sobre Lançamento?
+## Desafio de Lançamento ⚡
+
+Se você publicar o app hoje, o usuário poderá baixar agora mesmo ou precisa esperar?
 
 ---
 
-### Próxima Aula: Projeto Final e Portfólio! 🎓👋
+## Resumo ✅
+
+- AAB é o novo padrão. { .fragment }
+- Keystore é sagrada. { .fragment }
+- Play Console é sua ferramenta de gestão. { .fragment }
+
+---
+
+## Próxima Aula: Projeto Final 🎓
+
+- O grande encerramento! { .fragment }
+
+---
+
+## Dúvidas? 🚀

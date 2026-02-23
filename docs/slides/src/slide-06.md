@@ -1,185 +1,113 @@
 # Aula 06 - Navegação entre Telas 🗺️
-
-<!-- .slide: data-transition="slide" -->
-
----
-
-## 📨 O que é uma Intent?
-
-Seu App é um conjunto de telas. As `Intents` são as mensagens que conectam essas telas.
-
-* "Quero abrir a tela X". { .fragment }
-* "Quero passar este dado para a tela Y". { .fragment }
-* "Quero que outro app resolva este link". { .fragment }
+## Intents e o Fluxo do Usuário
 
 ---
 
-## 🚀 Intent Explícita
+## Agenda 📅
 
-Você sabe exatamente para onde quer ir.
+1. O que é uma Intent? { .fragment }
+2. Intent Explícita vs Implícita { .fragment }
+3. Passagem de Parâmetros (Extras) { .fragment }
+4. Pilha de Navegação (Back Stack) { .fragment }
+5. Android vs iOS (Navigation) { .fragment }
+
+---
+
+## 1. A Intenção (Intent) 📨
+
+- É o "envelope" de mensagem do Android. { .fragment }
+- Serve para abrir Activities, Serviços ou Broadcasts. { .fragment }
+
+---
+
+## 2. Intent Explícita 🎯
+
+- Quando você sabe o nome da classe destino. { .fragment }
 
 ```kotlin
-val intent = Intent(this, SecondActivity::class.java)
+val intent = Intent(this, ProfileActivity::class.java)
 startActivity(intent)
 ```
 
-> Usado para navegação interna do seu aplicativo.
-
 ---
 
-## 🌍 Intent Implícita
-
-Você diz **O QUE** quer fazer, não **QUEM** deve fazer.
+## 3. Passagem de Dados (Extras) 📦
 
 ```kotlin
-val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://google.com"))
-startActivity(intent)
-```
+// Enviando
+intent.putExtra("NOME", "Lucas")
 
-* O sistema Android pergunta ao usuário qual navegador ele prefere usar. { .fragment }
-
----
-
-### Exemplos Implícitos
-
-* **ACTION_DIAL**: Abrir o discador. { .fragment }
-* **ACTION_SEND**: Compartilhar algo. { .fragment }
-* **ACTION_IMAGE_CAPTURE**: Abrir a câmera. { .fragment }
-
----
-
-## 📦 Passando Dados (Extras)
-
-O "pacote" que viaja com a Intent.
-
-```kotlin
-// Tela A (Enviando)
-intent.putExtra("NOME", "Android")
-intent.putExtra("IDADE", 15)
-
-// Tela B (Recebendo)
+// Recebendo
 val nome = intent.getStringExtra("NOME")
-val idade = intent.getIntExtra("IDADE", 0)
 ```
 
----
-
-## 📚 A Pilha de Voltar (Back Stack)
-
-O Android gerencia telas como uma pilha de pratos.
-
-1. `startActivity` coloca um prato no topo. { .fragment }
-2. Botão "Back" (Voltar) tira o prato do topo. { .fragment }
-3. O prato que estava embaixo volta a ser visível. { .fragment }
+- Chave-Valor. { .fragment }
 
 ---
 
-### O Comando `finish()` 🧹
+## 4. Intent Implícita 🌍
 
-Encerra a Activity atual e a remove da pilha.
+- "Alguém aí sabe abrir um site?" { .fragment }
+- "Alguém pode ligar para este número?" { .fragment }
 
 ```kotlin
-startActivity(Intent(this, HomeActivity::class.java))
-finish() // O usuário não consegue voltar para a tela anterior
-```
-
-> Ideal para fluxos de Login e Splash Screens.
-
----
-
-## 🆚 Navegação: Android vs iOS
-
-| Conceito | Android | iOS |
-| :---: | :---: | :--- |
-| **Componente** | Activity | ViewController |
-| **Pilha** | Back Stack | Navigation Controller |
-| **Ação** | Intent | Segue / Push |
-| **Dados** | Extras | Properties / PrepareForSegue |
-
----
-
-## 🎨 Transições entre Telas
-
-Dê vida ao seu app!
-
-```kotlin
-startActivity(intent)
-overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://..."))
+startActivity(i)
 ```
 
 ---
 
-## 🧭 Navigation Component (Jetpack)
+## 5. A Pilha (Back Stack) 📚
 
-A forma moderna e visual.
-
-* **Navigation Graph**: Mapa visual das telas. { .fragment }
-* **Fragments**: Telas "leves" dentro de uma única Activity. { .fragment }
-* **Safe Args**: Passagem de dados sem erros de digitação. { .fragment }
-
-<!-- .slide: data-background-color="#51344d" -->
+- LIFO (Last In, First Out). { .fragment }
+- O botão **Voltar** desempilha a Activity do topo. { .fragment }
 
 ---
 
-## 🛠️ Prática: Indo para os Detalhes
+## Limpando a Pilha
 
-1. Crie uma nova Activity chamada `DetalhesActivity`. { .fragment }
-2. No `MainActivity`, adicione um botão. { .fragment }
-3. No clique do botão, peça para abrir os Detalhes. { .fragment }
-
----
-
-### Código da Prática
-
-```kotlin
-binding.btnIr.setOnClickListener {
-    val intent = Intent(this, DetalhesActivity::class.java)
-    intent.putExtra("INFO", "Vindo da Main!")
-    startActivity(intent)
-}
-```
+- `finish()`: Mata a tela atual. { .fragment }
+- Flags: Reconfiguram a pilha (ex: Logout). { .fragment }
 
 ---
 
-## ⚠️ Cuidado com a Memória
+## 6. Comparativo: Android vs iOS 🆚
 
-Abrir muitas Activities sem dar `finish()` pode deixar o app pesado e confuso.
-
-> Pergunte-se: "O usuário deve conseguir voltar para esta tela?"
-
----
-
-## 🧬 Mermaid: Fluxo de Navegação
-
-```mermaid
-graph LR
-    S[Splash] -->|finish| L[Login]
-    L -->|finish| H[Home]
-    H <--> D[Detalhes]
-    H <--> P[Perfil]
-    P -->|Logout + clear_task| L
-```
+| Android 🤖 | iOS 🍎 |
+| :--- | :--- |
+| Intent | Segue / UIIntent |
+| `startActivity` | `pushViewController` |
+| `finish()` | `popViewController` |
 
 ---
 
-## 🚀 Desafio da Aula: O Mensageiro
+## 7. Melhores Práticas 🏆
 
-1. Crie uma tela com um `EditText` e um `Button`. { .fragment }
-2. Ao clicar, abra uma segunda tela exibindo o texto que foi digitado. { .fragment }
-3. Na segunda tela, coloque um botão "Voltar" customizado que dá um `finish()`. { .fragment }
-
----
-
-## 🏁 Resumo
-
-* **Intents**: Mensageiros universais. { .fragment }
-* **Extras**: O conteúdo da mensagem. { .fragment }
-* **Back Stack**: A memória de onde viemos. { .fragment }
+- Não passe objetos gigantes via Intent (use IDs). { .fragment }
+- Verifique se o dado existe antes de usar. { .fragment }
+- Finalize telas de login após o sucesso. { .fragment }
 
 ---
 
-## ❓ Perguntas?
+## Desafio de Navegação ⚡
+
+Se eu chamar `finish()` na tela de Splash, o usuário consegue voltar para ela apertando o botão de voltar?
 
 ---
 
-### Próxima Aula: Listas Dinâmicas (RecyclerView)! 📋👋
+## Resumo ✅
+
+- Intents conectam os componentes. { .fragment }
+- PutExtra envia, GetExtra recebe. { .fragment }
+- Back Stack gerencia a vida e morte das telas. { .fragment }
+
+---
+
+## Próxima Aula: MVVM 🏗️
+
+- Organizando o código em camadas. { .fragment }
+- ViewModel e LiveData. { .fragment }
+
+---
+
+## Dúvidas? 🗺️

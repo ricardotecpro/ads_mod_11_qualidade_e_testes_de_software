@@ -1,203 +1,140 @@
-# Aula 01 - Introdução ao Mobile 📱
-
-<!-- .slide: data-transition="zoom" -->
-
----
-
-## Bem-vindo ao Mundo Mobile! 🌍
-
-O mundo hoje é _mobile-first_.
-
-* Mais acesso via smartphone que PC. { .fragment }
-* Bilhões de dispositivos ativos. { .fragment }
-* Ecossistema dinâmico e lucrativo. { .fragment }
+# Aula 01 - Introdução a Microsserviços 🌐
+## De Monólitos a Sistemas Distribuídos
 
 ---
 
-## 🎯 Nossa Agenda de Hoje
+## Agenda de Hoje 📅
 
-1. Panorama do Mercado { .fragment }
-2. Nativo vs Híbrido vs Web { .fragment }
-3. Android vs iOS { .fragment }
-4. Android Studio & Ferramentas { .fragment }
-5. Por onde começar? { .fragment }
-
----
-
-## 📱 1. Os Três Caminhos
-
-Existem três formas principais de criar um App.
-
-<!-- .slide: data-transition="slide-in fade-out" -->
+1. Panorama do Software Moderno { .fragment }
+2. Monólitos vs Microsserviços { .fragment }
+3. A Economia das APIs { .fragment }
+4. Escalabilidade Vertical vs Horizontal { .fragment }
+5. Cinto de Utilidades (Ferramentas) { .fragment }
+6. Setup do Ambiente { .fragment }
 
 ---
 
-### 🚀 Nativo
+## 1. O Mundo Cloud-Native ☁️
 
-Desenvolvido na linguagem "mãe" da plataforma.
-
-* **Android**: Kotlin / Java 🤖 { .fragment }
-* **iOS**: Swift / Objective-C 🍎 { .fragment }
-* **Vantagem**: Performance máxima e acesso total ao hardware. { .fragment }
+- Sistemas globais exigem disponibilidade **24/7**. { .fragment }
+- Milhões de requisições por segundo. { .fragment }
+- Deploy contínuo (várias vezes ao dia). { .fragment }
 
 ---
 
-### 🌐 Web (PWA)
-
-Basicamente um site que se comporta como App.
-
-* **Tecnologias**: HTML, CSS, JS.
-* **Vantagem**: Custo baixo, funciona em tudo.
-* **Desvantagem**: Performance limitada e pouco acesso ao hardware. { .fragment }
+## 2. A Evolução da Arquitetura 🏛️➡️🏗️
 
 ---
 
-### 🧩 Híbrido / Cross-Platform
+## 2.1 O Monólito 🏛️
 
-Usa um framework para gerar ambas as plataformas.
-
-* **Exemplos**: Flutter, React Native.
-* **Vantagem**: Uma base de código para dois apps.
-* **Desvantagem**: Dependência de terceiros e overhead de performance. { .fragment }
-
----
-
-## 🤖 2. O Gigante Verde: Android
-
-O sistema operacional mais usado do planeta.
-
-* Criado pelo Google. { .fragment }
-* Baseado em **Linux**. { .fragment }
-* Aberto e flexível. { .fragment }
+- Um único projeto, um único deploy. { .fragment }
+- Tudo ou nada: erro em um lugar afeta tudo. { .fragment }
+- Difícil de escalar partes específicas. { .fragment }
+- **Ideal para**: Projetos pequenos, MVPs rápidos. { .fragment }
 
 ---
 
-### Arquitetura Android
+## 2.2 Microsserviços 🏗️
+
+- Conjunto de serviços independentes. { .fragment }
+- Comunicação via rede (APIs). { .fragment }
+- Cada um com seu banco de dados. { .fragment }
+- **Ideal para**: Sistemas complexos e escaláveis. { .fragment }
+
+---
+
+## 3. O Papel das APIs 📡
+
+- **Contract-First**: Acordo de comunicação. { .fragment }
+- REST como padrão dominante. { .fragment }
+- JSON: A língua universal. { .fragment }
+
+---
+
+## Escalabilidade: Vertical vs Horizontal
+
+| Vertical (Scale Up) | Horizontal (Scale Out) |
+| :--- | :--- |
+| Aumenta CPU/RAM | Adiciona mais servidores |
+| Tem limite físico | Virtualmente ilimitada |
+| Causa downtime no upgrade | Zero downtime (Redundância) |
+
+---
+
+## Arquitetura de Microsserviços
 
 ```mermaid
-graph TD
-    A[Apps] --> B[Java/Kotlin Framework]
-    B --> C[ART Runtime]
-    C --> D[Hardware Abstraction - HAL]
-    D --> E[Linux Kernel]
+graph LR
+    User[Cliente] --> AGW[API Gateway]
+    AGW --> S1[Usuários]
+    AGW --> S2[Pedidos]
+    AGW --> S3[Pagamentos]
+    S1 --> DB1[(DB)]
+    S2 --> DB2[(DB)]
+    S3 --> DB3[(DB)]
 ```
 
 ---
 
-## 🍎 3. O Pomar da Apple: iOS
-
-Foco em luxo, fluidez e segurança.
-
-* Criado pela Apple. { .fragment }
-* Sistema Fechado (Darwin/Unix). { .fragment }
-* Consumidores com alto poder aquisitivo. { .fragment }
+## 4. Ferramentas Indispensáveis 🛠️
 
 ---
 
-### Android vs iOS 🆚
+## Client HTTP: Postman & Insomnia
 
-| Recurso | Android | iOS |
-| :--- | :--- | :--- |
-| **Linguagem** | Kotlin | Swift |
-| **IDE** | Android Studio | Xcode |
-| **Loja** | Google Play | App Store |
-| **Taxa** | $25 (Única) | $99 (Anual) |
+- Testar rotas sem Frontend. { .fragment }
+- Analisar Headers e Status Codes. { .fragment }
+- Simular diferentes cenários de erro. { .fragment }
 
 ---
 
-## 🛠️ 4. Sua Oficina: Android Studio
+## Containerização: Docker 🐋
 
-A ferramenta oficial para criar apps Android.
-
-* Baseada no IntelliJ IDEA. { .fragment }
-* Emulador integrado. { .fragment }
-* Layout Editor visual. { .fragment }
-
-<!-- .slide: data-background-color="#073b4c" -->
+- "Roda na minha máquina, roda em qualquer lugar". { .fragment }
+- Isola dependências e versões. { .fragment }
+- Facilita a subida de múltiplos serviços locais. { .fragment }
 
 ---
 
-### ⚠️ Requisitos de Hardware
+## 5. Estrutura de Projeto Backend 📂
 
-Para não passar raiva:
-
-* **RAM**: 8GB (Mínimo) / 16GB (Sonho). { .fragment }
-* **Disco**: SSD é OBRIGATÓRIO. { .fragment }
-* **Processador**: i5 ou superior. { .fragment }
+- Divisão clara de responsabilidades. { .fragment }
+- Controllers, Services e Repositories. { .fragment }
+- Tratamento global de exceções. { .fragment }
 
 ---
 
-## 📂 5. Anatomia de um Projeto
-
-O que tem dentro das pastas?
-
-```termynal
-$ ls -R app/src/main
-AndroidManifest.xml
-java/ # Código Fonte
-res/  # Recursos (Imagens/Layouts)
-```
+## 6. Setup do Ambiente 🚀
 
 ---
 
-### O Manifesto 📜
+## Requisitos:
 
-O arquivo `AndroidManifest.xml` é o "RG" do seu App.
-
-* Nome do App. { .fragment }
-* Quais telas existem (Activities). { .fragment }
-* Quais permissões ele precisa (Internet, Câmera). { .fragment }
-
----
-
-## 🧠 6. Por que Nativo?
-
-Frameworks vêm e vão, mas o **Nativo** permanece.
-
-> "Quem entende a base, não teme a mudança."
-
-<!-- .slide: data-transition="convex" -->
+- IDE: VS Code ou IntelliJ. { .fragment }
+- Postman (Desktop ou Extensão). { .fragment }
+- Docker Desktop. { .fragment }
+- Git & GitHub. { .fragment }
 
 ---
 
-## 🆚 Kotlin vs Swift
+## Resumo da Aula ✅
 
-São linguagens "irmãs" na sintaxe!
-
-```kotlin
-// Kotlin
-val nome = "Ricardo"
-println("Olá $nome")
-```
-
-```swift
-// Swift
-let nome = "Ricardo"
-print("Olá \(nome)")
-```
+- Microsserviços trazem resiliência e escala. { .fragment }
+- APIs são o coração da comunicação moderna. { .fragment }
+- Ferramentas como Docker mudaram o jogo. { .fragment }
+- Começamos nossa jornada Fullstack! { .fragment }
 
 ---
 
-## 🚀 Desafio de Hoje
+## Próxima Aula: Arquitetura e Gateway 🏗️
 
-1. Instalar o **Android Studio**. { .fragment }
-2. Criar seu primeiro projeto "Empty Activity". { .fragment }
-3. Mudar o texto do "Hello World" para seu nome. { .fragment }
-
----
-
-## 🏁 Conclusão
-
-* Mobile é o presente e o futuro. { .fragment }
-* Escolher o caminho Nativo te dá superpoderes. { .fragment }
-* Próxima aula: **Java para Android**. { .fragment }
+- Como os serviços conversam? { .fragment }
+- O que é Service Discovery? { .fragment }
+- Protegendo a porta de entrada. { .fragment }
 
 ---
 
-## ❓ Dúvidas?
+## Dúvidas? 🤔
 
-Siga para o canal oficial da disciplina no Teams!
-
----
-
-### Fim da Aula 01 👋
+> "A arquitetura de hoje é o legado de amanhã. Escolha com sabedoria."

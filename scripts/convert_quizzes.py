@@ -1,4 +1,4 @@
-"""
+﻿"""
 Script para converter automaticamente todos os quizzes de markdown para HTML interativo
 """
 import pathlib
@@ -120,12 +120,12 @@ def convert_quiz(quiz_path: pathlib.Path) -> bool:
 def convert_all_quizzes():
     """Converte todos os quizzes"""
     # Usar pasta .src como fonte
-    quizzes_src_dir = pathlib.Path('docs/quizzes/.src')
+    quizzes_src_dir = pathlib.Path('docs/quizzes/src')
     
     if not quizzes_src_dir.exists():
-        print("[yellow]⚠ Pasta docs/quizzes/.src/ não encontrada. Criando...[/yellow]")
+        print("[yellow]⚠ Pasta docs/quizzes/src/ não encontrada. Criando...[/yellow]")
         quizzes_src_dir.mkdir(parents=True, exist_ok=True)
-        print("[yellow]⚠ Por favor, coloque os arquivos markdown originais em docs/quizzes/.src/[/yellow]")
+        print("[yellow]⚠ Por favor, coloque os arquivos markdown originais em docs/quizzes/src/[/yellow]")
         return
     
     print("\n[bold cyan]🧠 Convertendo Quizzes para HTML...[/bold cyan]")
@@ -134,7 +134,7 @@ def convert_all_quizzes():
     quiz_files = sorted(quizzes_src_dir.glob('quiz-*.md'))
     
     if not quiz_files:
-        print("[yellow]⚠ Nenhum arquivo de quiz encontrado em docs/quizzes/.src/[/yellow]")
+        print("[yellow]⚠ Nenhum arquivo de quiz encontrado em docs/quizzes/src/[/yellow]")
         return
     
     converted = 0

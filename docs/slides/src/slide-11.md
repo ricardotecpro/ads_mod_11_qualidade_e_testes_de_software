@@ -1,165 +1,85 @@
-# Aula 11 - Threads e Coroutines 🧵
-
-<!-- .slide: data-transition="convex" -->
-
----
-
-## 🛑 O Bloqueio da UI
-
-O Android é um sistema exigente: ele redesenha a tela a cada 16ms (60fps).
-
-* **Main Thread**: Onde tudo o que é visual acontece. { .fragment }
-* **Regra de Ouro**: Nunca coloque código pesado na Main Thread. { .fragment }
+# Aula 11 - Threads e Assincronismo 🧵
+## Coroutines e Performance
 
 ---
 
-### O Erro ANR 💀
+## Agenda 📅
 
-Se a Main Thread parar por +5 segundos...
-**Application Not Responding**. O sistema mata seu app.
-
-* Download de arquivos. { .fragment }
-* Leitura de banco de dados pesada. { .fragment }
-* Processamento de imagens. { .fragment }
-
----
-
-## ⚡ Kotlin Coroutines
-
-"Threads leves".
-
-* Você pode rodar milhões sem travar o celular. { .fragment }
-* Código assíncrono que parece sequencial. { .fragment }
-* Criado pela JetBrains para facilitar sua vida. { .fragment }
+1. Main Thread vs Background { .fragment }
+2. O erro ANR 🛑 { .fragment }
+3. Kotlin Coroutines ⚡ { .fragment }
+4. Suspend Functions { .fragment }
+5. Dispatchers (Main vs IO) { .fragment }
 
 ---
 
-## 🏛️ Os 3 Pilares da Coroutine
+## 1. O Problema do Gargalo 🛑
 
-1. **Job**: A tarefa em si (o trabalho). { .fragment }
-2. **Scope**: Onde ela vive (morreu a tela, morre a tarefa). { .fragment }
-3. **Dispatcher**: Em qual pista ela corre (Threads). { .fragment }
-
----
-
-### 🚦 Conheça os Dispatchers
-
-* **Main**: Só para interface (UI). { .fragment }
-* **IO**: Rede, Banco, Arquivos (Espera). { .fragment }
-* **Default**: Cálculos pesados de CPU. { .fragment }
+- O Android desenha a tela 60 vezes por segundo. { .fragment }
+- Se você "segurar" a Main Thread, o app congela. { .fragment }
 
 ---
 
-## 🛌 A palavra-chave `suspend`
+## 2. Kotlin Coroutines ⚡
 
-"Esta função pode demorar, mas não vai travar o celular".
+- Sequencial na leitura, assíncrono na execução. { .fragment }
 
 ```kotlin
-suspend fun buscarDados() {
-    delay(2000) // Pausa a coroutine, não a thread!
-    println("Terminei")
+viewModelScope.launch {
+    val dados = api.buscar() // Suspende aqui
+    binding.txt.text = dados // Volta aqui
 }
 ```
 
 ---
 
-## 🧠 Coroutines na ViewModel
+## 3. Suspend Fun 𝑓
 
-```kotlin
-class MeuViewModel : ViewModel() {
-    fun carregar() {
-        viewModelScope.launch { // Inicia no Scope seguro
-             val dados = withContext(Dispatchers.IO) {
-                 api.getDados() // Roda em background
-             }
-             binding.txt.text = dados // Volta pra Main e atualiza
-        }
-    }
-}
-```
-
-<!-- .slide: data-background-color="#3d5a80" -->
+- Uma função que pode ser "pausada". { .fragment }
+- Não bloqueia a thread original. { .fragment }
 
 ---
 
-## 🔌 Sockets (Tempo Real)
+## 4. Dispatchers (Os Entregadores) 📦
 
-REST é: "Eu peço, você responde".
-Socket é: "Canal aberto, qualquer um fala".
-
-* **Full-Duplex**: Envio e Recebimento simultâneo. { .fragment }
-* **Casos**: Chat, GPS em tempo real, Bolsa de Valores. { .fragment }
+- **Main**: Só para interface visual. { .fragment }
+- **IO**: Para internet, banco e arquivos. { .fragment }
+- **Default**: Para cálculos pesados. { .fragment }
 
 ---
 
-### Socket vs REST
+## 5. Coroutines vs Threads puras 🆚
 
-```mermaid
-sequenceDiagram
-    participant App
-    participant Server
-    Note over App,Server: REST (Request/Response)
-    App->>Server: Me dá os dados?
-    Server->>App: Aqui estão. (Fecha)
-    
-    Note over App,Server: Socket (Persistent)
-    App->>Server: Abre conexão
-    Server->>App: Conectado!
-    Server->>App: Mensagem nova!
-    App->>Server: Valeu!
-```
+- Threads são pesadas e caras. { .fragment }
+- Coroutines são leves (miles podem rodar ao mesmo tempo). { .fragment }
 
 ---
 
-## 🆚 Android vs iOS (Async)
+## 6. Cancelamento 🚫
 
-| Recurso | Android (Kotlin) | iOS (Swift) |
-| :--- | :--- | :--- |
-| **Padrão** | Coroutines | Async / Await |
-| **Palavra** | `suspend` | `async` |
-| **Chamada** | `launch` | `Task` |
-| **Espera** | `delay` | `try await Task.sleep` |
+- Se o usuário fechar a tela, a Coroutine deve parar. { .fragment }
+- `viewModelScope` faz isso sozinho para você! { .fragment }
 
 ---
 
-## 🚫 Cancelamento Automático
+## Desafio de Performance ⚡
 
-O `viewModelScope` é fantástico.
-
-1. Usuário abre a tela e começa o download. { .fragment }
-2. Usuário fecha o app ou muda de tela. { .fragment }
-3. O download é cancelado na hora. Economia de bateria e dados! { .fragment }
+O comando `Thread.sleep(2000)` trava a tela do celular? E o `delay(2000)`?
 
 ---
 
-## 🛠️ Prática: O Simulador de Corrida
+## Resumo ✅
 
-```kotlin
-suspend fun corrida() {
-    println("3...")
-    delay(1000)
-    println("2...")
-    delay(1000)
-    println("1...")
-    delay(1000)
-    println("JÁ!")
-}
-```
-
-* Chame isso num clique de botão e tente clicar em outro botão enquanto a contagem ocorre. Se funcionar, você venceu o ANR! 🏆
+- Main Thread = UI apenas. { .fragment }
+- Coroutines simplificam o async. { .fragment }
+- Dispatchers definem onde o código roda. { .fragment }
 
 ---
 
-## 🏁 Conclusão
+## Próxima Aula: UX e Material 🎨
 
-* Main Thread é sagrada. { .fragment }
-* Coroutines trazem ordem ao caos assíncrono. { .fragment }
-* Sempre use `viewModelScope` para segurança. { .fragment }
+- Deixando o app bonito e moderno. { .fragment }
 
 ---
 
-## ❓ Perguntas sobre Threads?
-
----
-
-### Próxima Aula: UX e Material Design 3! 🎨👋
+## Dúvidas? 🧵
