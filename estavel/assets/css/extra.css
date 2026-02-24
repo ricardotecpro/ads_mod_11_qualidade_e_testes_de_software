@@ -1,0 +1,61 @@
+/* Extra CSS */
+.quiz-container {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Termynal Copy Button */
+.termy {
+    position: relative;
+    /* Ensure button is positioned relative to terminal */
+}
+
+.termynal-copy-button {
+    position: absolute;
+    top: 10px;
+    bottom: auto;
+    right: 10px;
+    left: auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.5;
+    transition: opacity 0.2s, transform 0.1s;
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.termynal-copy-button:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.termynal-copy-button.copied {
+    color: #2ea44f;
+    /* Green success color */
+}
+
+.termynal-copy-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.termynal-copy-feedback {
+    display: none;
+    font-size: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.termynal-copy-button.copied .termynal-copy-feedback {
+    display: inline-block;
+}
+
+.termynal-copy-button.copied .termynal-copy-icon {
+    display: none;
+}
