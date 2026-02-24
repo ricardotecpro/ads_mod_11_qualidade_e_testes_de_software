@@ -1,20 +1,22 @@
-# Setup 06: Python 🐍
+# Setup 06: VS Code para QA 💻
 
-## 1. Interpretador Python
-1.  Baixe a versão mais recente em [python.org](https://www.python.org/).
-2.  **IMPORTANTE**: Marque a caixa **"Add Python to PATH"** na instalação!
-3.  Teste: `python --version` ou `py --version`.
+O Visual Studio Code é o editor de texto mais versátil para quem trabalha com múltiplos frameworks de automação.
 
-## 2. PyCharm Community
-A IDE mais poderosa para Python.
-1.  Baixe em [jetbrains.com/pycharm](https://www.jetbrains.com/pycharm/).
+## 1. Extensões Essenciais para QA
+Abra o VS Code (`Ctrl+Shift+X`) e instale:
+- **Python**: Suporte completo para scripts.
+- **Python Test Explorer**: Interface visual para PyTest.
+- **Playwright Test**: Execute testes do Playwright direto no editor.
+- **Thunder Client**: Alternativa ao Postman dentro do VS Code.
 
-## 3. VS Code + Python
-1.  Instale a extensão "Python" da Microsoft.
-2.  Instale a extensão "Jupyter" se quiser usar Notebooks.
+## 2. Snippets e Produtividade
+Configure atalhos para gerar estruturas de casos de teste Markdown ou blocos de código Selenium rapidamente.
 
-## 4. Solução de Problemas Comuns ⚠️
+## 3. Terminal Integrado
+Use o terminal do VS Code (`Ctrl+'`) para rodar seus testes sem trocar de janela.
 
-*   **'python' não encontrado**: É o erro mais comum. Reinstale e marque a caixa "Add Python to PATH".
-*   **Comando 'python' abre a Microsoft Store**: Vá nas configurações do Windows ("Gerenciar Aliases de Execução de Aplicativo") e DESATIVE os itens do "Instalador de Aplicativo" para Python.
-*   **Pip não funciona**: Tente `python -m pip install pacote`.
+## 4. Git Integrado
+Use a aba de "Source Control" para dar commit e push nos seus scripts de teste para o GitHub.
+
+## 5. Solução de Problemas ⚠️
+*   **Editor Lento**: Desabilite extensões que você não está usando no momento. QA costuma ter muitas e isso consome RAM.

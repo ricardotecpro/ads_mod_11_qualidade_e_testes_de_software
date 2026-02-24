@@ -1,22 +1,27 @@
-# Setup 04: Java e JDK ☕
+# Setup 04: Java & Maven para QA ☕
+
+O ecossistema Java é muito forte em empresas enterprise para automação com Selenium e RestAssured.
 
 ## 1. JDK (Java Development Kit)
-O kit essencial para compilar Java.
-1.  Baixe o **JDK 17 LTS (ou 21 LTS)** no site da Oracle ou Adoptium.
-2.  Instale e configure a variável de ambiente `JAVA_HOME`.
-3.  Teste: `java -version`.
+1.  Baixe o **JDK 17 ou 21 (LTS)** no site da Oracle ou Adoptium.
+2.  Configure a variável `JAVA_HOME`.
 
-## 2. IntelliJ IDEA (Recomendado)
-A melhor IDE para Java/Kotlin.
-1.  Baixe a versão **Community** (Gratuita) em [jetbrains.com/idea](https://www.jetbrains.com/idea/).
-2.  Instale.
+## 2. Apache Maven
+O Maven é o gestor de dependências padrão para projetos Java.
+1.  Baixe em [maven.apache.org](https://maven.apache.org/download.cgi).
+2.  Adicione a pasta `bin` ao seu PATH.
+3.  Teste: `mvn -version`.
 
-## 3. VS Code
-Se preferir o VS Code:
-1.  Instale o "Extension Pack for Java" da Microsoft.
+## 3. IntelliJ IDEA (Comunidade)
+Excelente suporte para refatoração e execução de testes JUnit/TestNG.
+1.  Baixe a versão **Community** em [jetbrains.com/idea](https://www.jetbrains.com/idea/).
 
-## 4. Solução de Problemas Comuns ⚠️
+## 4. Dependências de QA comuns (pom.xml)
+No seu projeto Maven, você geralmente incluirá:
+- `selenium-java`
+- `junit-jupiter`
+- `rest-assured`
 
-*   **'javac' não reconhecido**: A variável de ambiente `JAVA_HOME` ou o `Path` estão errados. Verifique se apontam para a pasta `bin` do JDK.
-*   **Erro: "Class names are only accepted..."**: O nome do arquivo DEVE ser igual ao nome da classe (ex: `Ola.java` tem que ter `public class Ola`).
-*   **Versão antiga do Java**: Digite `java -version` para conferir se está usando a versão que acabou de instalar.
+## 5. Solução de Problemas Comuns ⚠️
+*   **Erro de Compilação**: Verifique se a versão do JDK no IntelliJ está alinhada com a do seu sistema.
+*   **Maven não baixa pacotes**: Pode ser problema de Proxy da empresa ou rede. Verifique seu arquivo `settings.xml`.

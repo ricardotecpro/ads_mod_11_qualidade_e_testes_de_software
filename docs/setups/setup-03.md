@@ -1,30 +1,32 @@
-# Setup 03: Ferramentas de Apoio 🛠️
+# Setup 03: Python para QA 🐍
 
-Além da IDE, você precisará de ferramentas para gerenciar código e testar dados.
+O Python é uma das linguagens mais amigáveis para quem está começando na automação de testes.
 
-## 1. Git e GitHub
-Essencial para versionamento.
-*   **Download**: [git-scm.com](https://git-scm.com/).
-*   **Configuração Inicial**:
-    ```bash
-    git config --global user.name "Seu Nome"
-    git config --global user.email "seu@email.com"
-    ```
+## 1. Instalando o Python
+1.  Baixe a versão mais recente em [python.org](https://www.python.org/).
+2.  **IMPORTANTE**: Marque a caixa **"Add Python to PATH"** na instalação!
+3.  Teste no terminal: `python --version`.
 
-## 2. Postman ou Insomnia
-Para testar as APIs REST antes de escrever código Kotlin/Swift.
-*   **Postman**: [postman.com](https://www.postman.com/).
-*   **Insomnia**: [insomnia.rest](https://insomnia.rest/).
+## 2. Ambientes Virtuais (VENV)
+Sempre crie ambientes isolados para seus projetos de teste para evitar conflitos de bibliotecas:
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+.\venv\Scripts\activate   # Windows
+```
 
-## 3. Vysor (Opcional)
-Para espelhar a tela do seu celular real no computador (via cabo USB).
-*   **Acesso**: [vysor.io](https://www.vysor.io/).
+## 3. Gerenciando Dependências (PIP)
+Use o `pip` para instalar bibliotecas como `pytest`, `selenium` e `behave` (BDD):
+```bash
+pip install pytest selenium behave
+```
 
-## 4. ADB (Android Debug Bridge)
-Já vem com o Android Studio, mas é útil no PATH do sistema.
-*   Permite instalar APKs via terminal: `adb install app.apk`.
-*   Permite ver logs detalhados: `adb logcat`.
+## 4. PyTest (O Framework de Escolha)
+O PyTest é o padrão para testes em Python. Crie um arquivo `test_exemplo.py` e rode:
+```bash
+pytest
+```
 
-## 5. Flipper (Meta)
-Uma ferramenta avançada para debugar bancos de dados SQLite e chamadas de rede direto na interface visual.
-*   **Acesso**: [fbflipper.com](https://fbflipper.com/).
+## 5. Solução de Problemas ⚠️
+*   **'python' não encontrado**: Certifique-se de que o PATH foi configurado corretamente.
+*   **Permissão no Windows**: Se não conseguir ativar o venv, rode `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` no PowerShell (como Admin).

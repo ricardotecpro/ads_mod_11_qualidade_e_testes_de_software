@@ -1,0 +1,5 @@
+HERE= C:\Python\Python313\Lib\site-packages\mkdocs_revealjs
+DIRNAME= docs/revealjs
+WARNING -  Config value 'plugins': Plugin 'mkdocs-revealjs' option 'revealjs_config': Unrecognised configuration name: revealjs_config
+
+Aborted with 1 configuration warnings in 'strict' mode!

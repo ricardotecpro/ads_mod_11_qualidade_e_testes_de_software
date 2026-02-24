@@ -1,29 +1,37 @@
-# Setup 01: Android Studio 🤖
+# Setup 01: Selenium & WebDriver 🤖
 
-O Android Studio é a IDE oficial para o desenvolvimento Android.
+O Selenium é o padrão de mercado para automação de navegadores web. Nele, usamos o **WebDriver** para controlar o navegador.
 
-## 1. Requisitos de Sistema
-*   **RAM**: Mínimo 8GB (Sugerido 16GB+).
-*   **Espaço**: Mínimo 10GB para IDE + SDKs.
-*   **Processador**: Intel Core i5 ou equivalente.
+## 1. Instalando o Selenium (Python)
+Se você estiver usando Python, instale via pip:
+```bash
+pip install selenium
+```
 
-## 2. Instalação
-1.  Acesse o site oficial: [developer.android.com/studio](https://developer.android.com/studio).
-2.  Baixe a versão mais recente para o seu Sistema Operacional.
-3.  Execute o instalador e escolha a opção "Standard" na configuração inicial.
+## 2. WebDrivers (Navegadores)
+Para que o código consiga "clicar" no navegador, você precisa do driver correspondente:
 
-## 3. Configurando o SDK
-*   Após a instalação, vá em **Settings > Languages & Frameworks > Android SDK**.
-*   Certifique-se de que a versão mais recente do Android (estável) esteja instalada.
-*   Na aba **SDK Tools**, instale o "Android Emulator" e o "Intel x86 Emulator Accelerator (HAXM)" se estiver no Windows com Intel.
+*   **Google Chrome**: Recomenda-se usar o `webdriver-manager` para baixar automaticamente.
+*   **Firefox**: Baixe o **GeckoDriver** em [github.com/mozilla/geckodriver](https://github.mozilla.com/geckodriver/releases).
 
-## 4. Criando um Emulador (AVD)
-1.  Abra o **Device Manager**.
-2.  Clique em **Create Device**.
-3.  Escolha um dispositivo (ex: Pixel 7).
-4.  Selecione uma imagem de sistema (ex: Level 34 - Android 14).
-5.  Finalize e clique no "Play" para iniciar o celular virtual.
+## 3. Gestão Automática de Drivers
+A melhor prática hoje é usar bibliotecas que gerenciam os drivers para você:
+
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+```
+
+## 4. Playwright (Alternativa Moderna)
+Se preferir usar o Playwright (muito comum em JS/TS e Python):
+```bash
+pip install playwright
+playwright install
+```
 
 ## 5. Solução de Problemas ⚠️
-*   **VT-x is disabled**: Você precisa habilitar a virtualização na BIOS do seu computador.
-*   **Studio muito lento**: Adicione a pasta do projeto e as pastas do Android SDK nas exclusões do seu Antivírus.
+*   **Drivers Desatualizados**: Sempre garanta que a versão do seu navegador (Chrome) é a mesma da versão do driver (ChromeDriver).
+*   **Path**: Se não usar o manager, o executável do driver deve estar no PATH do sistema.

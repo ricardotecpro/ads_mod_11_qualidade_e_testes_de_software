@@ -1,22 +1,28 @@
 # Ambientes de Desenvolvimento 🛠️
 
-Guias para configurar seu computador para o desenvolvimento mobile.
+Guias para configurar seu computador para automação de testes e garantia de qualidade.
 
 <div class="grid cards" markdown>
 
--   :material-android: **Android**
+-   :material-robot: **Módulo 1: Web & API**
     ---
-    Instalação do Android Studio, SDK e emuladores.
-    - [Setup 01 - Android Studio](setup-01.md)
+    - [Setup 01 - Selenium & Webdriver](setup-01.md)
+    - [Setup 02 - Postman & Insomnia](setup-02.md)
 
--   :material-apple: **iOS (Opcional/Referência)**
+-   :material-language-python: **Módulo 2: Linguagens**
     ---
-    Configuração básica de Xcode e ferramentas Mac.
-    - [Setup 02 - Xcode Foundation](setup-02.md)
+    - [Setup 03 - Python para QA](setup-03.md)
+    - [Setup 04 - Java & Maven](setup-04.md)
+    - [Setup 05 - Node.js & Playwright](setup-05.md)
 
--   :material-cog: **Ferramentas de Apoio**
+-   :material-cog: **Módulo 3: Ferramentas**
     ---
-    Git, Terminais e Postman/Insomnia para testes de API.
-    - [Setup 03 - Tools](setup-03.md)
+    - [Setup 06 - VS Code para QA](setup-06.md)
+    - [Setup 07 - Git & GitHub](setup-07.md)
+
+-   :material-database: **Módulo 4: Infra & Dados**
+    ---
+    - [Setup 08 - Docker para QA](setup-08.md)
+    - [Setup 09 - Bancos de Dados](setup-09.md)
 
 </div>

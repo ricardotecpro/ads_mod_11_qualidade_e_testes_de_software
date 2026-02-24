@@ -1,21 +1,26 @@
-# Setup 07: Sistemas (Rust e Go) ⚙️
+# Setup 07: Git & GitHub 🐙
 
-## Rust 🦀
-O Rust usa o gerenciador `rustup`.
-1.  Acesse [rustup.rs](https://rustup.rs/).
-2.  Baixe e execute o `rustup-init`.
-3.  Aceite o padrão (opção 1).
-4.  Reinicie o terminal e teste: `cargo --version`.
-5.  **VS Code**: Instale a extensão "rust-analyzer".
+Versionamento de código é o que separa um testador manual de um QA Automation profissional.
 
-## Go (Golang) 🐹
-1.  Baixe em [go.dev](https://go.dev/dl/).
-2.  Instale (Next, Next, Finish).
-3.  Teste: `go version`.
-4.  **VS Code**: Instale a extensão "Go" oficial.
+## 1. Instalando o Git
+1.  Baixe em [git-scm.com](https://git-scm.com/).
+2.  Configure sua identidade:
+    ```bash
+    git config --global user.name "Seu Nome"
+    git config --global user.email "seu@email.com"
+    ```
 
-## 4. Solução de Problemas Comuns ⚠️
+## 2. GitHub Acadêmico
+Crie uma conta no GitHub para hospedar seus repositórios de estudo e portfólio de automação.
 
-*   **'cargo' não encontrado**: Reinicie o terminal. Se não funcionar, adicione `~/.cargo/bin` (Linux/Mac) ou `%USERPROFILE%\.cargo\bin` (Windows) ao PATH.
-*   **Go Path**: Certifique-se de que a variável `GOPATH` está configurada corretamente (geralmente `C:\Users\SeuUsuario\go`).
-*   **Erro de Linker (Rust)**: No Windows, pode faltar as ferramentas de build do C++. Baixe o "Build Tools for Visual Studio".
+## 3. GitHub Desktop (Opcional)
+Se preferir uma interface visual ao invés do terminal:
+1.  Baixe em [desktop.github.com](https://desktop.github.com/).
+
+## 4. Workflow de QA
+Sempre crie branches para novos testes:
+`git checkout -b feature/testes-login`
+
+## 5. Solução de Problemas ⚠️
+*   **Erro de Autenticação**: Use o **GitHub CLI** ou configure chaves SSH para não precisar digitar senha a todo momento.
+*   **Conflitos**: Se o "Merge" falhar, use o VS Code para resolver os conflitos de linha por linha.

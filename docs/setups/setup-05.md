@@ -1,22 +1,27 @@
-# Setup 05: .NET (C# e F#) 🔷
+# Setup 05: Node.js & Playwright / Cypress 🟢
 
-## 1. .NET SDK
-Necessário para rodar C# e F#.
-1.  Baixe o **.NET 8.0 SDK (LTS)** em [dotnet.microsoft.com](https://dotnet.microsoft.com/download).
-2.  Instale.
-3.  Teste: `dotnet --version`.
+O ecossistema JavaScript/TypeScript é hoje um dos mais populares para automação de testes "Shift Left".
 
-## 2. Visual Studio Community
-A IDE mais completa para Windows.
-1.  Baixe em [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/community/).
-2.  No instalador, selecione a carga de trabalho: **"Desenvolvimento para desktop com .NET"**.
+## 1. Instalando o Node.js
+1.  Baixe a versão **LTS** (Long Term Support) em [nodejs.org](https://nodejs.org/).
+2.  Teste: `node -v` e `npm -v`.
 
-## 3. VS Code + C# Dev Kit
-Para uma experiência mais leve:
-1.  Instale a extensão "C# Dev Kit" da Microsoft.
+## 2. Playwright (O sucessor do Selenium)
+Moderno, rápido e com suporte nativo a execução paralela.
+```bash
+npm init playwright@latest
+```
 
-## 4. Solução de Problemas Comuns ⚠️
+## 3. Cypress (Focado em Desenvolvedores)
+Excelente para testes E2E com uma interface visual incrível.
+```bash
+npm install cypress --save-dev
+npx cypress open
+```
 
-*   **'dotnet' não encontrado**: Reinicie o computador após instalar o SDK.
-*   **Erro de Certificado HTTPS**: Na primeira execução, rode `dotnet dev-certs https --trust` para confiar no certificado local.
-*   **OmniSharp Error**: Se o VS Code reclamar, verifique se instalou o **C# Dev Kit** e se o SDK é compatível.
+## 4. TypeScript (Recomendado)
+Para automação robusta, prefira TypeScript ao invés de JS puro para ter autocompletar e tipagem nos seus seletores.
+
+## 5. Solução de Problemas Comuns ⚠️
+*   **npm ERR!**: Tente limpar o cache: `npm cache clean --force`.
+*   **npx não funciona**: Verifique se o Node foi instalado com permissões de administrador.

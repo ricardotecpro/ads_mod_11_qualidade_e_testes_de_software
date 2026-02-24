@@ -1,28 +1,20 @@
-# Setup 09: PHP e Servidor Local 🐘
+# Setup 09: Bancos de Dados para QA 🗄️
 
-Como o PHP roda no servidor, precisamos simular um servidor no nosso computador.
+Saber manipular dados é vital para criar massas de teste e verificar a persistência.
 
-## 1. XAMPP (Tudo em Um)
-O pacote mais fácil. Inclui Apache (Servidor), MySQL (Banco) e PHP.
-1.  Baixe em [apachefriends.org](https://www.apachefriends.org/pt_br/index.html).
-2.  Instale e abra o **XAMPP Control Panel**.
-3.  Clique em **Start** no Apache e MySQL.
-4.  Seus arquivos devem ficar na pasta `C:\xampp\htdocs`.
+## 1. DBeaver (Ferramenta Universal)
+A melhor ferramenta para conectar em qualquer banco (SQL, NoSQL).
+1.  Baixe em [dbeaver.io](https://dbeaver.io/).
 
-## 2. Composer (Gerenciador de Pacotes)
-Essencial para usar bibliotecas modernas e frameworks como Laravel.
-1.  Baixe em [getcomposer.org](https://getcomposer.org/).
-2.  Instale. Ele deve encontrar seu PHP automaticamente.
+## 2. SQLite (Para Estudos)
+Leve e não exige instalação de servidor. Ótimo para treinar SELECT, INSERT e DELETE.
 
-## 3. Laravel (Opcional)
-Para criar projetos profissionais:
-```bash
-composer global require laravel/installer
-laravel new meu-projeto
-```
+## 3. PostgreSQL / MySQL
+Os bancos mais comuns no mercado. Você pode rodá-los via Docker (conforme vimos no Setup 08).
 
-## 4. Solução de Problemas Comuns ⚠️
+## 4. Verificação de Dados
+Sempre compare o que o seu teste automatizado diz com o que está gravado no banco de dados.
 
-*   **Apache não inicia (Port 80 busy)**: Skype ou IIS podem estar usando a porta 80. No XAMPP, vá em Config -> httpd.conf e mude `Listen 80` para `Listen 8080`.
-*   **MySQL não conecta**: Verifique se o serviço está verde no XAMPP.
-*   **Erro de DLL**: Pode faltar o "Visual C++ Redistributable" no seu Windows. Atualize-o.
+## 5. Solução de Problemas ⚠️
+*   **Erro de Driver**: O DBeaver baixa os drivers automaticamente, mas você precisa de internet na primeira conexão de cada tipo de banco.
+*   **Query Lenta**: Verifique se o banco não está bloqueado por outra transação (Deadlock).

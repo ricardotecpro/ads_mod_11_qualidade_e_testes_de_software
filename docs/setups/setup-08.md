@@ -1,25 +1,24 @@
-# Setup 08: Mobile (Flutter e Kotlin) 📱
+# Setup 08: Docker para QA 🐳
 
-Desenvolvimento mobile exige ferramentas mais pesadas.
+O Docker permite rodar ambientes inteiros (Bancos, APIs, Selenium Grid) sem sujar sua máquina local.
 
-## 1. Android Studio
-Essencial para emular celulares Android e programar em Kotlin/Java nativo.
-1.  Baixe em [developer.android.com/studio](https://developer.android.com/studio).
-2.  Instale e deixe ele baixar o **Android SDK**.
+## 1. Docker Desktop
+1.  Baixe em [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/).
+2.  **IMPORTANTE**: No Windows, certifique-se de que o **WSL 2** está instalado e ativo.
 
-## 2. Flutter SDK
-Para desenvolvimento Dart multiplataforma.
-1.  Baixe o SDK em [flutter.dev](https://docs.flutter.dev/get-started/install).
-2.  Extraia para `C:\src\flutter` (exemplo).
-3.  Adicione `C:\src\flutter\bin` ao **Path** do Windows.
-4.  Rode `flutter doctor` no terminal para verificar o que falta.
+## 2. Selenium Grid em Container
+Para rodar testes em paralelo em diferentes navegadores:
+```bash
+docker run -d -p 4444:4444 --name selenium-grid selenium/standalone-chrome
+```
 
-## 3. VS Code
-O editor preferido para Flutter.
-1.  Instale a extensão "Flutter" (ela instala a do Dart automaticamente).
+## 3. Docker Compose
+Use arquivos `docker-compose.yml` para subir seu app + banco de dados para testes em um único comando.
 
-## 4. Solução de Problemas Comuns ⚠️
+## 4. Limpeza
+Para não ficar sem espaço em disco:
+`docker system prune`
 
-*   **flutter doctor com erros**: É normal. Siga o que ele diz. Geralmente é aceitar licenças (`flutter doctor --android-licenses`).
-*   **Emulador não abre (HAXM/Hyper-V)**: Seu processador precisa ter virtualização ativada na BIOS.
-*   **Gradle demorando**: A primeira vez demora MUITO (baixa a internet inteira). Tenha paciência.
+## 5. Solução de Problemas ⚠️
+*   **Engine not running**: Verifique se o ícone da baleia está verde na barra de tarefas.
+*   **Falta de RAM**: O Docker consome bastante memória. Aumente o limite nas configurações do Docker Desktop se os containers caírem.

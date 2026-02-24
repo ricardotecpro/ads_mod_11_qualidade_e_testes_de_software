@@ -69,14 +69,8 @@ markdown_extensions:
       base_path: docs
   - pymdownx.arithmatex:
       generic: true
-
-
 plugins:
-  - mkdocs-revealjs:
-      revealjs_config:
-        transition: slide
-        backgroundTransition: fade
-        slideNumber: true
+  - mkdocs-revealjs: {}
 
   - search:
       lang: pt
@@ -112,6 +106,16 @@ plugins:
       add_print_site_banner: false
       enumerate_headings: false
       enumerate_figures: false
+      exclude:
+        - setups/setup-01.md
+        - setups/setup-02.md
+        - setups/setup-03.md
+        - setups/setup-04.md
+        - setups/setup-05.md
+        - setups/setup-06.md
+        - setups/setup-07.md
+        - setups/setup-08.md
+        - setups/setup-09.md
 
 hooks:
   - hooks/copy_slides.py
@@ -148,6 +152,7 @@ nav:
   - Início: index.md
   - Plano de Ensino: plano-ensino.md
   - Aulas:
+      - Índice: aulas/index.md
       - 'Aula 01 - Qualidade e QA': aulas/aula-01.md
       - 'Aula 02 - Modelos de Qualidade': aulas/aula-02.md
       - 'Aula 03 - Ciclo de Vida (STLC)': aulas/aula-03.md
@@ -238,8 +243,15 @@ nav:
       - 'Slide 16': slides/slide-16.md
   - Configuração:
       - 'Índice': setups/index.md
-      - 'Setup Android': setups/setup-01.md
-      - 'Setup iOS': setups/setup-02.md
+      - 'Setup 01 - Selenium': setups/setup-01.md
+      - 'Setup 02 - Postman': setups/setup-02.md
+      - 'Setup 03 - Python': setups/setup-03.md
+      - 'Setup 04 - Java': setups/setup-04.md
+      - 'Setup 05 - Node.js': setups/setup-05.md
+      - 'Setup 06 - VS Code': setups/setup-06.md
+      - 'Setup 07 - Git': setups/setup-07.md
+      - 'Setup 08 - Docker': setups/setup-08.md
+      - 'Setup 09 - DBs': setups/setup-09.md
   - Sobre:
       - 'O Curso': sobre.md
       - 'Roadmap': project_roadmap.md

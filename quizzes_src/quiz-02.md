@@ -3,7 +3,7 @@
 1. O que significa a sigla CMMI?
    - [ ] Control Maturity Model for Integration.
    - [x] Capability Maturity Model Integration.
-   - [ ] Code Management Mobile Interface.
+   - [ ] Code Management Model Integration.
    - [ ] Computer Maturity and Management Institute.
    > **Explicação**: CMMI é o modelo de referência global para maturidade de processos.
 

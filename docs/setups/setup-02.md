@@ -1,33 +1,30 @@
-# Setup 02: Xcode (iOS Foundation) 🍎
+# Setup 02: Testes de API (Postman & Insomnia) 📡
 
-O Xcode é a ferramenta necessária para compilar e testar apps iOS.
+Para testar o backend e os endpoints do sistema, precisamos de clientes de API robustos.
 
-> [!IMPORTANT]
-> O Xcode requer um computador **Mac** (macOS).
+## 1. Postman
+O Postman é a ferramenta mais completa para gestão de coleções de API e automação de testes contratuais.
 
-## 1. Instalação
-1.  Abra a **App Store** no seu Mac.
-2.  Pesquise por **Xcode**.
-3.  Clique em Obter/Instalar.
-4.  Após o download, abra o Xcode para carregar os componentes adicionais do macOS.
+*   **Download**: [postman.com/downloads](https://www.postman.com/downloads/).
+*   **Principais Funções**: 
+    - Criação de Ambientes (Environments).
+    - Scripts de testes em JavaScript.
+    - Runner de coleções.
 
-## 2. Configurando Simuladores
-1.  Vá em **Settings > Platforms**.
-2.  Verifique se o componente "iOS" está baixado.
-3.  Se não estiver, clique em "GET" para baixar a versão mais estável.
+## 2. Insomnia
+Uma alternativa leve e focada em design, excelente para testes rápidos e suporte nativo a GraphQL e gRPC.
 
-## 3. Comandos de Linha (CLI)
-Para que ferramentas de automação funcionem, você precisa instalar os Command Line Tools:
+*   **Download**: [insomnia.rest/download](https://insomnia.rest/download).
+
+## 3. Newman (CLI para Postman)
+Para rodar seus testes do Postman em pipelines de CI/CD:
 ```bash
-xcode-select --install
+npm install -g newman
 ```
 
-## 4. Opcional: CocoaPods
-Muitos projetos iOS antigos ainda usam CocoaPods para dependências:
-```bash
-sudo gem install cocoapods
-```
+## 4. Dica de Produtividade 🚀
+Sempre documente o `base_url` em uma variável de ambiente no Postman. Assim, você alterna entre `http://localhost:3000` (desenvolvimento) e `https://api.empresa.com` (produção) com apenas um clique.
 
 ## 5. Solução de Problemas ⚠️
-*   **Espaço em Disco**: O Xcode é muito grande. Garanta pelo menos 40GB de espaço livre para ele e os simuladores.
-*   **Build Lento**: Use simuladores de modelos mais simples (ex: iPhone SE) para poupar memória RAM se necessário.
+*   **Erro de SSL**: Se estiver testando em ambiente local com HTTPS sem certificado válido, desabilite a "SSL Certificate Verification" nas configurações da ferramenta.
+*   **CORS**: Alguns navegadores barram requisições, mas ferramentas como Postman e Insomnia ignoram regras de CORS, facilitando os testes.
