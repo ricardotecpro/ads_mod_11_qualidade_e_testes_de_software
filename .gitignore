@@ -49,6 +49,7 @@ poetry.lock
 
 # Logs
 *.log
+*.txt
 
 # Database
 *.db
