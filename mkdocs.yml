@@ -265,3 +265,4 @@ exclude_docs: |
   projetos/src/
   setups/src/
   aulas/src/
+  _legado/
