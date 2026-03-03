@@ -33,7 +33,7 @@ graph TD
     A[Usuário Ativo?] -->|Sim| B[Tem Saldo?]
     A -->|Não| C[Negar Transação]
     B -->|Sim| D[Aprovar Transação]
-    B -->|Não| E[Negar (Saldo Insuficiente)]
+    B -->|Não| E["Negar (Saldo Insuficiente)"]
 ```
 
 ---
@@ -63,3 +63,35 @@ graph TD
 **Objetivo**: Aplicar técnicas de caixa preta.
 - Cenário: Um sistema de e-commerce dá 10% de desconto para compras acima de R$ 500,00 e frete grátis para compras acima de R$ 1.000,00.
 - **Tarefa**: Crie uma pequena tabela com 5 casos de teste que cubram a **Partição de Equivalência** e os **Valores Limite** desta regra.
+
+---
+
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+
+- :material-presentation: **Slides**
+    ---
+    Material visual com diagramas e conceitos-chave.
+    [:octicons-arrow-right-24: Slide 07](../slides/slide-07.md)
+
+- :material-help-circle: **Quiz**
+    ---
+    Teste seu conhecimento com 10 questões interativas.
+    [:octicons-arrow-right-24: Quiz 07](../quizzes/quiz-07.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+    ---
+    5 exercícios progressivos (básico → desafio).
+    [:octicons-arrow-right-24: Exercício 07](../exercicios/exercicio-07.md)
+
+- :material-briefcase-outline: **Projeto**
+    ---
+    Aplicação prática dos conceitos da aula.
+    [:octicons-arrow-right-24: Projeto 07](../projetos/projeto-07.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 08](./aula-08.md){ .md-button .md-button--primary }

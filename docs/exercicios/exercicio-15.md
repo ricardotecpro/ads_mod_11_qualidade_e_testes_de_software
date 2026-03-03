@@ -1,15 +1,23 @@
-# Exercícios: Aula 15 - Gestão de Defeitos 🐛
+# Exercícios 15 - Estrutura de Custos 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **Status do Bug**: Qual a diferença entre um bug com status **Novo** e um bug com status **Aberto**?
-2.  **Jira**: Para que serve um "Board" (Quadro) no Jira ou em ferramentas similares de gestão ágil?
+1. Discirna de modo fluído Custos e viabilidade entre modelo Direcionado ao Valor versus Direcionados na base bruta dos Custos focados intersecionados ativos perenes lógicos puros inatos ao planejamento.
+2. Qual pilar atesta Custo Fixo de um Custo estritamente Variável nas dinâmicas tangíveis operacionais lógicas?
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **Severidade vs Prioridade**: Um bug que impede o usuário de trocar de senha, mas que afeta apenas 1% da base de usuários, possui qual Severidade e qual Prioridade? Justifique.
-4.  **Reabertura**: Em qual situação um QA deve mudar o status de um bug de "Reteste" para "Aberto/Reaberto"?
+3. Qual tática ou margem atestável a franquia Fast-Food ou corporação escalonada atestada perante bases ganham ao comprar matéria em margens fluídas exponenciadas de bases massificadas intersecionadas globais?
+4. Expanda no fenômeno das Economias atreladas nas bases do Escopo puro onde logística fluí em fluxos paralelos orgânicos perenes aos conglomerados nativos passivos das estruturas de pontes de distribuição de base sólida logística imbuída globais.
 
 ## 🔴 Desafio
 
-5.  **Análise de Métricas**: No final da sprint, você percebe que a taxa de **Bug Leakage** (bugs que foram para produção) aumentou. Como QA, quais seriam as duas perguntas principais que você faria ao time para identificar a causa raiz desse problema?
+5. Explicite O Efeito Burn Rate implacável que as Startups sofrem base nas projeções atestadas de viés intermediário e defina 'Runway' atrelado de métricas pautadas nos modelos base tech desprovidos puramente nativamente natos da margem atrelada fluída de ganhos iniciais interativos transacionais das massificações lógicas inatas garantidas fluídas ao percurso dos trilhos dos ecossistemas de risco e capital nativos da era tech.
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-15.md)**

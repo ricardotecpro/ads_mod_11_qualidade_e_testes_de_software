@@ -1,15 +1,23 @@
-# Exercícios: Aula 07 - Caixa Preta 🌑
+# Exercícios 07 - Modelagem Canvas 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **Fundamentos**: Por que chamamos esta técnica de "Caixa Preta"? O testador precisa saber em qual linguagem o sistema foi escrito?
-2.  **Vantagem**: Cite uma vantagem pedagógica de se iniciar os testes de um sistema pela abordagem de Caixa Preta antes de olhar o código.
+1. Qual a grande diferença e grande proposta revolucionária do Canvas sobre o Plano clássico (Seapa/Sebrae)?
+2. Quantos e quais são os blocos lógicos essenciais do Business Model Canvas (BMC)?
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **Partição de Equivalência**: Um campo de "Cupom de Desconto" aceita apenas 3 códigos válidos: `PROMO10`, `BLACK50` e `FRETEGRATIS`. Identifique as partições válidas e pelo menos duas partições inválidas para este campo.
-4.  **Valor Limite**: Um sistema de pontuação de games concede uma medalha de ouro para quem faz exatamente entre 1.000 e 5.000 pontos. Quais seriam os valores exatos para testar os limites dessa regra?
+3. Se uma alteração radical for feita na Segmentação de Clientes, que blocos do Canvas sofreriam abalo em cadeia direto?
+4. Descreva o papel lógico e semântico dos Canais versus a área de Relacionamento no Canvas.
 
 ## 🔴 Desafio
 
-5.  **Planejamento de Teste**: Crie 5 casos de teste de **Caixa Preta** para uma tela de login que possui: Email, Senha e Captcha. Utilize pelo menos uma das técnicas vistas em aula (Equivalência ou Limite).
+5. O Canvas não é estático. Use o conceito de Padronização e Business Model Patterns, aplique isso definindo a configuração atípica de um Business Canvas na vertente Freemium Digital e Long Tail de produtos físicos nichados.
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-07.md)**

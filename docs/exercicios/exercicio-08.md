@@ -1,24 +1,23 @@
-# Exercícios: Aula 08 - Caixa Branca ⚪
+# Exercícios 08 - Segmentação de Clientes 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **Visibilidade**: O que diferencia o teste de Caixa Branca do teste de Caixa Preta em relação ao acesso do testador ao código-fonte?
-2.  **Cobertura**: O que significa dizer que um projeto tem "80% de code coverage"?
+1. O que significa nichar um mercado e as vantagens desta restrição?
+2. Tratar características demográficas sozinhas atesta resultados plenos para startups? Por quê? 
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **Complexidade Ciclomática**: Imagine uma função com 10 comandos `if` encadeados. Por que essa função é considerada difícil de testar via Caixa Branca?
-4.  **Cobertura de Decisão**: Se eu tenho um código `if (A && B)`, quantos casos de teste eu preciso, no mínimo, para garantir que todas as condições da decisão foram testadas (Verdadeiro/Falso)?
+3. Construa e diferencie a essência de Público-alvo versus da Persona Analítica Ideal.
+4. Exemplifique B2B e B2C determinando quem efetua a ação vital de compra corporativa.
 
 ## 🔴 Desafio
 
-5.  **Análise de Fluxo**: Desenhe o grafo de fluxo de controle para o código abaixo e identifique o "caminho feliz" e o "caminho de exceção":
-```python
-def check_status(active, balance):
-    if active:
-        if balance > 0:
-            return "Pode Comprar"
-        else:
-            return "Saldo Insuficiente"
-    return "Conta Inativa"
-```
+5. O framework Intermediário 'Job To Be Done (JTBD)' inverte as lógicas do marketing e as personas engessadas e cegas faturadas globalmente pelo sistema demográfico. Desenvolva através da explicação com uma furadeira qual seria na realidade a tarefa subjacente.
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-08.md)**

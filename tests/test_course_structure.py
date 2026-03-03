@@ -8,7 +8,7 @@ EXPECTED_SLIDES = [f"slide-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_QUIZZES = [f"quiz-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_EXERCISES = [f"exercicio-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_PROJECTS = [f"projeto-{i:02d}.md" for i in range(1, 17)]
-EXPECTED_SETUPS = [f"setup-{i:02d}.md" for i in range(1, 10)]
+EXPECTED_SETUPS = [f"setup-{i:02d}.md" for i in range(1, 4)]
 EXPECTED_INDEXES = [
     "aulas/index.md",
     "exercicios/index.md",

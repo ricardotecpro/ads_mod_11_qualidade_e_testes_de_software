@@ -1,20 +1,23 @@
-# Exercícios: Aula 03 - Ciclo de Vida de Testes (STLC) 🔄
+# Exercícios 03 - Análise de Valor 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **Sequenciamento**: Coloque as fases abaixo na ordem correta do STLC:
-    - Execução de Testes
-    - Planejamento de Testes
-    - Análise de Requisitos
-    - Encerramento de Testes
-    - Desenvolvimento de Casos de Teste
-2.  **Objetivo**: Qual a principal entrega da fase de **Análise de Requisitos** no ciclo de testes?
+1. O que significa 'Percepção de Valor' pelo cliente?
+2. Qual é a relação entre preço, custo e valor na confecção de um produto?
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **Ambiente**: Por que a fase de **Configuração do Ambiente de Teste** deve ocorrer, idealmente, antes da fase de Execução? O que pode acontecer se o ambiente não for validado previamente?
-4.  **Critérios de Saída**: O que define que a fase de **Execução de Testes** pode ser considerada encerrada em um ciclo de sprint ágil?
+3. Se uma empresa inova mas o cliente não percebe melhoria na usabilidade, houve entrega de valor? Por quê?
+4. Apresente os três pilares que sustentam uma Proposta de Valor imbatível.
 
 ## 🔴 Desafio
 
-5.  **Gestão de Crise**: Durante a fase de **Execução**, você percebe que os requisitos mudaram completamente no meio do caminho. Como você ajustaria o STLC para lidar com essa mudança sem perder a qualidade do que já foi testado?
+5. Explique a dinâmica do CAC e do LTV. Demonstre matematicamente por que um negócio cujo LTV seja 3x maior que o CAC tem uma análise de valor robusta.
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-03.md)**

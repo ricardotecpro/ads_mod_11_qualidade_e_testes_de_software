@@ -64,3 +64,35 @@ mindmap
 - Imagine um sistema de "Gestão Escolar".
 - Escolha uma funcionalidade: "Lançamento de Notas".
 - Escreva 3 critérios que o Professor (Usuário Final) usaria para **Aceitar** ou **Rejeitar** essa entrega.
+
+---
+
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+
+- :material-presentation: **Slides**
+    ---
+    Material visual com diagramas e conceitos-chave.
+    [:octicons-arrow-right-24: Slide 09](../slides/slide-09.md)
+
+- :material-help-circle: **Quiz**
+    ---
+    Teste seu conhecimento com 10 questões interativas.
+    [:octicons-arrow-right-24: Quiz 09](../quizzes/quiz-09.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+    ---
+    5 exercícios progressivos (básico → desafio).
+    [:octicons-arrow-right-24: Exercício 09](../exercicios/exercicio-09.md)
+
+- :material-briefcase-outline: **Projeto**
+    ---
+    Aplicação prática dos conceitos da aula.
+    [:octicons-arrow-right-24: Projeto 09](../projetos/projeto-09.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 10](./aula-10.md){ .md-button .md-button--primary }

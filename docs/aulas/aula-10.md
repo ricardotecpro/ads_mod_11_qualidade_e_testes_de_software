@@ -65,3 +65,35 @@ Um QA deve se preocupar com as **10 Heurísticas de Nielsen**, como:
 - Escolha um formulário online complexo (ex: cadastro em site oficial).
 - Identifique 2 pontos onde a **Heurística de Prevenção de Erros** poderia ser melhor aplicada.
 - Sugira uma melhoria para cada ponto.
+
+---
+
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+
+- :material-presentation: **Slides**
+    ---
+    Material visual com diagramas e conceitos-chave.
+    [:octicons-arrow-right-24: Slide 10](../slides/slide-10.md)
+
+- :material-help-circle: **Quiz**
+    ---
+    Teste seu conhecimento com 10 questões interativas.
+    [:octicons-arrow-right-24: Quiz 10](../quizzes/quiz-10.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+    ---
+    5 exercícios progressivos (básico → desafio).
+    [:octicons-arrow-right-24: Exercício 10](../exercicios/exercicio-10.md)
+
+- :material-briefcase-outline: **Projeto**
+    ---
+    Aplicação prática dos conceitos da aula.
+    [:octicons-arrow-right-24: Projeto 10](../projetos/projeto-10.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 11](./aula-11.md){ .md-button .md-button--primary }

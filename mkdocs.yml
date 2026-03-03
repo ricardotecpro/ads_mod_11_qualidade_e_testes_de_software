@@ -58,8 +58,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - footnotes
   - admonition
   - attr_list
@@ -144,13 +144,12 @@ extra:
       link: https://linkedin.com/in/ricardotecpro
     - icon: fontawesome/solid/globe
       link: https://ricardotecpro.github.io/
-  version:
-    provider: mike
-    default: estavel
-
 nav:
-  - Início: index.md
-  - Plano de Ensino: plano-ensino.md
+  - Principal:
+      - Início: index.md
+      - Plano de Ensino: plano-ensino.md
+      - O Curso: sobre.md
+      - Roadmap: project_roadmap.md
   - Aulas:
       - Índice: aulas/index.md
       - 'Aula 01 - Qualidade e QA': aulas/aula-01.md
@@ -169,91 +168,100 @@ nav:
       - 'Aula 14 - Testes de API': aulas/aula-14.md
       - 'Aula 15 - Gestão de Defeitos': aulas/aula-15.md
       - 'Aula 16 - Projeto Integrador': aulas/aula-16.md
-  - Exercícios:
-      - 'Índice': exercicios/index.md
-      - 'Ex 01': exercicios/exercicio-01.md
-      - 'Ex 02': exercicios/exercicio-02.md
-      - 'Ex 03': exercicios/exercicio-03.md
-      - 'Ex 04': exercicios/exercicio-04.md
-      - 'Ex 05': exercicios/exercicio-05.md
-      - 'Ex 06': exercicios/exercicio-06.md
-      - 'Ex 07': exercicios/exercicio-07.md
-      - 'Ex 08': exercicios/exercicio-08.md
-      - 'Ex 09': exercicios/exercicio-09.md
-      - 'Ex 10': exercicios/exercicio-10.md
-      - 'Ex 11': exercicios/exercicio-11.md
-      - 'Ex 12': exercicios/exercicio-12.md
-      - 'Ex 13': exercicios/exercicio-13.md
-      - 'Ex 14': exercicios/exercicio-14.md
-      - 'Ex 15': exercicios/exercicio-15.md
-      - 'Ex 16': exercicios/exercicio-16.md
-  - Projetos:
-      - 'Índice': projetos/index.md
-      - 'Proj 01': projetos/projeto-01.md
-      - 'Proj 02': projetos/projeto-02.md
-      - 'Proj 03': projetos/projeto-03.md
-      - 'Proj 04': projetos/projeto-04.md
-      - 'Proj 05': projetos/projeto-05.md
-      - 'Proj 06': projetos/projeto-06.md
-      - 'Proj 07': projetos/projeto-07.md
-      - 'Proj 08': projetos/projeto-08.md
-      - 'Proj 09': projetos/projeto-09.md
-      - 'Proj 10': projetos/projeto-10.md
-      - 'Proj 11': projetos/projeto-11.md
-      - 'Proj 12': projetos/projeto-12.md
-      - 'Proj 13': projetos/projeto-13.md
-      - 'Proj 14': projetos/projeto-14.md
-      - 'Proj 15': projetos/projeto-15.md
-      - 'Proj 16': projetos/projeto-16.md
-  - Quizzes:
-      - 'Índice': quizzes/index.md
-      - 'Quiz 01': quizzes/quiz-01.md
-      - 'Quiz 02': quizzes/quiz-02.md
-      - 'Quiz 03': quizzes/quiz-03.md
-      - 'Quiz 04': quizzes/quiz-04.md
-      - 'Quiz 05': quizzes/quiz-05.md
-      - 'Quiz 06': quizzes/quiz-06.md
-      - 'Quiz 07': quizzes/quiz-07.md
-      - 'Quiz 08': quizzes/quiz-08.md
-      - 'Quiz 09': quizzes/quiz-09.md
-      - 'Quiz 10': quizzes/quiz-10.md
-      - 'Quiz 11': quizzes/quiz-11.md
-      - 'Quiz 12': quizzes/quiz-12.md
-      - 'Quiz 13': quizzes/quiz-13.md
-      - 'Quiz 14': quizzes/quiz-14.md
-      - 'Quiz 15': quizzes/quiz-15.md
-      - 'Quiz 16': quizzes/quiz-16.md
-  - Slides:
-      - 'Índice': slides/index.md
-      - 'Slide 01': slides/slide-01.md
-      - 'Slide 02': slides/slide-02.md
-      - 'Slide 03': slides/slide-03.md
-      - 'Slide 04': slides/slide-04.md
-      - 'Slide 05': slides/slide-05.md
-      - 'Slide 06': slides/slide-06.md
-      - 'Slide 07': slides/slide-07.md
-      - 'Slide 08': slides/slide-08.md
-      - 'Slide 09': slides/slide-09.md
-      - 'Slide 10': slides/slide-10.md
-      - 'Slide 11': slides/slide-11.md
-      - 'Slide 12': slides/slide-12.md
-      - 'Slide 13': slides/slide-13.md
-      - 'Slide 14': slides/slide-14.md
-      - 'Slide 15': slides/slide-15.md
-      - 'Slide 16': slides/slide-16.md
-  - Configuração:
-      - 'Índice': setups/index.md
-      - 'Setup 01 - Selenium': setups/setup-01.md
-      - 'Setup 02 - Postman': setups/setup-02.md
-      - 'Setup 03 - Python': setups/setup-03.md
-      - 'Setup 04 - Java': setups/setup-04.md
-      - 'Setup 05 - Node.js': setups/setup-05.md
-      - 'Setup 06 - VS Code': setups/setup-06.md
-      - 'Setup 07 - Git': setups/setup-07.md
-      - 'Setup 08 - Docker': setups/setup-08.md
-      - 'Setup 09 - DBs': setups/setup-09.md
-  - Sobre:
-      - 'O Curso': sobre.md
-      - 'Roadmap': project_roadmap.md
+  - Materiais:
+      - Quizzes:
+          - 'Índice': quizzes/index.md
+          - 'Quiz 01': quizzes/quiz-01.md
+          - 'Quiz 02': quizzes/quiz-02.md
+          - 'Quiz 03': quizzes/quiz-03.md
+          - 'Quiz 04': quizzes/quiz-04.md
+          - 'Quiz 05': quizzes/quiz-05.md
+          - 'Quiz 06': quizzes/quiz-06.md
+          - 'Quiz 07': quizzes/quiz-07.md
+          - 'Quiz 08': quizzes/quiz-08.md
+          - 'Quiz 09': quizzes/quiz-09.md
+          - 'Quiz 10': quizzes/quiz-10.md
+          - 'Quiz 11': quizzes/quiz-11.md
+          - 'Quiz 12': quizzes/quiz-12.md
+          - 'Quiz 13': quizzes/quiz-13.md
+          - 'Quiz 14': quizzes/quiz-14.md
+          - 'Quiz 15': quizzes/quiz-15.md
+          - 'Quiz 16': quizzes/quiz-16.md
+      - Slides:
+          - 'Índice': slides/index.md
+          - 'Slide 01': slides/slide-01.md
+          - 'Slide 02': slides/slide-02.md
+          - 'Slide 03': slides/slide-03.md
+          - 'Slide 04': slides/slide-04.md
+          - 'Slide 05': slides/slide-05.md
+          - 'Slide 06': slides/slide-06.md
+          - 'Slide 07': slides/slide-07.md
+          - 'Slide 08': slides/slide-08.md
+          - 'Slide 09': slides/slide-09.md
+          - 'Slide 10': slides/slide-10.md
+          - 'Slide 11': slides/slide-11.md
+          - 'Slide 12': slides/slide-12.md
+          - 'Slide 13': slides/slide-13.md
+          - 'Slide 14': slides/slide-14.md
+          - 'Slide 15': slides/slide-15.md
+          - 'Slide 16': slides/slide-16.md
+      - Exercícios:
+          - 'Índice': exercicios/index.md
+          - 'Ex 01': exercicios/exercicio-01.md
+          - 'Ex 02': exercicios/exercicio-02.md
+          - 'Ex 03': exercicios/exercicio-03.md
+          - 'Ex 04': exercicios/exercicio-04.md
+          - 'Ex 05': exercicios/exercicio-05.md
+          - 'Ex 06': exercicios/exercicio-06.md
+          - 'Ex 07': exercicios/exercicio-07.md
+          - 'Ex 08': exercicios/exercicio-08.md
+          - 'Ex 09': exercicios/exercicio-09.md
+          - 'Ex 10': exercicios/exercicio-10.md
+          - 'Ex 11': exercicios/exercicio-11.md
+          - 'Ex 12': exercicios/exercicio-12.md
+          - 'Ex 13': exercicios/exercicio-13.md
+          - 'Ex 14': exercicios/exercicio-14.md
+          - 'Ex 15': exercicios/exercicio-15.md
+          - 'Ex 16': exercicios/exercicio-16.md
+      - Projetos:
+          - 'Índice': projetos/index.md
+          - 'Proj 01': projetos/projeto-01.md
+          - 'Proj 02': projetos/projeto-02.md
+          - 'Proj 03': projetos/projeto-03.md
+          - 'Proj 04': projetos/projeto-04.md
+          - 'Proj 05': projetos/projeto-05.md
+          - 'Proj 06': projetos/projeto-06.md
+          - 'Proj 07': projetos/projeto-07.md
+          - 'Proj 08': projetos/projeto-08.md
+          - 'Proj 09': projetos/projeto-09.md
+          - 'Proj 10': projetos/projeto-10.md
+          - 'Proj 11': projetos/projeto-11.md
+          - 'Proj 12': projetos/projeto-12.md
+          - 'Proj 13': projetos/projeto-13.md
+          - 'Proj 14': projetos/projeto-14.md
+          - 'Proj 15': projetos/projeto-15.md
+          - 'Proj 16': projetos/projeto-16.md
       - 'Materiais Extras': materiais.md
-  - Impressão: print_page.md
+  - Impresso:
+      - Impressão: print_page.md
+  - Legado:
+      - Configuração:
+          - 'Índice': setups/index.md
+          - 'Setup 01 - Selenium': setups/setup-01.md
+          - 'Setup 02 - Postman': setups/setup-02.md
+          - 'Setup 03 - Python': setups/setup-03.md
+          - 'Setup 04 - Java': setups/setup-04.md
+          - 'Setup 05 - Node.js': setups/setup-05.md
+          - 'Setup 06 - VS Code': setups/setup-06.md
+          - 'Setup 07 - Git': setups/setup-07.md
+          - 'Setup 08 - Docker': setups/setup-08.md
+          - 'Setup 09 - DBs': setups/setup-09.md
+
+exclude_docs: |
+  .src/
+  slides/src/
+  quizzes/src/
+  exercicios/src/
+  projetos/src/
+  setups/src/
+  aulas/src/

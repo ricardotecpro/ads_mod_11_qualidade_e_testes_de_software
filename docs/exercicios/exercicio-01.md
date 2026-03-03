@@ -1,18 +1,23 @@
-# Exercícios: Aula 01 - Qualidade e Papel do QA 📝
+# Exercícios 01 - Intro ao Empreendedorismo 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **Definição**: Segundo o que vimos em aula, o que diferencia a Qualidade de Software da simples "ausência de erros"?
-2.  **Cadeia de Valor**: Cite três benefícios claros que uma empresa obtém ao investir em uma equipe de QA dedicada desde o início do projeto.
+1. Defina o que é ser um empreendedor com suas palavras.
+2. Quais são as diferenças marcantes entre o empreendedor por necessidade e o por oportunidade?
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **Cenário de Falha**: Identifique se as situações abaixo são **Erro**, **Defeito** ou **Falha**:
-    - A) O desenvolvedor esqueceu de fechar uma conexão com o banco de dados.
-    - B) O sistema exibe "500 Internal Server Error" ao clicar em salvar.
-    - C) O documento de especificação diz que a idade mínima é 18, mas o programador escreveu `if (age > 18)`.
-4.  **Verificação x Validação**: Um QA está lendo o documento de requisitos para encontrar contradições. Ele está fazendo uma atividade de Verificação ou Validação? Justifique sua resposta.
+3. Um funcionário otimiza um setor interno reduzindo custos em 30%. Ele pode ser considerado empreendedor? Justifique baseado nos tipos de perfis.
+4. Explique a importância da característica 'Correr Riscos Calculados' na visão empreendedora.
 
 ## 🔴 Desafio
 
-5.  **Estudo de Caso**: Imagine que um bug crítico chegou à produção (os usuários não conseguem finalizar compras). Como QA, quais seriam seus primeiros passos para ajudar a equipe técnica e como você documentaria essa situação para evitar que ocorra novamente?
+5. Como a mentalidade 'Lean Startup' e o uso de MVP revolucionam a validação de um empreendimento, diferenciando da abertura clássica de empresas de décadas atrás?
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-01.md)**

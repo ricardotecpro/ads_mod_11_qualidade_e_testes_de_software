@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Subtle gradient for depth -->
+    <linearGradient id="whiteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer ring (representing integrated systems) -->
+  <circle cx="60" cy="60" r="55" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Central hexagon (representing structured organization) -->
+  <polygon points="60,25 85,40 85,70 60,85 35,70 35,40" 
+           fill="none" 
+           stroke="#ffffff" 
+           stroke-width="3"/>
+  
+  <!-- Inner management dashboard -->
+  <rect x="45" y="45" width="30" height="20" rx="3" ry="3" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="2"/>
+  
+  <!-- Data visualization elements (bar chart) -->
+  <g opacity="0.9">
+    <rect x="48" y="58" width="2" height="5" fill="#ffffff"/>
+    <rect x="52" y="55" width="2" height="8" fill="#ffffff"/>
+    <rect x="56" y="52" width="2" height="11" fill="#ffffff"/>
+    <rect x="60" y="56" width="2" height="7" fill="#ffffff"/>
+    <rect x="64" y="50" width="2" height="13" fill="#ffffff"/>
+    <rect x="68" y="54" width="2" height="9" fill="#ffffff"/>
+  </g>
+  
+  <!-- Network nodes (representing IT infrastructure) -->
+  <g fill="#ffffff" opacity="0.8">
+    <!-- Core nodes -->
+    <circle cx="60" cy="35" r="4"/>
+    <circle cx="85" cy="55" r="4"/>
+    <circle cx="60" cy="85" r="4"/>
+    <circle cx="35" cy="55" r="4"/>
+    
+    <!-- Secondary nodes -->
+    <circle cx="75" cy="75" r="3"/>
+    <circle cx="45" cy="75" r="3"/>
+    <circle cx="75" cy="35" r="3"/>
+    <circle cx="45" cy="35" r="3"/>
+  </g>
+  
+  <!-- Connection lines (data flow) -->
+  <g stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.6">
+    <!-- Cross connections -->
+    <path d="M60,35 L35,55 M60,35 L85,55"/>
+    <path d="M35,55 L60,85 M85,55 L60,85"/>
+    
+    <!-- Diagonal connections -->
+    <path d="M75,35 L75,75 M45,35 L45,75"/>
+    <path d="M75,35 L45,75 M45,35 L75,75"/>
+  </g>
+  
+  <!-- Central processing unit (representing technology core) -->
+  <rect x="55" y="55" width="10" height="10" rx="2" ry="2" 
+        fill="#ffffff" 
+        opacity="0.9"/>
+  
+  <!-- Binary pattern decoration -->
+  <g fill="#ffffff" opacity="0.4" font-family="monospace" font-size="6">
+    <text x="20" y="25">01</text>
+    <text x="95" y="25">10</text>
+    <text x="20" y="100">11</text>
+    <text x="95" y="100">00</text>
+  </g>
+  
+  <!-- Process flow arrows -->
+  <g stroke="#ffffff" stroke-width="2" fill="none" opacity="0.7">
+    <!-- Input arrows -->
+    <path d="M10,60 L25,60 M22,57 L25,60 L22,63" stroke="none" fill="#ffffff"/>
+    <polygon points="10,57 25,60 10,63" fill="#ffffff"/>
+    
+    <!-- Output arrows -->
+    <polygon points="95,57 110,60 95,63" fill="#ffffff"/>
+  </g>
+  
+  <!-- Corner tech elements -->
+  <g opacity="0.5">
+    <!-- Top left: Database symbol -->
+    <ellipse cx="15" cy="15" rx="8" ry="4" fill="none" stroke="#ffffff" stroke-width="1"/>
+    <ellipse cx="15" cy="15" rx="8" ry="2" fill="#ffffff" opacity="0.6"/>
+    
+    <!-- Top right: Cloud/Server -->
+    <path d="M98,10 Q105,8 108,15 Q112,12 115,18 Q118,15 120,20 Q115,25 108,23 Q105,25 98,22 Q95,18 98,15 Z" 
+          fill="#ffffff" opacity="0.6"/>
+    
+    <!-- Bottom left: Settings gear -->
+    <circle cx="15" cy="105" r="6" fill="none" stroke="#ffffff" stroke-width="1"/>
+    <circle cx="15" cy="105" r="2" fill="#ffffff"/>
+    
+    <!-- Bottom right: Analytics -->
+    <path d="M100,100 L120,100 M105,105 L110,95 M115,102 L120,98" 
+          stroke="#ffffff" stroke-width="1"/>
+  </g>
+</svg>

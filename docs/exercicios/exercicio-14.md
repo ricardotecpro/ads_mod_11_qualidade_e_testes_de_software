@@ -1,22 +1,23 @@
-# Exercícios: Aula 14 - Testes de API 📡
+# Exercícios 14 - Parcerias Estratégicas 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **Métodos HTTP**: Relacione o Verbo HTTP com sua ação:
-    - GET -> ?
-    - POST -> ?
-    - DELETE -> ?
-    - PUT -> ?
-2.  **Status Codes**: O que significa quando uma API retorna o status **404 Not Found**?
+1. Quais os motivos base de mitigar e partilhar esforços na criação das redes puras passivas orgânicas conjuntas aos pares e redes perenes atreladas?
+2. O termo Coopetição é a base dos negócios híbridos de pares? Forneça contexto lúdico onde englobam pares puros das bases do conceito ativo fluído.
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **Autenticação**: Como funciona o teste de uma API que exige um **Token JWT**? Onde esse token deve ser enviado na requisição?
-4.  **Payload JSON**: Em um método **POST**, qual a função do "Body" (Corpo) da requisição? Dê um exemplo simples de um JSON de criação de usuário.
+3. Risco fatiado no Joint Venturing interseciona lucros também ou age a título benevolente das premissas conjuntas dos acordos base?
+4. Com a nova era atestada interligada pautada nos Ecossistemas base tech fluídos puros os Parceiros perderam o contato? Elucide no marketplace nativo fluído ou intersecção nas gigantes redes perenes vitais globais.
 
 ## 🔴 Desafio
 
-5.  **Cenário de Erro**: Você está testando uma API de transferência bancária.
-    - O sistema deve retornar **200 OK** se houver saldo.
-    - O sistema deve retornar **400 Bad Request** se o saldo for insuficiente.
-    - **Escreva como você estruturaria** um teste no Postman para garantir que o sistema não permita transferências sem saldo, validando o Status Code e a mensagem de erro no JSON de resposta.
+5. O mercado avançado aponta 'Alianças API/Economy' substituindo elos braçais orgânicos inertes puros vitais dos moldes corporativos dos parceiros na era passada. Debata por que programar a roda inteira internamente beira ou flerta no suícidio logístico perante a aliança imediata nas APIs pautadas puras atestadamente robustas externas interlaçadas de gigantes fluídos escalonáveis mundiais.
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-14.md)**

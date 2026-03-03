@@ -70,3 +70,35 @@ sequenceDiagram
 }
 ```
 - **Tarefa**: Escreva 2 validações que você faria nesta resposta (ex: validar o campo status, validar o valor).
+
+---
+
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+
+- :material-presentation: **Slides**
+    ---
+    Material visual com diagramas e conceitos-chave.
+    [:octicons-arrow-right-24: Slide 14](../slides/slide-14.md)
+
+- :material-help-circle: **Quiz**
+    ---
+    Teste seu conhecimento com 10 questões interativas.
+    [:octicons-arrow-right-24: Quiz 14](../quizzes/quiz-14.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+    ---
+    5 exercícios progressivos (básico → desafio).
+    [:octicons-arrow-right-24: Exercício 14](../exercicios/exercicio-14.md)
+
+- :material-briefcase-outline: **Projeto**
+    ---
+    Aplicação prática dos conceitos da aula.
+    [:octicons-arrow-right-24: Projeto 14](../projetos/projeto-14.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 15](./aula-15.md){ .md-button .md-button--primary }

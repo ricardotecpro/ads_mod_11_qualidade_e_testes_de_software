@@ -1,19 +1,23 @@
-# Exercícios: Aula 13 - Automação Web 🤖
+# Exercícios 13 - Recursos Essenciais 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **Seletores**: Quais são os três principais tipos de seletores (IDs, Classes, etc.) usados para localizar elementos em uma página web? Qual deles é o mais estável?
-2.  **Happy Path**: O que significa o termo "Caminho Feliz" (Happy Path) na automação E2E?
+1. Qual é a base e elo lógico de intersecção existencial do Bloco de Recursos e das macro atividades correlatas ativas no canvas interativo?
+2. Distância de bases de recursos vitais como Patrimônio vs Finanças nas óticas modernas de empreendimentos ativos globais nascidos recém saídos dos Berços base da web 4.0 atuais perenes.
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **Auto-waiting**: Como ferramentas modernas como o Playwright lidam com elementos que demoram para carregar na página? Por que isso é melhor do que usar `sleep(5)`?
-4.  **Localizadores**: Por que é uma má prática usar o **XPath Absoluto** (ex: `/html/body/div[1]/div[2]/...`) em seus testes automatizados?
+3. Qual importância de capital Intelectual? Exemplifique no setor tech atual da bolsa ou de bases modernas.
+4. Cite formas e caminhos lógicos puros utilizados pelos ecossistemas orgânicos dos modelos físicos para amarrar recursos atestadamente sem incorrer falências antecipadas passivas brutais.
 
 ## 🔴 Desafio
 
-5.  **Script de Teste**: Imagine que você precisa testar um formulário que contém:
-    - Um campo de texto para o Nome.
-    - Um checkbox para "Aceito os termos".
-    - Um botão de "Enviar".
-    **Escreva o roteiro** (passo a passo) de como o robô deve interagir com esses elementos e qual seria a validação (assertion) final para confirmar o envio com sucesso.
+5. Gestão ágil do 'Asset-Light' tem salvo Unicórnios no mercado global interligado? Explique o fenômeno tangível vital sob as siglas CAPEX (ativos fixos) a e como as sublocações dinâmicas OPEX (operacionais fluidos e variáveis lógicos) aceleraram perante incertezas do mercado atrelado passivo oscilante global. 
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-13.md)**

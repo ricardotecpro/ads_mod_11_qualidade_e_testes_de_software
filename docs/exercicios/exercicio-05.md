@@ -1,18 +1,23 @@
-# Exercícios: Aula 05 - Melhores Práticas ✨
+# Exercícios 05 - Estratégias e Ideação 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **Nomenclatura**: Refatore os nomes das variáveis abaixo seguindo os princípios do Clean Code:
-    - `d`: data de vencimento do boleto.
-    - `u_ativo`: booleano que indica se o usuário está logado.
-    - `lista1`: lista contendo nomes de arquivos de log.
-2.  **Funções**: Segundo o Clean Code, qual a regra de ouro sobre o que uma função deve fazer e qual deve ser o seu tamanho ideal?
+1. Qual a finalidade de realizar uma sessão de Brainstorming focada?
+2. O Design Thinking coloca o humano no centro. O que isso significa na prática da ideação?
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **DRY vs WET**: Explique por que o princípio **DRY (Don't Repeat Yourself)** é um forte aliado dos testes automatizados. O que acontece com a manutenção dos testes quando o código é "WET" (Write Everything Twice)?
-4.  **Refatoração**: Imagine um código que possui 1000 linhas em um único método. Quais seriam as duas primeiras técnicas de refatoração (ex: extrair método) que você aplicaria para facilitar a criação de testes unitários?
+3. Como o processo de divergência (criar escolhas) e convergência (fazer escolhas) estrutura as dinâmicas?
+4. Cite dois mitigadores importantes na estratégia visual ou mind-mapping para resolução.
 
 ## 🔴 Desafio
 
-5.  **Revisão de Código (Code Review)**: Você recebeu para revisar um código onde todas as validações de banco de dados estão misturadas com a lógica de interface (HTML/JS). Escreva um breve comentário (feedback) para o desenvolvedor explicando por que essa falta de **Separação de Preocupações** prejudica a testabilidade do sistema.
+5. Descreva o modelo do 'Duplo Diamante' no contexto avançado e discuta como focar no Espaço do Problema é diferencial antes de pular para o Espaço da Solução.
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-05.md)**

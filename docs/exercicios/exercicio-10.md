@@ -1,15 +1,23 @@
-# Exercícios: Aula 10 - Testes Não Funcionais e UX 🧠
+# Exercícios 10 - Canais de Comunicação 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **Performance**: Explique a diferença entre o tempo de resposta do servidor e o tempo de carregamento da página para o usuário.
-2.  **Segurança**: Por que o teste de segurança deve ser uma preocupação desde o início do desenvolvimento (Security by Design)?
+1. O que definem os Canais de forma teórica em relação orgânica às vendas no modelo lido?
+2. Canal primariamente tem apenas e unicamente intuito de venda transacional? Cite um contraponto do marketing.
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **Carga vs Estresse**: Uma Black Friday está chegando. Qual destes dois testes você priorizaria para garantir que o site não saia do ar? Justifique.
-4.  **Acessibilidade**: Como a acessibilidade digital se conecta com a qualidade de software? Cite dois exemplos de testes de acessibilidade (ex: contraste, leitores de tela).
+3. Qual a disparidade de viabilidade e de impacto comparando canais Diretos com canais Indiretos parceirizados.
+4. Defina o viés moderno entre atuar num Multicanal perante um Omnichannel onde marcas modernas aportam.
 
 ## 🔴 Desafio
 
-5.  **Heurísticas de Nielsen**: Escolha um aplicativo que você considera "difícil de usar". Identifique pelo menos uma das **10 Heurísticas de Nielsen** que está sendo violada e proponha uma correção de design/fluxo.
+5. Canais se comunicam matematicamente de forma contígua a taxas de funil perante CAC. Demonstre o racional intermediário estratégico que fundamenta em cancelar certas bases para manter a taxa de conversão final escalável nas estratégias focadas do Omnichannel.
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-10.md)**

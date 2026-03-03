@@ -1,15 +1,23 @@
-# Exercícios: Aula 06 - Controle de Versão e CI 🐙
+# Exercícios 06 - Plano de Negócios 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **Git Flow**: Em um ambiente profissional, por que nunca devemos rodar testes ou fazer experimentos diretamente na branch `main`?
-2.  **CI (Integração Contínua)**: Explique com suas palavras o que é uma "Pipeline" de CI.
+1. Por que estruturamos um Plano de Negócios clássico perante investidores bancários?
+2. Destaque os principais componentes do Sumário Executivo.
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **GitHub Actions**: Qual a principal diferença entre um **Workflow**, um **Job** e um **Step** no contexto do GitHub Actions?
-4.  **Fail Fast**: Por que a prática de "Falhar Rápido" (Fail Fast) é considerada um pilar da qualidade em processos de Integração Contínua?
+3. Como validar uma Projeção de Caixa sem conhecer o futuro? Que medidas usar?
+4. O Plano Operacional ajuda a prever a logística, os insumos essenciais e a real viabilidade do esforço. Qual a essência fundamental nele?
 
 ## 🔴 Desafio
 
-5.  **Cenário de Deploy**: Uma pipeline de CI falhou na etapa de "Linting" (formatação de código), mas todos os testes unitários passaram. Você, como QA, autorizaria o merge dessa branch para produção? Justifique sua decisão técnica e ética.
+5. Para modelos ágeis em incerteza, como conciliar o Plano de Negócios Tradicional com a análise de Break-Even dinâmico em cenários desfavoráveis e incertos? Justifique em relação ao cálculo de OPEX e fixos contínuos.
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-06.md)**

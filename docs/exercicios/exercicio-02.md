@@ -1,15 +1,23 @@
-# Exercícios: Aula 02 - Modelos de Qualidade 📊
+# Exercícios 02 - Identificação de Oportunidades 🧩
 
-## 🟢 Básico
+## 🟢 Fáceis
 
-1.  **CMMI**: Liste os 5 níveis de maturidade do CMMI e explique brevemente o que muda do Nível 1 para o Nível 2.
-2.  **MPS.br**: Por que o modelo MPS.br é dividido em 7 níveis (A a G) ao invés de apenas 5 como o CMMI?
+1. Diferencie uma Ideia de uma Oportunidade real.
+2. Qual o papel das 'dores de clientes' na criação de oportunidades de negócios?
 
-## 🟡 Intermediário
+## 🟡 Médios
 
-3.  **Métricas**: Uma empresa encontrou 50 defeitos durante os testes internos e os clientes reportaram mais 10 após o lançamento. Calcule a **DRE (Defect Removal Efficiency)** desta empresa.
-4.  **Comparativo**: Em qual situação você recomendaria a uma empresa brasileira de 15 funcionários que ela buscasse a certificação MPS.br Nível G antes de tentar o CMMI Nível 2?
+3. De que forma o avanço tecnológico cria oportunidades para nichos até então ignorados? Dê um exemplo.
+4. Descreva como a segmentação ajuda a validar e penetrar no mercado com mais precisão.
 
 ## 🔴 Desafio
 
-5.  **Plano de Melhoria**: Você foi contratado como QA Lead em uma startup "Nível 1" (caótico). Desenvolva um plano com 3 ações práticas baseadas nas áreas de processo do **CMMI Nível 2** para organizar a casa nos próximos 3 meses.
+5. Construa uma Matriz CSD para a ideia de um 'Aplicativo de Lavagem de Carros a Seco em Domicílio' e explique a estratégia de buscar o Oceano Azul para esse mercado.
+
+---
+
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-02.md)**
