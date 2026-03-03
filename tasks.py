@@ -132,7 +132,7 @@ def format_code(c):
 
 @task
 def deploy(c):
-    """Deploy para produção com Mike"""
+    """Deploy para produção"""
     console.print("[blue]🚀 Fazendo deploy para produção...[/blue]")
     c.run("poetry run task deploy")
     console.print("[green]✅ Deploy concluído[/green]")
