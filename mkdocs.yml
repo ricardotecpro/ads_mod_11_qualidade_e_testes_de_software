@@ -244,18 +244,7 @@ nav:
       - 'Materiais Extras': materiais.md
   - Impresso:
       - Impressão: print_page.md
-  - Legado:
-      - Configuração:
-          - 'Índice': setups/index.md
-          - 'Setup 01 - Selenium': setups/setup-01.md
-          - 'Setup 02 - Postman': setups/setup-02.md
-          - 'Setup 03 - Python': setups/setup-03.md
-          - 'Setup 04 - Java': setups/setup-04.md
-          - 'Setup 05 - Node.js': setups/setup-05.md
-          - 'Setup 06 - VS Code': setups/setup-06.md
-          - 'Setup 07 - Git': setups/setup-07.md
-          - 'Setup 08 - Docker': setups/setup-08.md
-          - 'Setup 09 - DBs': setups/setup-09.md
+
 
 exclude_docs: |
   .src/
