@@ -1,9 +1,9 @@
 // Custom Termynal
-console.log('Termynal loaded');
+console.log('Termynal loaded v2');
 
 document.addEventListener("DOMContentLoaded", function () {
     // Find all termynal blocks
-    const termynals = document.querySelectorAll(".termy");
+    const termynals = document.querySelectorAll(".termy, [data-termynal]");
     console.log("Found termynals:", termynals.length);
 
     termynals.forEach(termynal => {
