@@ -75,7 +75,7 @@ Um QA deve se preocupar com as **10 Heurísticas de Nielsen**, como:
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 10](../slides/slide-10.md)
+    [:octicons-arrow-right-24: Slide 10](../slides/slide-10.html)
 
 - :material-help-circle: **Quiz**
     ---

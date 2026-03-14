@@ -69,7 +69,7 @@ O **Jira** é a ferramenta padrão de mercado para gestão ágil e rastreamento 
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 15](../slides/slide-15.md)
+    [:octicons-arrow-right-24: Slide 15](../slides/slide-15.html)
 
 - :material-help-circle: **Quiz**
     ---

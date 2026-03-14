@@ -74,7 +74,7 @@ Qualidade sem medição é apenas opinião. Algumas métricas essenciais:
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 02](../slides/slide-02.md)
+    [:octicons-arrow-right-24: Slide 02](../slides/slide-02.html)
 
 - :material-help-circle: **Quiz**
     ---

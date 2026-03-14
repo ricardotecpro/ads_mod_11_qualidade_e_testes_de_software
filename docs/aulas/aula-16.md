@@ -70,7 +70,7 @@ A área de Qualidade e Testes é dinâmica e fundamental para o sucesso de qualq
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 16](../slides/slide-16.md)
+    [:octicons-arrow-right-24: Slide 16](../slides/slide-16.html)
 
 - :material-help-circle: **Quiz**
     ---

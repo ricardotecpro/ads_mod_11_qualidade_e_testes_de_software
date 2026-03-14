@@ -80,7 +80,7 @@ A **Integração Contínua** é a prática de integrar o código em um repositó
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 06](../slides/slide-06.md)
+    [:octicons-arrow-right-24: Slide 06](../slides/slide-06.html)
 
 - :material-help-circle: **Quiz**
     ---

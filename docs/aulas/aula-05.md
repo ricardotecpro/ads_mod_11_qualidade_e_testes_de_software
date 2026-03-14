@@ -80,7 +80,7 @@ def p(a, b):
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 05](../slides/slide-05.md)
+    [:octicons-arrow-right-24: Slide 05](../slides/slide-05.html)
 
 - :material-help-circle: **Quiz**
     ---

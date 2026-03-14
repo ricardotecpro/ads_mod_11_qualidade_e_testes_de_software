@@ -77,7 +77,7 @@ pie title Taxa de Defeitos por Status
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 04](../slides/slide-04.md)
+    [:octicons-arrow-right-24: Slide 04](../slides/slide-04.html)
 
 - :material-help-circle: **Quiz**
     ---

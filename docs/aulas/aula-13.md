@@ -78,7 +78,7 @@ graph LR
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 13](../slides/slide-13.md)
+    [:octicons-arrow-right-24: Slide 13](../slides/slide-13.html)
 
 - :material-help-circle: **Quiz**
     ---

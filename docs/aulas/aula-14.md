@@ -80,7 +80,7 @@ sequenceDiagram
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 14](../slides/slide-14.md)
+    [:octicons-arrow-right-24: Slide 14](../slides/slide-14.html)
 
 - :material-help-circle: **Quiz**
     ---

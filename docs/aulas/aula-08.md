@@ -80,7 +80,7 @@ SENÃO:
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 08](../slides/slide-08.md)
+    [:octicons-arrow-right-24: Slide 08](../slides/slide-08.html)
 
 - :material-help-circle: **Quiz**
     ---

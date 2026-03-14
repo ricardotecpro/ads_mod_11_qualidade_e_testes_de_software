@@ -150,6 +150,8 @@ extra:
       link: https://linkedin.com/in/ricardotecpro
     - icon: fontawesome/solid/globe
       link: https://ricardotecpro.github.io/
+use_directory_urls: false
+
 nav:
   - Principal:
       - 'Início': index.md
@@ -178,108 +180,108 @@ nav:
       - 'Aula 15 - Gestão de Defeitos': aulas/aula-15.md
       - 'Aula 16 - Projeto Integrador': aulas/aula-16.md
   - Materiais:
-    - materiais.md
-    - Slides:
-      - slides/index.md
-      - 'Slide 01': slides/slide-01.html
-      - 'Slide 02': slides/slide-02.html
-      - 'Slide 03': slides/slide-03.html
-      - 'Slide 04': slides/slide-04.html
-      - 'Slide 05': slides/slide-05.html
-      - 'Slide 06': slides/slide-06.html
-      - 'Slide 07': slides/slide-07.html
-      - 'Slide 08': slides/slide-08.html
-      - 'Slide 09': slides/slide-09.html
-      - 'Slide 10': slides/slide-10.html
-      - 'Slide 11': slides/slide-11.html
-      - 'Slide 12': slides/slide-12.html
-      - 'Slide 13': slides/slide-13.html
-      - 'Slide 14': slides/slide-14.html
-      - 'Slide 15': slides/slide-15.html
-      - 'Slide 16': slides/slide-16.html
-    - Exercícios:
-      - exercicios/index.md
-      - 'Atividades':
-        - 'Exercício 01': exercicios/exercicio-01.md
-        - 'Exercício 02': exercicios/exercicio-02.md
-        - 'Exercício 03': exercicios/exercicio-03.md
-        - 'Exercício 04': exercicios/exercicio-04.md
-        - 'Exercício 05': exercicios/exercicio-05.md
-        - 'Exercício 06': exercicios/exercicio-06.md
-        - 'Exercício 07': exercicios/exercicio-07.md
-        - 'Exercício 08': exercicios/exercicio-08.md
-        - 'Exercício 09': exercicios/exercicio-09.md
-        - 'Exercício 10': exercicios/exercicio-10.md
-        - 'Exercício 11': exercicios/exercicio-11.md
-        - 'Exercício 12': exercicios/exercicio-12.md
-        - 'Exercício 13': exercicios/exercicio-13.md
-        - 'Exercício 14': exercicios/exercicio-14.md
-        - 'Exercício 15': exercicios/exercicio-15.md
-        - 'Exercício 16': exercicios/exercicio-16.md
-      - 'Soluções':
-        - 'Solução 01': exercicios/solucao-01.md
-        - 'Solução 02': exercicios/solucao-02.md
-        - 'Solução 03': exercicios/solucao-03.md
-        - 'Solução 04': exercicios/solucao-04.md
-        - 'Solução 05': exercicios/solucao-05.md
-        - 'Solução 06': exercicios/solucao-06.md
-        - 'Solução 07': exercicios/solucao-07.md
-        - 'Solução 08': exercicios/solucao-08.md
-        - 'Solução 09': exercicios/solucao-09.md
-        - 'Solução 10': exercicios/solucao-10.md
-        - 'Solução 11': exercicios/solucao-11.md
-        - 'Solução 12': exercicios/solucao-12.md
-        - 'Solução 13': exercicios/solucao-13.md
-        - 'Solução 14': exercicios/solucao-14.md
-        - 'Solução 15': exercicios/solucao-15.md
-        - 'Solução 16': exercicios/solucao-16.md
-    - Quizzes:
-      - quizzes/index.md
-      - 'Quiz 01': quizzes/quiz-01.md
-      - 'Quiz 02': quizzes/quiz-02.md
-      - 'Quiz 03': quizzes/quiz-03.md
-      - 'Quiz 04': quizzes/quiz-04.md
-      - 'Quiz 05': quizzes/quiz-05.md
-      - 'Quiz 06': quizzes/quiz-06.md
-      - 'Quiz 07': quizzes/quiz-07.md
-      - 'Quiz 08': quizzes/quiz-08.md
-      - 'Quiz 09': quizzes/quiz-09.md
-      - 'Quiz 10': quizzes/quiz-10.md
-      - 'Quiz 11': quizzes/quiz-11.md
-      - 'Quiz 12': quizzes/quiz-12.md
-      - 'Quiz 13': quizzes/quiz-13.md
-      - 'Quiz 14': quizzes/quiz-14.md
-      - 'Quiz 15': quizzes/quiz-15.md
-      - 'Quiz 16': quizzes/quiz-16.md
-    - Projetos:
-      - projetos/index.md
-      - 'Projeto 01': projetos/projeto-01.md
-      - 'Projeto 02': projetos/projeto-02.md
-      - 'Projeto 03': projetos/projeto-03.md
-      - 'Projeto 04': projetos/projeto-04.md
-      - 'Projeto 05': projetos/projeto-05.md
-      - 'Projeto 06': projetos/projeto-06.md
-      - 'Projeto 07': projetos/projeto-07.md
-      - 'Projeto 08': projetos/projeto-08.md
-      - 'Projeto 09': projetos/projeto-09.md
-      - 'Projeto 10': projetos/projeto-10.md
-      - 'Projeto 11': projetos/projeto-11.md
-      - 'Projeto 12': projetos/projeto-12.md
-      - 'Projeto 13': projetos/projeto-13.md
-      - 'Projeto 14': projetos/projeto-14.md
-      - 'Projeto 15': projetos/projeto-15.md
-      - 'Projeto 16': projetos/projeto-16.md
-    - Configuração:
-      - setups/index.md
-      - 'Windows': setups/setup-01.md
-      - 'Linux': setups/setup-02.md
-      - 'macOS': setups/setup-03.md
-      - 'VS Code': setups/setup-04.md
-      - 'Docker': setups/setup-05.md
-      - 'Git': setups/setup-06.md
-      - 'Python': setups/setup-07.md
-      - 'Node.js': setups/setup-08.md
-      - 'Playwright': setups/setup-09.md
+      - materiais.md
+      - Slides:
+          - slides/index.md
+          - 'Slide 01': slides/slide-01.html
+          - 'Slide 02': slides/slide-02.html
+          - 'Slide 03': slides/slide-03.html
+          - 'Slide 04': slides/slide-04.html
+          - 'Slide 05': slides/slide-05.html
+          - 'Slide 06': slides/slide-06.html
+          - 'Slide 07': slides/slide-07.html
+          - 'Slide 08': slides/slide-08.html
+          - 'Slide 09': slides/slide-09.html
+          - 'Slide 10': slides/slide-10.html
+          - 'Slide 11': slides/slide-11.html
+          - 'Slide 12': slides/slide-12.html
+          - 'Slide 13': slides/slide-13.html
+          - 'Slide 14': slides/slide-14.html
+          - 'Slide 15': slides/slide-15.html
+          - 'Slide 16': slides/slide-16.html
+      - Exercícios:
+          - exercicios/index.md
+          - 'Atividades':
+            - 'Exercício 01': exercicios/exercicio-01.md
+            - 'Exercício 02': exercicios/exercicio-02.md
+            - 'Exercício 03': exercicios/exercicio-03.md
+            - 'Exercício 04': exercicios/exercicio-04.md
+            - 'Exercício 05': exercicios/exercicio-05.md
+            - 'Exercício 06': exercicios/exercicio-06.md
+            - 'Exercício 07': exercicios/exercicio-07.md
+            - 'Exercício 08': exercicios/exercicio-08.md
+            - 'Exercício 09': exercicios/exercicio-09.md
+            - 'Exercício 10': exercicios/exercicio-10.md
+            - 'Exercício 11': exercicios/exercicio-11.md
+            - 'Exercício 12': exercicios/exercicio-12.md
+            - 'Exercício 13': exercicios/exercicio-13.md
+            - 'Exercício 14': exercicios/exercicio-14.md
+            - 'Exercício 15': exercicios/exercicio-15.md
+            - 'Exercício 16': exercicios/exercicio-16.md
+          - 'Soluções':
+            - 'Solução 01': exercicios/solucao-01.md
+            - 'Solução 02': exercicios/solucao-02.md
+            - 'Solução 03': exercicios/solucao-03.md
+            - 'Solução 04': exercicios/solucao-04.md
+            - 'Solução 05': exercicios/solucao-05.md
+            - 'Solução 06': exercicios/solucao-06.md
+            - 'Solução 07': exercicios/solucao-07.md
+            - 'Solução 08': exercicios/solucao-08.md
+            - 'Solução 09': exercicios/solucao-09.md
+            - 'Solução 10': exercicios/solucao-10.md
+            - 'Solução 11': exercicios/solucao-11.md
+            - 'Solução 12': exercicios/solucao-12.md
+            - 'Solução 13': exercicios/solucao-13.md
+            - 'Solução 14': exercicios/solucao-14.md
+            - 'Solução 15': exercicios/solucao-15.md
+            - 'Solução 16': exercicios/solucao-16.md
+      - Quizzes:
+          - quizzes/index.md
+          - 'Quiz 01': quizzes/quiz-01.md
+          - 'Quiz 02': quizzes/quiz-02.md
+          - 'Quiz 03': quizzes/quiz-03.md
+          - 'Quiz 04': quizzes/quiz-04.md
+          - 'Quiz 05': quizzes/quiz-05.md
+          - 'Quiz 06': quizzes/quiz-06.md
+          - 'Quiz 07': quizzes/quiz-07.md
+          - 'Quiz 08': quizzes/quiz-08.md
+          - 'Quiz 09': quizzes/quiz-09.md
+          - 'Quiz 10': quizzes/quiz-10.md
+          - 'Quiz 11': quizzes/quiz-11.md
+          - 'Quiz 12': quizzes/quiz-12.md
+          - 'Quiz 13': quizzes/quiz-13.md
+          - 'Quiz 14': quizzes/quiz-14.md
+          - 'Quiz 15': quizzes/quiz-15.md
+          - 'Quiz 16': quizzes/quiz-16.md
+      - Projetos:
+          - projetos/index.md
+          - 'Projeto 01': projetos/projeto-01.md
+          - 'Projeto 02': projetos/projeto-02.md
+          - 'Projeto 03': projetos/projeto-03.md
+          - 'Projeto 04': projetos/projeto-04.md
+          - 'Projeto 05': projetos/projeto-05.md
+          - 'Projeto 06': projetos/projeto-06.md
+          - 'Projeto 07': projetos/projeto-07.md
+          - 'Projeto 08': projetos/projeto-08.md
+          - 'Projeto 09': projetos/projeto-09.md
+          - 'Projeto 10': projetos/projeto-10.md
+          - 'Projeto 11': projetos/projeto-11.md
+          - 'Projeto 12': projetos/projeto-12.md
+          - 'Projeto 13': projetos/projeto-13.md
+          - 'Projeto 14': projetos/projeto-14.md
+          - 'Projeto 15': projetos/projeto-15.md
+          - 'Projeto 16': projetos/projeto-16.md
+      - Configuração:
+          - setups/index.md
+          - 'Windows': setups/setup-01.md
+          - 'Linux': setups/setup-02.md
+          - 'macOS': setups/setup-03.md
+          - 'VS Code': setups/setup-04.md
+          - 'Docker': setups/setup-05.md
+          - 'Git': setups/setup-06.md
+          - 'Python': setups/setup-07.md
+          - 'Node.js': setups/setup-08.md
+          - 'Playwright': setups/setup-09.md
   - Impresso: print_page.md
 
 

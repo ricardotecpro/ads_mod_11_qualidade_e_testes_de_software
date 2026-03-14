@@ -75,7 +75,7 @@ graph TD
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 03](../slides/slide-03.md)
+    [:octicons-arrow-right-24: Slide 03](../slides/slide-03.html)
 
 - :material-help-circle: **Quiz**
     ---

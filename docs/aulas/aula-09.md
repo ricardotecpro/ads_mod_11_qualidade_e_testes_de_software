@@ -74,7 +74,7 @@ mindmap
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 09](../slides/slide-09.md)
+    [:octicons-arrow-right-24: Slide 09](../slides/slide-09.html)
 
 - :material-help-circle: **Quiz**
     ---

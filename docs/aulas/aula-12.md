@@ -81,7 +81,7 @@ Quando um componente depende de algo externo (como uma API de pagamentos ou um B
 - :material-presentation: **Slides**
     ---
     Material visual com diagramas e conceitos-chave.
-    [:octicons-arrow-right-24: Slide 12](../slides/slide-12.md)
+    [:octicons-arrow-right-24: Slide 12](../slides/slide-12.html)
 
 - :material-help-circle: **Quiz**
     ---
