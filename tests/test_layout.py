@@ -13,10 +13,10 @@ from playwright.sync_api import Page, expect
 def test_build_output_exists():
     """Verify that all expected build output files exist."""
     assert os.path.exists("site/index.html"), "Main index.html not found"
-    assert os.path.exists("site/aulas/aula-01/index.html"), "Lesson 01 page not found"
-    assert os.path.exists("site/aulas/aula-16/index.html"), "Lesson 16 page not found"
+    assert os.path.exists("site/aulas/aula-01.html"), "Lesson 01 page not found"
+    assert os.path.exists("site/aulas/aula-16.html"), "Lesson 16 page not found"
     assert os.path.exists("site/slides/index.html"), "Slides index not found"
-    assert os.path.exists("site/setups/index.html"), "Setup index not found"
+    assert os.path.exists("site/setups/setup-01.html"), "Setup 01 page not found"
     assert os.path.exists("site/assets/js/quiz.js"), "Quiz JS not found"
     assert os.path.exists("site/assets/css/quiz.css"), "Quiz CSS not found"
 
@@ -60,7 +60,7 @@ def test_lesson_01_page(page: Page, base_url):
 # Test 4: Quiz interactivity
 def test_quiz_functionality(page: Page, base_url):
     """Test that quiz JavaScript works correctly."""
-    page.goto(f"{base_url}/quizzes/quiz-01/")
+    page.goto(f"{base_url}/quizzes/quiz-01.html")
     
     # Wait for quiz to be visible
     first_quiz = page.locator(".quiz-container").first
@@ -95,7 +95,7 @@ def test_slides_structure(page: Page, base_url):
 # Test 6: Lesson 16 page (Testing/Boas Práticas)
 def test_lesson_16_page(page: Page, base_url):
     """Test Lesson 16 page loads correctly."""
-    page.goto(f"{base_url}/aulas/aula-16/")
+    page.goto(f"{base_url}/aulas/aula-16.html")
     
     # Check title
     # Actual: "Aula 16 - Segurança e Lojas - Tecnologia da Informação Aplicada a Administração"
@@ -109,7 +109,7 @@ def test_lesson_16_page(page: Page, base_url):
 # Test 7: Mermaid diagram rendering (checking Lesson 11)
 def test_mermaid_diagram(page: Page, base_url):
     """Test that Mermaid diagrams are present in the content."""
-    page.goto(f"{base_url}/aulas/aula-09/")
+    page.goto(f"{base_url}/aulas/aula-09.html")
     
     # Check for mermaid code block or rendered diagram
     # MkDocs Material renders mermaid as div.mermaid or similar

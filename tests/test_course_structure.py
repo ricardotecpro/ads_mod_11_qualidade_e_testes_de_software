@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Expected course structure
 EXPECTED_LESSONS = [f"aulas/aula-{i:02d}.md" for i in range(1, 17)]
-EXPECTED_SLIDES = [f"slide-{i:02d}.md" for i in range(1, 17)]
+EXPECTED_SLIDES = [f"src/slide-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_QUIZZES = [f"quiz-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_EXERCISES = [f"exercicio-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_PROJECTS = [f"projeto-{i:02d}.md" for i in range(1, 17)]

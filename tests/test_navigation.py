@@ -62,7 +62,7 @@ class TestNavigation:
         page.get_by_role("link", name="Aula 01", exact=False).first.click()
         
         # Verifica URL
-        expect(page).to_have_url(re.compile(r".*/aulas/aula-01/?$"))
+        expect(page).to_have_url(re.compile(r".*/aulas/aula-01\.html$"))
         
         # Verifica se existe um H1 (agnóstico ao conteúdo)
         expect(page.locator("h1")).to_be_visible()
