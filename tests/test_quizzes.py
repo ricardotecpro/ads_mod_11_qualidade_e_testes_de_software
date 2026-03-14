@@ -12,7 +12,7 @@ class TestQuizzes:
     def test_quiz_index_loads(self, page_with_base_url: Page, base_url: str):
         """Verifica se a página de índice de quizzes carrega"""
         page = page_with_base_url
-        page.goto(f"{base_url}/quizzes/")
+        page.goto(f"{base_url}/quizzes/index.html")
         
         # Verifica se não é 404
         expect(page).not_to_have_title("404")
@@ -22,7 +22,7 @@ class TestQuizzes:
     def test_quiz_page_loads(self, page_with_base_url: Page, base_url: str, quiz_number: int):
         """Verifica se cada página de quiz carrega sem erro 404"""
         page = page_with_base_url
-        quiz_url = f"{base_url}/quizzes/quiz-{quiz_number:02d}/"
+        quiz_url = f"{base_url}/quizzes/quiz-{quiz_number:02d}.html"
         
         page.goto(quiz_url)
         
@@ -32,7 +32,7 @@ class TestQuizzes:
     def test_quiz_has_interactive_elements(self, page_with_base_url: Page, base_url: str):
         """Verifica se o quiz 01 tem elementos interativos"""
         page = page_with_base_url
-        page.goto(f"{base_url}/quizzes/quiz-01/")
+        page.goto(f"{base_url}/quizzes/quiz-01.html")
         
         # Procura por opções de quiz (estrutura customizada)
         options = page.locator(".quiz-option")
@@ -43,7 +43,7 @@ class TestQuizzes:
     def test_quiz_questions_visible(self, page_with_base_url: Page, base_url: str):
         """Verifica se as perguntas do quiz estão visíveis"""
         page = page_with_base_url
-        page.goto(f"{base_url}/quizzes/quiz-01/")
+        page.goto(f"{base_url}/quizzes/quiz-01.html")
         
         # Verifica se há texto de pergunta
         # Procura pela primeira pergunta conhecida
@@ -55,7 +55,7 @@ class TestQuizzes:
     def test_quiz_can_select_answer(self, page_with_base_url: Page, base_url: str):
         """Verifica se é possível selecionar uma resposta"""
         page = page_with_base_url
-        page.goto(f"{base_url}/quizzes/quiz-01/")
+        page.goto(f"{base_url}/quizzes/quiz-01.html")
         
         # Encontra o primeiro container de quiz
         quiz_container = page.locator(".quiz-container").first
@@ -81,7 +81,7 @@ class TestQuizzes:
     def test_quiz_has_multiple_questions(self, page_with_base_url: Page, base_url: str):
         """Verifica se o quiz tem múltiplas perguntas (pelo menos 5)"""
         page = page_with_base_url
-        page.goto(f"{base_url}/quizzes/quiz-01/")
+        page.goto(f"{base_url}/quizzes/quiz-01.html")
         
         # Procura por itens de quiz
         questions = page.locator(".quiz-question")
