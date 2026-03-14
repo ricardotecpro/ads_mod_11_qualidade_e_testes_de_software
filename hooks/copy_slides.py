@@ -39,11 +39,14 @@ def copy_slides(config, **kwargs):
     
     # Copiar Markdown
     print("[cyan]Copiando slides Markdown...[/cyan]")
-    for slide in slides_source.glob('slide-*.md'):  # CORRIGIDO: era *-slides.md
-        dest_file = slides_dest / slide.name
-        shutil.copy(slide.resolve(), dest_file.resolve())
-        print(f"  [blue]-> {slide.name}[/blue]")
-        md_copied += 1
+    slides_md_source = slides_source / 'src'
+    if slides_md_source.exists():
+        for slide in slides_md_source.glob('slide-*.md'):
+            dest_file = slides_dest / 'src' / slide.name
+            (slides_dest / 'src').mkdir(exist_ok=True)
+            shutil.copy(slide.resolve(), dest_file.resolve())
+            print(f"  [blue]-> src/{slide.name}[/blue]")
+            md_copied += 1
     
     if html_copied > 0:
         print(f"[green][OK] {html_copied} slide(s) HTML copiados[/green]")
