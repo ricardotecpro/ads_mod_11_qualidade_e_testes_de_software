@@ -42,7 +42,7 @@ def test_homepage_structure(page: Page, base_url):
 # Test 3: Navigation to Lesson 01
 def test_lesson_01_page(page: Page, base_url):
     """Test Lesson 01 page loads and has correct content."""
-    page.goto(f"{base_url}/aulas/aula-01/")
+    page.goto(f"{base_url}/aulas/aula-01.html")
     
     # Check title (flexible match)
     # The actual title in HTML is "Aula 01 - Qualidade e QA - Qualidade e Testes de Software - Curso"
@@ -126,7 +126,7 @@ def test_mermaid_diagram(page: Page, base_url):
 # Test 8: Assets loading
 def test_assets_load(page: Page, base_url):
     """Test that CSS and JS assets load correctly."""
-    page.goto(f"{base_url}/aulas/aula-01/")
+    page.goto(f"{base_url}/aulas/aula-01.html")
     
     # Check that quiz.js is loaded
     quiz_script = page.locator("script[src*='quiz.js']")
